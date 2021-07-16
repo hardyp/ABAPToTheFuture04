@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Component Name="FPM_OVP_COMPONENT" ConfId="ZCOMP_CONF_4_MONSTER_OVP" ConfType="00" ConfVar="">
+ <Node Name="CONFIGURATION_CONTEXT" SimpleFormat="true">
+  <Item Index="000001" SimpleFormat="true">
+   <Node Name="OVP_APPLICATION" SimpleFormat="true">
+    <Item Index="000001" SimpleFormat="true">
+     <Node Name="ACTION" SimpleFormat="true"/>
+     <Node Name="AMC_BINDING" SimpleFormat="true"/>
+     <Node Name="APPLICATION_SETTINGS" SimpleFormat="true">
+      <Item Index="000001" SimpleFormat="true">
+       <TRANSIENT_STATE>N</TRANSIENT_STATE>
+      </Item>
+     </Node>
+     <Node Name="APP_SPECIFIC_CC" SimpleFormat="true"/>
+     <Node Name="CONF_COMP_USAGE" SimpleFormat="true"/>
+     <Node Name="CONTENT_AREA" SimpleFormat="true">
+      <Item Index="000001" SimpleFormat="true">
+       <ID Final="5 ">PAGE_1</ID>
+       <TITLE Transl="true">1</TITLE>
+       <DEFAULT>X</DEFAULT>
+       <Node Name="EXTERNAL_NAVIGATION" SimpleFormat="true"/>
+       <Node Name="PAGE_MASTER_AREA" SimpleFormat="true"/>
+       <Node Name="SECTION" SimpleFormat="true">
+        <Item Index="000001" SimpleFormat="true">
+         <ID Final="5 ">SECTION_1</ID>
+         <INDEX>1</INDEX>
+         <Node Name="COLUMN_LAYOUT" SimpleFormat="true">
+          <Item Index="000001" SimpleFormat="true">
+           <COLUMN_ID Final="5 ">COLUMN_ID_1</COLUMN_ID>
+          </Item>
+         </Node>
+         <Node Name="UIBB" SimpleFormat="true">
+          <Item Index="000001" SimpleFormat="true">
+           <FPM_PRIMARY_ATTRIBUTE Final="5 ">_GENP_005056B074C91EDBA4A47FD2A1F5812A</FPM_PRIMARY_ATTRIBUTE>
+           <INTERFACE_VIEW>SEARCH_WINDOW</INTERFACE_VIEW>
+           <COMPONENT>FPM_SEARCH_UIBB</COMPONENT>
+           <INDEX>1</INDEX>
+           <LOCATION>1</LOCATION>
+           <TYPE>T</TYPE>
+           <DEFAULT_IN_STACK>X</DEFAULT_IN_STACK>
+           <CONFIG_ID>ZCOMP_CONF_4MONSTERSEARCH_UIBB</CONFIG_ID>
+           <TITLE Transl="true">2</TITLE>
+           <Node Name="UIBB_TOOLBAR" SimpleFormat="true">
+            <Item Index="000001" SimpleFormat="true">
+             <CAPTURE_ACTIONS>N</CAPTURE_ACTIONS>
+             <Node Name="UIBB_BUTTON" SimpleFormat="true"/>
+            </Item>
+           </Node>
+          </Item>
+         </Node>
+        </Item>
+       </Node>
+       <Node Name="TOOLBAR" SimpleFormat="true">
+        <Item Index="000001" SimpleFormat="true">
+         <Node Name="BUTTON" SimpleFormat="true"/>
+        </Item>
+       </Node>
+       <Node Name="UIBB_SELECTOR" SimpleFormat="true"/>
+      </Item>
+     </Node>
+     <Node Name="MSG_MAPPER_SETTING" SimpleFormat="true"/>
+     <Node Name="PAGE_SELECTOR" SimpleFormat="true"/>
+     <Node Name="PERSONALIZATION" SimpleFormat="true"/>
+     <Node Name="WIRE_MODEL" SimpleFormat="true">
+      <Item Index="000001" SimpleFormat="true">
+       <Node Name="WIRE" SimpleFormat="true"/>
+      </Item>
+     </Node>
+    </Item>
+   </Node>
+  </Item>
+ </Node>
+</Component>

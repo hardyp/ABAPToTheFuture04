@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_INTF" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOINTERF>
+    <CLSNAME>ZIF_4_MONSTERMODEL_PERS_LAYER</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Generic Monster Model Persitency Layer</DESCRIPT>
+    <EXPOSURE>2</EXPOSURE>
+    <STATE>1</STATE>
+    <UNICODE>X</UNICODE>
+   </VSEOINTERF>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_4_MONSTERMODEL_PERS_LAYER</CLSNAME>
+     <CMPNAME>CREATE_MONSTER_RECORD</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Create Monster Record</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_4_MONSTERMODEL_PERS_LAYER</CLSNAME>
+     <CMPNAME>DERIVE_HEADERS_BY_ATTRIBUTE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Given Selection options, Return Table of Monster Headers</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_4_MONSTERMODEL_PERS_LAYER</CLSNAME>
+     <CMPNAME>DERIVE_MONSTER_RECORD</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Given Monster Number, Return Monster Record</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_4_MONSTERMODEL_PERS_LAYER</CLSNAME>
+     <CMPNAME>DERIVE_MONSTER_RECORD_4_UPDATE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Given Monster Number, Return Monster Record for Update</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_4_MONSTERMODEL_PERS_LAYER</CLSNAME>
+     <CMPNAME>UPDATE_MONSTER_RECORD</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Update Monster Record</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

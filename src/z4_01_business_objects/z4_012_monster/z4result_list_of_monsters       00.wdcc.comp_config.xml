@@ -1,0 +1,643 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Component Name="FPM_LIST_UIBB_ATS" ConfId="Z4RESULT_LIST_OF_MONSTERS" ConfType="00" ConfVar="">
+ <Node Name="CONFIGURATION_CONTEXT" SimpleFormat="true">
+  <Item Index="000001" SimpleFormat="true">
+   <Node Name="LIST" SimpleFormat="true">
+    <Item Index="000001" SimpleFormat="true">
+     <FEEDER>CL_FPM_SADL_SEARCH_RESULT</FEEDER>
+     <TITLE Transl="true">1</TITLE>
+     <Node Name="BUTTON_ROW" SimpleFormat="true">
+      <Item Index="000001" SimpleFormat="true">
+       <INSTANCE_STYLE/>
+       <Node Name="BUTTON_ROW_ELEMENT" SimpleFormat="true">
+        <Item Index="000001" SimpleFormat="true">
+         <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE83812A</ELEMENT_ID>
+         <DISPLAY_TYPE>BT</DISPLAY_TYPE>
+         <INDEX>1</INDEX>
+         <TEXT Transl="true"/>
+         <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;00&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;00&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;00&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE&gt;~Icon/NewItem&lt;/IMAGE_SOURCE&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;0&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;0&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;00&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;0&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT&gt;X&lt;/HIDE_TEXT&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+         <TOOLTIP Transl="true"/>
+         <WIDTH/>
+         <CTXT_MENU_ID/>
+         <EXPLANATION_TEXT Transl="true"/>
+         <INSTANCE_STYLE/>
+         <Node Name="BUTTON_ACTION" SimpleFormat="true">
+          <Item Index="000001" SimpleFormat="true">
+           <FPM_PRIMARY_ATTRIBUTE Final="5 ">_GENP_005056B074C91EDBA9FF287BAE83A12A</FPM_PRIMARY_ATTRIBUTE>
+           <EVENT_ID>FPM_NAVIGATE</EVENT_ID>
+           <TEXT Transl="true"/>
+           <INDEX>1</INDEX>
+           <EVENT_PARAMETERS>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;LPD_ROLE/&gt;&lt;LPD_INSTANCE/&gt;&lt;LPD_APPLICATION_ALIAS/&gt;&lt;SOURCE_ATTRIBUTE_NAME/&gt;&lt;INITIAL_PAGE_PROC_MODE&gt;C&lt;/INITIAL_PAGE_PROC_MODE&gt;&lt;EDIT_MODE&gt;E&lt;/EDIT_MODE&gt;&lt;START_PAGE_ID&gt;FPM_SADL_CREATE&lt;/START_PAGE_ID&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</EVENT_PARAMETERS>
+           <ACTION_TYPE/>
+           <HAS_SEPARATOR/>
+          </Item>
+         </Node>
+        </Item>
+       </Node>
+      </Item>
+     </Node>
+     <Node Name="COLUMN" SimpleFormat="true">
+      <Item Index="000001" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE83612A</ELEMENT_ID>
+       <NAME>LASTCHANGEDAT</NAME>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <INDEX>24</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY>01</VISIBILITY>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000002" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE83412A</ELEMENT_ID>
+       <NAME>LASTCHANGEDBY</NAME>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <INDEX>23</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY>01</VISIBILITY>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000003" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE83212A</ELEMENT_ID>
+       <NAME>CREATION_DATE</NAME>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <INDEX>22</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY>01</VISIBILITY>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000004" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE83012A</ELEMENT_ID>
+       <NAME>WEAPON</NAME>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <INDEX>21</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY>01</VISIBILITY>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000005" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE82E12A</ELEMENT_ID>
+       <NAME>SOCK_EATING_FLAG</NAME>
+       <DISPLAY_TYPE>CB</DISPLAY_TYPE>
+       <INDEX>20</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY>01</VISIBILITY>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000006" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE82C12A</ELEMENT_ID>
+       <NAME>BED_HIDER_FLAG</NAME>
+       <DISPLAY_TYPE>CB</DISPLAY_TYPE>
+       <INDEX>19</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY>01</VISIBILITY>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000007" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE82A12A</ELEMENT_ID>
+       <NAME>OSOUP_PERCENTAGE</NAME>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <INDEX>18</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY>01</VISIBILITY>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000008" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE82812A</ELEMENT_ID>
+       <NAME>GROWTH_PERCENTAGE</NAME>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <INDEX>17</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY>01</VISIBILITY>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000009" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE82612A</ELEMENT_ID>
+       <NAME>EAS_DAYS</NAME>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <INDEX>16</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY>01</VISIBILITY>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000010" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE82412A</ELEMENT_ID>
+       <NAME>EARLY_AGE_STRENGTH</NAME>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <INDEX>15</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY>01</VISIBILITY>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000011" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE82212A</ELEMENT_ID>
+       <NAME>STRENGTH</NAME>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <INDEX>14</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY>01</VISIBILITY>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000012" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE82012A</ELEMENT_ID>
+       <NAME>RAGES_PER_DAY</NAME>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <INDEX>13</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY>01</VISIBILITY>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000013" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE81E12A</ELEMENT_ID>
+       <NAME>HAT_SIZE</NAME>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <INDEX>12</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY>01</VISIBILITY>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000014" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE81C12A</ELEMENT_ID>
+       <NAME>NO_OF_HEADS</NAME>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <INDEX>11</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY>01</VISIBILITY>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000015" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE81A12A</ELEMENT_ID>
+       <NAME>COLOR</NAME>
+       <DISPLAY_TYPE>DD</DISPLAY_TYPE>
+       <INDEX>10</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY/>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000016" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE81812A</ELEMENT_ID>
+       <NAME>BRAIN_SIZE</NAME>
+       <DISPLAY_TYPE>DD</DISPLAY_TYPE>
+       <INDEX>9</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY/>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000017" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE81612A</ELEMENT_ID>
+       <NAME>SCARINESS</NAME>
+       <DISPLAY_TYPE>DD</DISPLAY_TYPE>
+       <INDEX>8</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY/>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000018" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE81412A</ELEMENT_ID>
+       <NAME>EVILNESS</NAME>
+       <DISPLAY_TYPE>DD</DISPLAY_TYPE>
+       <INDEX>7</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY/>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000019" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE81212A</ELEMENT_ID>
+       <NAME>SANITY_PERCENTAGE</NAME>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <INDEX>6</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY/>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000020" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE81012A</ELEMENT_ID>
+       <NAME>MONSTER_USAGE</NAME>
+       <DISPLAY_TYPE>DD</DISPLAY_TYPE>
+       <INDEX>5</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY/>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000021" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE80E12A</ELEMENT_ID>
+       <NAME>MODEL</NAME>
+       <DISPLAY_TYPE>DD</DISPLAY_TYPE>
+       <INDEX>4</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY/>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000022" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE80C12A</ELEMENT_ID>
+       <NAME>TAX_NUMBER</NAME>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <INDEX>3</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY/>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000023" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE80A12A</ELEMENT_ID>
+       <NAME>NAME</NAME>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <INDEX>2</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;00&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY/>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+      </Item>
+      <Item Index="000024" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE80812A</ELEMENT_ID>
+       <NAME>MONSTER_NUMBER</NAME>
+       <DISPLAY_TYPE>LA</DISPLAY_TYPE>
+       <INDEX>1</INDEX>
+       <HEADER Transl="true"/>
+       <SPECIAL_PROPERTIES>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;ALIGNMENT&gt;03&lt;/ALIGNMENT&gt;&lt;PASSWORD_FIELD/&gt;&lt;WRAPPING/&gt;&lt;TEXT_VIEW_LAYOUT&gt;01&lt;/TEXT_VIEW_LAYOUT&gt;&lt;TEXTVIEW_SEM_COL&gt;00&lt;/TEXTVIEW_SEM_COL&gt;&lt;TEXT_VIEW_DESIGN&gt;09&lt;/TEXT_VIEW_DESIGN&gt;&lt;BUTTON_DESIGN&gt;00&lt;/BUTTON_DESIGN&gt;&lt;IMAGE_SOURCE/&gt;&lt;IMAGE_SOURCE_CHECKED/&gt;&lt;LINK_TYPE&gt;02&lt;/LINK_TYPE&gt;&lt;COL_COUNT&gt;40&lt;/COL_COUNT&gt;&lt;ROW_COUNT&gt;5&lt;/ROW_COUNT&gt;&lt;TEXT_WRAPPING&gt;02&lt;/TEXT_WRAPPING&gt;&lt;TARGET/&gt;&lt;LINK_DESIGN&gt;00&lt;/LINK_DESIGN&gt;&lt;TOGGLE_BUTTON_DESIGN&gt;00&lt;/TOGGLE_BUTTON_DESIGN&gt;&lt;DEPENDENT_CHECKBOX/&gt;&lt;REPEAT_SEL_ACTION/&gt;&lt;HOTKEY&gt;00&lt;/HOTKEY&gt;&lt;BORDER&gt;0&lt;/BORDER&gt;&lt;MAX_RATING&gt;5&lt;/MAX_RATING&gt;&lt;MAX_TICK_MARKS&gt;0&lt;/MAX_TICK_MARKS&gt;&lt;SHOW_TICK_MARKS/&gt;&lt;UNIT_WIDTH&gt;0&lt;/UNIT_WIDTH&gt;&lt;TICK_MARK_SPACING&gt;0&lt;/TICK_MARK_SPACING&gt;&lt;THRESHOLDS/&gt;&lt;SUGGEST_FILTER_METHOD&gt;00&lt;/SUGGEST_FILTER_METHOD&gt;&lt;SUGGEST_VALUES/&gt;&lt;DISPLAY_AS_TEXT/&gt;&lt;MIME_TYPE/&gt;&lt;TOOLBAR_BUTTON_DESIGN&gt;00&lt;/TOOLBAR_BUTTON_DESIGN&gt;&lt;KEY_VISIBLE/&gt;&lt;HIDE_VALUE/&gt;&lt;VIRUS_SCAN_PROFILE/&gt;&lt;ACTION_MENU_ID/&gt;&lt;HIDE_TEXT/&gt;&lt;QUICKVIEW_ID/&gt;&lt;QUICKVIEW_IMAGE_REF/&gt;&lt;SELECTED_ACTION_ITEM/&gt;&lt;ALT_DDIC_SHLP_NAME/&gt;&lt;SEMANTIC_OBJECT/&gt;&lt;IMAGE_IS_DECORATIVE/&gt;&lt;IMAGE_ONLY/&gt;&lt;BUTTON_CHOICE_DESIGN&gt;00&lt;/BUTTON_CHOICE_DESIGN&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</SPECIAL_PROPERTIES>
+       <WIDTH/>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <TOOLTIP Transl="true"/>
+       <VISIBILITY/>
+       <FIXED/>
+       <TOOLTIP_HEADER Transl="true"/>
+       <CTXT_MENU_ID/>
+       <INSTANCE_STYLE/>
+       <HEADER_INSTANCE_STYLE/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <MULTI_EDITOR_ID/>
+       <MULTI_EDITOR_NEW_LINE/>
+       <EXPLANATION_TEXT_HEADER Transl="true"/>
+       <Node Name="COLUMN_ACTION" SimpleFormat="true">
+        <Item Index="000001" SimpleFormat="true">
+         <EVENT_ID>FPM_NAVIGATE</EVENT_ID>
+         <EVENT_PARAMETERS>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;BN1&gt;&lt;LPD_ROLE/&gt;&lt;LPD_INSTANCE/&gt;&lt;LPD_APPLICATION_ALIAS/&gt;&lt;SOURCE_ATTRIBUTE_NAME&gt;KEY&lt;/SOURCE_ATTRIBUTE_NAME&gt;&lt;INITIAL_PAGE_PROC_MODE&gt;L&lt;/INITIAL_PAGE_PROC_MODE&gt;&lt;EDIT_MODE&gt;R&lt;/EDIT_MODE&gt;&lt;START_PAGE_ID&gt;FPM_SADL_KEY_ENTRY&lt;/START_PAGE_ID&gt;&lt;/BN1&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</EVENT_PARAMETERS>
+        </Item>
+       </Node>
+      </Item>
+     </Node>
+     <Node Name="DRAG_DROP" SimpleFormat="true"/>
+     <Node Name="PARAMETER" SimpleFormat="true">
+      <Item Index="000001" SimpleFormat="true">
+       <NAME Final="5 ">SADL_ENTITY_TYPE</NAME>
+       <VALUE>BOPF</VALUE>
+      </Item>
+      <Item Index="000002" SimpleFormat="true">
+       <NAME Final="5 ">SADL_ENTITY_ID</NAME>
+       <VALUE>Z4_MONSTER~MONSTER_HEADER</VALUE>
+      </Item>
+      <Item Index="000003" SimpleFormat="true">
+       <NAME Final="5 ">SADL_JOIN_TREE</NAME>
+       <VALUE>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;DATA/&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</VALUE>
+      </Item>
+     </Node>
+     <Node Name="ROW_ACTIONS" SimpleFormat="true"/>
+     <Node Name="SETTINGS" SimpleFormat="true">
+      <Item Index="000001" SimpleFormat="true">
+       <VISIBLE_ROW_COUNT>10</VISIBLE_ROW_COUNT>
+       <SELECTION_MODE>06</SELECTION_MODE>
+       <ACCESS_DESCR Transl="true"/>
+       <EXPORT_EXCEL/>
+       <EXPORT_FORMAT/>
+       <EXPORT_SELECTION/>
+       <LIST_WIDTH/>
+       <GRID_MODE/>
+       <TABLE_VISIBILITY/>
+       <INITIAL_LEAD_SELECTION/>
+       <SEL_EVENT_TYPE/>
+       <VISIBLE_COL_COUNT/>
+       <CHECK_MANDATORY/>
+       <SELECTION_CHANGE_BEHAVIOUR/>
+       <DISPLAY_EMPTY_ROWS/>
+       <SCROLLABLE_COLUMN_COUNT/>
+       <ENABLE_H_SCROLLING/>
+       <STYLE_OF_RENDERING/>
+       <SCROLL_MODE/>
+       <SELECTION_MODE_ATS>06</SELECTION_MODE_ATS>
+       <HEIGHT_MODE_ATS>02</HEIGHT_MODE_ATS>
+       <ALLOW_PERSONALIZATION>X</ALLOW_PERSONALIZATION>
+       <ALLOW_CREATING_VIEWS>X</ALLOW_CREATING_VIEWS>
+       <ALLOW_SORTING/>
+       <ALLOW_FILTERING/>
+       <ALLOW_CALCULATION/>
+       <ALLOW_GROUPING/>
+       <IS_SEARCH_RESULT_LIST>X</IS_SEARCH_RESULT_LIST>
+       <FIT_TO_TABLE_WIDTH>X</FIT_TO_TABLE_WIDTH>
+       <MASTER_DETAIL_COLUMN/>
+       <DISPLAY_MODE/>
+       <CTXT_MENU_ID/>
+       <ROW_HEIGHT/>
+       <NO_DATA_TEXT Transl="true"/>
+       <SHOW_NO_DATA_DEFAULT_TEXT>X</SHOW_NO_DATA_DEFAULT_TEXT>
+       <ALLOW_CREATING_ROWS_BY_LIST/>
+       <ALLOW_SEARCH/>
+       <ARIA_LANDMARK/>
+       <HAS_MAX_MIN_BUTTON>X</HAS_MAX_MIN_BUTTON>
+       <ALLOW_CONDITIONAL_FORMATING>X</ALLOW_CONDITIONAL_FORMATING>
+       <HEADER_TEXT_DESIGN>03</HEADER_TEXT_DESIGN>
+       <SEL_SPECIFIC_AGGR/>
+       <NO_ON_ENTER_AFTER_F4/>
+       <SORT_BY_RELEVANCE/>
+      </Item>
+     </Node>
+    </Item>
+   </Node>
+  </Item>
+ </Node>
+</Component>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TABL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD02V>
+    <TABNAME>Z4SC_MONSTER_HEADER_EX</TABNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <TABCLASS>INTTAB</TABCLASS>
+    <LANGDEP>X</LANGDEP>
+    <DDTEXT>Monster Header - Combined Fields - External View</DDTEXT>
+    <EXCLASS>1</EXCLASS>
+   </DD02V>
+   <DD03P_TABLE>
+    <DD03P>
+     <FIELDNAME>.INCLUDE</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <PRECFIELD>Z4SP_MONSTER_HEADER_D</PRECFIELD>
+     <MASK>      S</MASK>
+     <DDTEXT>Monster Header Structure (Persistent Fields)</DDTEXT>
+     <COMPTYPE>S</COMPTYPE>
+     <GROUPNAME>NODE_DATA</GROUPNAME>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>.INCLUDE</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <PRECFIELD>Z4ST_MONSTER_HEADER_DT</PRECFIELD>
+     <MASK>      S</MASK>
+     <DDTEXT>Monster Header Structure (Transient Fields)</DDTEXT>
+     <COMPTYPE>S</COMPTYPE>
+     <GROUPNAME>TRANSIENT_NODE_DATA</GROUPNAME>
+    </DD03P>
+   </DD03P_TABLE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

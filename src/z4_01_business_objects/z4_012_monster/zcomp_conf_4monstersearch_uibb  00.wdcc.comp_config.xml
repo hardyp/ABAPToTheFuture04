@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Component Name="FPM_SEARCH_UIBB" ConfId="ZCOMP_CONF_4MONSTERSEARCH_UIBB" ConfType="00" ConfVar="">
+ <Node Name="CONFIGURATION_CONTEXT" SimpleFormat="true">
+  <Item Index="000001" SimpleFormat="true">
+   <Node Name="SEARCH" SimpleFormat="true">
+    <Item Index="000001" SimpleFormat="true">
+     <FEEDER>ZCL_4_FPM_MONSTERSEARCH_FEEDER</FEEDER>
+     <Node Name="ATTRIBUTES" SimpleFormat="true">
+      <Item Index="000001" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA4A41EA79FEC812A</ELEMENT_ID>
+       <NAME>MONSTER_NUMBER</NAME>
+       <INDEX>1</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000002" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA4A41EA79FECA12A</ELEMENT_ID>
+       <NAME>NAME</NAME>
+       <INDEX>2</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+     </Node>
+     <Node Name="EXCLUDED_OPERATORS" SimpleFormat="true"/>
+     <Node Name="GLOBAL_SETTINGS" SimpleFormat="true"/>
+     <Node Name="PARAMETER" SimpleFormat="true"/>
+     <Node Name="PERSONALIZATION" SimpleFormat="true"/>
+     <Node Name="RESULT_GUIBB_LIST" SimpleFormat="true"/>
+     <Node Name="RESULT_TABLE" SimpleFormat="true">
+      <Item Index="000001" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA4A428BAEC48C12A</ELEMENT_ID>
+       <NAME>MONSTER_NUMBER</NAME>
+       <INDEX>1</INDEX>
+       <HEADER Transl="true">1</HEADER>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <WIDTH/>
+      </Item>
+      <Item Index="000002" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA4A428BAEC48E12A</ELEMENT_ID>
+       <NAME>NAME</NAME>
+       <INDEX>2</INDEX>
+       <HEADER Transl="true">2</HEADER>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <WIDTH/>
+      </Item>
+      <Item Index="000003" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA4A428BAEC49012A</ELEMENT_ID>
+       <NAME>MODEL</NAME>
+       <INDEX>3</INDEX>
+       <HEADER Transl="true">3</HEADER>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <WIDTH/>
+      </Item>
+      <Item Index="000004" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA4A428BAEC49212A</ELEMENT_ID>
+       <NAME>MONSTER_USAGE</NAME>
+       <INDEX>4</INDEX>
+       <HEADER Transl="true">4</HEADER>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <WIDTH/>
+      </Item>
+      <Item Index="000005" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA4A428BAEC49412A</ELEMENT_ID>
+       <NAME>SOCK_EATING_FLAG</NAME>
+       <INDEX>5</INDEX>
+       <HEADER Transl="true">5</HEADER>
+       <DISPLAY_TYPE>TV</DISPLAY_TYPE>
+       <TAG_ACTIVE/>
+       <TAG/>
+       <WIDTH/>
+      </Item>
+     </Node>
+     <Node Name="SEARCH_GROUP" SimpleFormat="true"/>
+     <Node Name="SETTINGS" SimpleFormat="true">
+      <Item Index="000001" SimpleFormat="true">
+       <LOCATION_SAVED_SEARCHES>P</LOCATION_SAVED_SEARCHES>
+       <EXECUTE_SEARCH_ON_ENTER>X</EXECUTE_SEARCH_ON_ENTER>
+      </Item>
+     </Node>
+    </Item>
+   </Node>
+  </Item>
+ </Node>
+</Component>

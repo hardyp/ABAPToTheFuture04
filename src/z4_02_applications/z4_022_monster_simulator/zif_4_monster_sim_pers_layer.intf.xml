@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_INTF" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOINTERF>
+    <CLSNAME>ZIF_4_MONSTER_SIM_PERS_LAYER</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Monster Simulator Persistency Layer</DESCRIPT>
+    <EXPOSURE>2</EXPOSURE>
+    <STATE>1</STATE>
+    <UNICODE>X</UNICODE>
+   </VSEOINTERF>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_4_MONSTER_SIM_PERS_LAYER</CLSNAME>
+     <CMPNAME>DERIVE_HEADS_PER_MONSTER_TYPE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Given Monster Type, Return Deafult Number of Heads</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_4_MONSTER_SIM_PERS_LAYER</CLSNAME>
+     <CMPNAME>DERIVE_MONSTERS_UNDER_BED</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Given Bed, Return Table of Monsters Hiding Underneath</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

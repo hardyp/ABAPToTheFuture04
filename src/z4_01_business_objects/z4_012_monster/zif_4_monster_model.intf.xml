@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_INTF" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOINTERF>
+    <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Monster Model Interface</DESCRIPT>
+    <EXPOSURE>2</EXPOSURE>
+    <STATE>1</STATE>
+    <UNICODE>X</UNICODE>
+   </VSEOINTERF>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
+     <CMPNAME>ACTION_HOWL_AT_THE_MOON</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Howl at the Moon</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
+     <CMPNAME>ARE_VALUES_DERIVATION_RELEVANT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Are header values relevant for derivation?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
+     <CMPNAME>DERIVE_HEADER_FIELDS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Derive some header fields values based upon others</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
+     <CMPNAME>DERIVE_ITEM_FIELDS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Derive some item fields values based upon others</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
+     <CMPNAME>IS_DERIVATION_RELEVANT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Has a field changed that fill need derived values changing?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
+     <CMPNAME>MTT_MONSTER_HEADERS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table of Monster Headers</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
+     <CMPNAME>MTT_MONSTER_ITEMS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table of Monster Items</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
+     <CMPNAME>VALIDATE_ACTION_HOWL</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Validate Howl Action</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
+     <CMPNAME>VALIDATE_MONSTER_HEADER</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Validate Consistency of Monster Header</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

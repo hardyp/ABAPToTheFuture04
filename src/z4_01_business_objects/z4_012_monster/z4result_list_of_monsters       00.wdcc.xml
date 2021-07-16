@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_WDCC" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <OBJECT_NAME>Z4RESULT_LIST_OF_MONSTERS       00</OBJECT_NAME>
+   <CONFIG_ID>Z4RESULT_LIST_OF_MONSTERS</CONFIG_ID>
+   <WDA_COMPONENT>FPM_LIST_UIBB_ATS</WDA_COMPONENT>
+   <OTR_TEXT>
+    <WDY_CONFIG_COMPT>
+     <CONFIG_ID>Z4RESULT_LIST_OF_MONSTERS</CONFIG_ID>
+     <LANGU>E</LANGU>
+     <TEXT_ID>1</TEXT_ID>
+     <DESCRIPTION>Monster Business Object - Monster Header Records</DESCRIPTION>
+    </WDY_CONFIG_COMPT>
+   </OTR_TEXT>
+   <DESCR_LANG>
+    <WDY_CONFIG_DATT>
+     <CONFIG_ID>Z4RESULT_LIST_OF_MONSTERS</CONFIG_ID>
+     <LANGU>E</LANGU>
+     <DESCRIPTION>Result List: Monster Business Object - Monster Header</DESCRIPTION>
+    </WDY_CONFIG_DATT>
+   </DESCR_LANG>
+  </asx:values>
+ </asx:abap>
+</abapGit>

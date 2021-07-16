@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Component Name="FPM_SEARCH_UIBB" ConfId="Z4SEARCH_FOR_MONSTERS" ConfType="00" ConfVar="">
+ <Node Name="CONFIGURATION_CONTEXT" SimpleFormat="true">
+  <Item Index="000001" SimpleFormat="true">
+   <Node Name="SEARCH" SimpleFormat="true">
+    <Item Index="000001" SimpleFormat="true">
+     <FEEDER>CL_FPM_SADL_SEARCH</FEEDER>
+     <NUMBER_OF_QUERY_LINES>4</NUMBER_OF_QUERY_LINES>
+     <RESULT_NUMBER_OF_VISIBLE_ROWS/>
+     <SAVE_SEARCHES/>
+     <SHOW_BUTTON_SEARCH/>
+     <SHOW_BUTTON_CLEAR/>
+     <EXCLUDE_CRITERIAS/>
+     <SHOW_BUTTON_RESET/>
+     <MAX_NUMBER_OF_RESULTS/>
+     <SHOW_MAX_NUM_RESULT_FIELD>01</SHOW_MAX_NUM_RESULT_FIELD>
+     <GROUP_SAME_CRITERIA>X</GROUP_SAME_CRITERIA>
+     <ALLOW_PERSONALIZATION>01</ALLOW_PERSONALIZATION>
+     <ARIA_LANDMARK/>
+     <SEARCH_AS_SELECT_OPTION/>
+     <Node Name="PARAMETER" SimpleFormat="true">
+      <Item Index="000001" SimpleFormat="true">
+       <NAME Final="5 ">SADL_ENTITY_TYPE</NAME>
+       <VALUE>BOPF</VALUE>
+      </Item>
+      <Item Index="000002" SimpleFormat="true">
+       <NAME Final="5 ">SADL_ENTITY_ID</NAME>
+       <VALUE>Z4_MONSTER~MONSTER_HEADER</VALUE>
+      </Item>
+      <Item Index="000003" SimpleFormat="true">
+       <NAME Final="5 ">SADL_JOIN_TREE</NAME>
+       <VALUE>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;DATA/&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</VALUE>
+      </Item>
+     </Node>
+     <Node Name="SETTINGS" SimpleFormat="true">
+      <Item Index="000001" SimpleFormat="true">
+       <LOCATION_SAVED_SEARCHES>P</LOCATION_SAVED_SEARCHES>
+       <CHECK_MANDATORY/>
+       <ALLOW_EASY_SEARCH/>
+       <EXECUTE_SEARCH_ON_ENTER/>
+      </Item>
+     </Node>
+     <Node Name="ATTRIBUTES" SimpleFormat="true">
+      <Item Index="000001" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223C1412A</ELEMENT_ID>
+       <NAME>LASTCHANGEDAT</NAME>
+       <INDEX>24</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000002" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223C1212A</ELEMENT_ID>
+       <NAME>LASTCHANGEDBY</NAME>
+       <INDEX>23</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000003" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223C1012A</ELEMENT_ID>
+       <NAME>CREATION_DATE</NAME>
+       <INDEX>22</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000004" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223C0E12A</ELEMENT_ID>
+       <NAME>WEAPON</NAME>
+       <INDEX>21</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000005" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223C0C12A</ELEMENT_ID>
+       <NAME>SOCK_EATING_FLAG</NAME>
+       <INDEX>20</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000006" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223C0A12A</ELEMENT_ID>
+       <NAME>BED_HIDER_FLAG</NAME>
+       <INDEX>19</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000007" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223C0812A</ELEMENT_ID>
+       <NAME>OSOUP_PERCENTAGE</NAME>
+       <INDEX>18</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000008" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223C0612A</ELEMENT_ID>
+       <NAME>GROWTH_PERCENTAGE</NAME>
+       <INDEX>17</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000009" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223C0412A</ELEMENT_ID>
+       <NAME>EAS_DAYS</NAME>
+       <INDEX>16</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000010" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223C0212A</ELEMENT_ID>
+       <NAME>EARLY_AGE_STRENGTH</NAME>
+       <INDEX>15</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000011" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223C0012A</ELEMENT_ID>
+       <NAME>STRENGTH</NAME>
+       <INDEX>14</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000012" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223BFE12A</ELEMENT_ID>
+       <NAME>RAGES_PER_DAY</NAME>
+       <INDEX>13</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000013" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223BFC12A</ELEMENT_ID>
+       <NAME>HAT_SIZE</NAME>
+       <INDEX>12</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000014" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223BFA12A</ELEMENT_ID>
+       <NAME>NO_OF_HEADS</NAME>
+       <INDEX>11</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000015" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223BF812A</ELEMENT_ID>
+       <NAME>COLOR</NAME>
+       <INDEX>10</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000016" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223BF612A</ELEMENT_ID>
+       <NAME>BRAIN_SIZE</NAME>
+       <INDEX>9</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000017" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223BF412A</ELEMENT_ID>
+       <NAME>SCARINESS</NAME>
+       <INDEX>8</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000018" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223BF212A</ELEMENT_ID>
+       <NAME>EVILNESS</NAME>
+       <INDEX>7</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000019" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223BF012A</ELEMENT_ID>
+       <NAME>SANITY_PERCENTAGE</NAME>
+       <INDEX>6</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000020" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223BEE12A</ELEMENT_ID>
+       <NAME>MONSTER_USAGE</NAME>
+       <INDEX>5</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000021" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223BEC12A</ELEMENT_ID>
+       <NAME>MODEL</NAME>
+       <INDEX>4</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000022" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223BEA12A</ELEMENT_ID>
+       <NAME>TAX_NUMBER</NAME>
+       <INDEX>3</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000023" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223BE812A</ELEMENT_ID>
+       <NAME>NAME</NAME>
+       <INDEX>2</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+      <Item Index="000024" SimpleFormat="true">
+       <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF27B223BE612A</ELEMENT_ID>
+       <NAME>MONSTER_NUMBER</NAME>
+       <INDEX>1</INDEX>
+       <TEXT Transl="true"/>
+       <DEFAULT_OPERATOR/>
+       <GROUP_ID_ATTR/>
+       <INPUT_PROMPT Transl="true"/>
+       <ENABLE_TOKENS/>
+       <SHLP_TEXTFIELD/>
+       <TOKEN_FORMAT/>
+       <ELEM_DDIC_SHLP/>
+      </Item>
+     </Node>
+     <Node Name="RESULT_GUIBB_LIST" SimpleFormat="true">
+      <Item Index="000001" SimpleFormat="true">
+       <COMPONENT>FPM_LIST_UIBB_ATS</COMPONENT>
+       <INTERFACE_VIEW>LIST_WINDOW</INTERFACE_VIEW>
+       <CONFIG_ID>Z4RESULT_LIST_OF_MONSTERS</CONFIG_ID>
+       <CONFIG_TYPE/>
+       <CONFIG_VAR/>
+       <INSTANCE_ID/>
+       <HIDDEN/>
+       <NEEDS_STRETCHING/>
+      </Item>
+     </Node>
+    </Item>
+   </Node>
+  </Item>
+ </Node>
+</Component>

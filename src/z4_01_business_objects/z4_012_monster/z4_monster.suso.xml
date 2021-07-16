@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SUSO" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TOBJ>
+    <OBJCT>Z4_MONSTER</OBJCT>
+    <FIEL1>ACTVT</FIEL1>
+    <FIEL2>BO_SERVICE</FIEL2>
+    <FIEL3>Z4_MON_NO</FIEL3>
+    <OCLSS>BOBF</OCLSS>
+   </TOBJ>
+   <TOBJT>
+    <LANGU>E</LANGU>
+    <OBJECT>Z4_MONSTER</OBJECT>
+    <TTEXT>Monster Authorization Object</TTEXT>
+   </TOBJT>
+   <TOBJVORFLG>
+    <OBJCT>Z4_MONSTER</OBJCT>
+   </TOBJVORFLG>
+   <TACTZ>
+    <TACTZ>
+     <BROBJ>Z4_MONSTER</BROBJ>
+     <ACTVT>01</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>Z4_MONSTER</BROBJ>
+     <ACTVT>02</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>Z4_MONSTER</BROBJ>
+     <ACTVT>03</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>Z4_MONSTER</BROBJ>
+     <ACTVT>05</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>Z4_MONSTER</BROBJ>
+     <ACTVT>06</ACTVT>
+    </TACTZ>
+   </TACTZ>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,15 @@
+{
+"BASEINFO":
+{
+"FROM":
+[
+"Z4T_ORDER_HEADER"
+],
+"ASSOCIATED":
+[
+"Z4I_MONSTER_SO_ITEMS"
+],
+"BASE":
+[]
+}
+}

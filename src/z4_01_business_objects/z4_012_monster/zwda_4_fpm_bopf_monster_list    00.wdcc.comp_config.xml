@@ -1,0 +1,1201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Component Name="FPM_OVP_COMPONENT" ConfId="ZWDA_4_FPM_BOPF_MONSTER_LIST" ConfType="00" ConfVar="">
+ <Node Name="CONFIGURATION_CONTEXT" SimpleFormat="true">
+  <Item Index="000001" SimpleFormat="true">
+   <Node Name="OVP_APPLICATION" SimpleFormat="true">
+    <Item Index="000001" SimpleFormat="true">
+     <TITLE Transl="true"/>
+     <EDIT_MODE>R</EDIT_MODE>
+     <SCROLLING_MODE/>
+     <Node Name="APPLICATION_SETTINGS" SimpleFormat="true">
+      <Item Index="000001" SimpleFormat="true">
+       <TRANSIENT_STATE>N</TRANSIENT_STATE>
+       <MAXIMUM_MESSAGES_SIZE>0</MAXIMUM_MESSAGES_SIZE>
+       <SHOW_MESSAGE_LOG/>
+      </Item>
+     </Node>
+     <Node Name="CONTENT_AREA" SimpleFormat="true">
+      <Item Index="000001" SimpleFormat="true">
+       <ID Final="5 ">FPM_SADL_CONFIRM</ID>
+       <TYPE>CONF</TYPE>
+       <TITLE Transl="true">1</TITLE>
+       <TITLE_HIDDEN/>
+       <TITLE_INSTANCE_STYLE/>
+       <DEFAULT/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <EXPLANATION_DOCUMENT/>
+       <INSTANCE_STYLE/>
+       <DLG_NAME/>
+       <DLG_BUTTON_SET/>
+       <DLG_TEXT_FOR_OK_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_YES_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_NO_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_CANCEL_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_CLOSE_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_OK_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_YES_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_NO_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_CANCEL_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_CLOSE_BUTTON Transl="true"/>
+       <DLG_WIDTH/>
+       <DLG_HEIGHT/>
+       <ACTION_TYPE_PERS_DIALOG/>
+       <ACTION_TYPE_DRAG_DROP_AB/>
+       <ACTION_TYPE_CLOSE/>
+       <ON_ENTER_ACTION_ID/>
+       <PERSONALIZATION_ENABLED/>
+       <UIBB_SELECTOR_ENABLED/>
+       <Node Name="SECTION" SimpleFormat="true">
+        <Item Index="000001" SimpleFormat="true">
+         <ID Final="5 ">FPM_SADL_SECTION_1</ID>
+         <LAYOUT_TYPE/>
+         <INDEX>1</INDEX>
+         <COLUMN_WIDTH_MODE/>
+         <Node Name="COLUMN_LAYOUT" SimpleFormat="true">
+          <Item Index="000001" SimpleFormat="true">
+           <COLUMN_ID Final="5 ">COLUMN_ID_1</COLUMN_ID>
+           <STACKED/>
+           <ROWS/>
+           <WIDTH/>
+          </Item>
+         </Node>
+         <Node Name="UIBB" SimpleFormat="true">
+          <Item Index="000001" SimpleFormat="true">
+           <FPM_PRIMARY_ATTRIBUTE Final="5 ">_GENP_005056B074C91EDBA9FF287BAE89E12A</FPM_PRIMARY_ATTRIBUTE>
+           <COMPONENT>FPM_FORM_UIBB_GL2</COMPONENT>
+           <INTERFACE_VIEW>FORM_WINDOW</INTERFACE_VIEW>
+           <CONFIG_ID>FPM_SADL_CRUD_CONFIRM_FORM</CONFIG_ID>
+           <CONFIG_TYPE/>
+           <CONFIG_VAR/>
+           <INSTANCE_ID/>
+           <LOCATION>1</LOCATION>
+           <ROW/>
+           <INDEX>1</INDEX>
+           <DEFAULT_IN_STACK/>
+           <NEEDS_STRETCHING/>
+           <HIDDEN/>
+           <TYPE/>
+           <COLLAPSED/>
+           <TITLE Transl="true"/>
+           <TOOLTIP Transl="true"/>
+           <IMAGE/>
+           <PADDING/>
+           <INSTANCE_STYLE/>
+           <EXPLANATION_TEXT Transl="true"/>
+           <EXPLANATION_DOCUMENT/>
+           <DEFAULT_EDIT_PAGE/>
+           <DEFAULT_DETAILS_PAGE/>
+          </Item>
+         </Node>
+        </Item>
+       </Node>
+      </Item>
+      <Item Index="000002" SimpleFormat="true">
+       <ID Final="5 ">FPM_SADL_EDIT_MONSTER_ITEMS</ID>
+       <TYPE>FULL</TYPE>
+       <TITLE Transl="true">2</TITLE>
+       <TITLE_HIDDEN/>
+       <TITLE_INSTANCE_STYLE/>
+       <DEFAULT/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <EXPLANATION_DOCUMENT/>
+       <INSTANCE_STYLE/>
+       <DLG_NAME/>
+       <DLG_BUTTON_SET/>
+       <DLG_TEXT_FOR_OK_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_YES_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_NO_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_CANCEL_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_CLOSE_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_OK_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_YES_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_NO_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_CANCEL_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_CLOSE_BUTTON Transl="true"/>
+       <DLG_WIDTH/>
+       <DLG_HEIGHT/>
+       <ACTION_TYPE_PERS_DIALOG/>
+       <ACTION_TYPE_DRAG_DROP_AB/>
+       <ACTION_TYPE_CLOSE/>
+       <ON_ENTER_ACTION_ID/>
+       <PERSONALIZATION_ENABLED/>
+       <UIBB_SELECTOR_ENABLED/>
+       <Node Name="SECTION" SimpleFormat="true">
+        <Item Index="000001" SimpleFormat="true">
+         <ID Final="5 ">FPM_SADL_SECTION_1</ID>
+         <LAYOUT_TYPE/>
+         <INDEX>1</INDEX>
+         <COLUMN_WIDTH_MODE/>
+         <Node Name="COLUMN_LAYOUT" SimpleFormat="true">
+          <Item Index="000001" SimpleFormat="true">
+           <COLUMN_ID Final="5 ">COLUMN_ID_1</COLUMN_ID>
+           <STACKED/>
+           <ROWS/>
+           <WIDTH/>
+          </Item>
+         </Node>
+         <Node Name="UIBB" SimpleFormat="true">
+          <Item Index="000001" SimpleFormat="true">
+           <FPM_PRIMARY_ATTRIBUTE Final="5 ">_GENP_005056B074C91EDBA9FF287BAE89C12A</FPM_PRIMARY_ATTRIBUTE>
+           <COMPONENT>FPM_FORM_UIBB_GL2</COMPONENT>
+           <INTERFACE_VIEW>FORM_WINDOW</INTERFACE_VIEW>
+           <CONFIG_ID>Z4_DETAILS_OF_MONSTER_ITEMS</CONFIG_ID>
+           <CONFIG_TYPE/>
+           <CONFIG_VAR/>
+           <INSTANCE_ID/>
+           <LOCATION>1</LOCATION>
+           <ROW/>
+           <INDEX>1</INDEX>
+           <DEFAULT_IN_STACK/>
+           <NEEDS_STRETCHING/>
+           <HIDDEN/>
+           <TYPE/>
+           <COLLAPSED/>
+           <TITLE Transl="true"/>
+           <TOOLTIP Transl="true"/>
+           <IMAGE/>
+           <PADDING/>
+           <INSTANCE_STYLE/>
+           <EXPLANATION_TEXT Transl="true"/>
+           <EXPLANATION_DOCUMENT/>
+           <DEFAULT_EDIT_PAGE/>
+           <DEFAULT_DETAILS_PAGE/>
+          </Item>
+         </Node>
+        </Item>
+       </Node>
+       <Node Name="TOOLBAR" SimpleFormat="true">
+        <Item Index="000001" SimpleFormat="true">
+         <Node Name="BUTTON" SimpleFormat="true">
+          <Item Index="000001" SimpleFormat="true">
+           <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE8B612A</ELEMENT_ID>
+           <TYPE>BU</TYPE>
+           <INDEX>1</INDEX>
+           <TEXT Transl="true">3</TEXT>
+           <IMAGE>~Icon/Done</IMAGE>
+           <IMAGE_IS_DECORATIVE/>
+           <TOOLTIP Transl="true"/>
+           <EXPLANATION_TEXT Transl="true"/>
+           <SPECIAL_PROPERTIES/>
+           <ENABLED>X</ENABLED>
+           <VISIBILITY>02</VISIBILITY>
+           <ALIGNMENT>LEFT</ALIGNMENT>
+           <HAS_SEPARATOR/>
+           <INSTANCE_STYLE/>
+           <Node Name="BUTTON_SUB_ITEM" SimpleFormat="true">
+            <Item Index="000001" SimpleFormat="true">
+             <ACTION_ID Final="5 ">FPM_DONE_AND_BACK_TO_MAIN_FPM_SADL_EDIT_MONSTER_ITEMS</ACTION_ID>
+             <INDEX/>
+             <TEXT Transl="true"/>
+             <IMAGE/>
+             <HOTKEY/>
+             <ENABLED>X</ENABLED>
+             <VISIBILITY>02</VISIBILITY>
+             <HAS_SEPARATOR/>
+            </Item>
+           </Node>
+          </Item>
+         </Node>
+        </Item>
+       </Node>
+      </Item>
+      <Item Index="000003" SimpleFormat="true">
+       <ID Final="5 ">FPM_SADL_OVERVIEW</ID>
+       <TYPE>MAIN</TYPE>
+       <TITLE Transl="true">4</TITLE>
+       <TITLE_HIDDEN/>
+       <TITLE_INSTANCE_STYLE/>
+       <DEFAULT/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <EXPLANATION_DOCUMENT/>
+       <INSTANCE_STYLE/>
+       <DLG_NAME/>
+       <DLG_BUTTON_SET/>
+       <DLG_TEXT_FOR_OK_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_YES_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_NO_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_CANCEL_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_CLOSE_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_OK_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_YES_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_NO_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_CANCEL_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_CLOSE_BUTTON Transl="true"/>
+       <DLG_WIDTH/>
+       <DLG_HEIGHT/>
+       <ACTION_TYPE_PERS_DIALOG/>
+       <ACTION_TYPE_DRAG_DROP_AB/>
+       <ACTION_TYPE_CLOSE/>
+       <ON_ENTER_ACTION_ID/>
+       <PERSONALIZATION_ENABLED>X</PERSONALIZATION_ENABLED>
+       <UIBB_SELECTOR_ENABLED/>
+       <Node Name="SECTION" SimpleFormat="true">
+        <Item Index="000001" SimpleFormat="true">
+         <ID Final="5 ">FPM_SADL_SECTION_1</ID>
+         <LAYOUT_TYPE/>
+         <INDEX/>
+         <COLUMN_WIDTH_MODE/>
+         <Node Name="COLUMN_LAYOUT" SimpleFormat="true">
+          <Item Index="000001" SimpleFormat="true">
+           <COLUMN_ID Final="5 ">COLUMN_ID_1</COLUMN_ID>
+           <STACKED>X</STACKED>
+           <ROWS/>
+           <WIDTH/>
+          </Item>
+         </Node>
+         <Node Name="UIBB" SimpleFormat="true">
+          <Item Index="000001" SimpleFormat="true">
+           <FPM_PRIMARY_ATTRIBUTE Final="5 ">_GENP_005056B074C91EDBA9FF287BAE89812A</FPM_PRIMARY_ATTRIBUTE>
+           <COMPONENT>FPM_FORM_UIBB_GL2</COMPONENT>
+           <INTERFACE_VIEW>FORM_WINDOW</INTERFACE_VIEW>
+           <CONFIG_ID>Z4MONSTER_HEADER_RECORD</CONFIG_ID>
+           <CONFIG_TYPE/>
+           <CONFIG_VAR/>
+           <INSTANCE_ID/>
+           <LOCATION>1</LOCATION>
+           <ROW>1</ROW>
+           <INDEX>1</INDEX>
+           <DEFAULT_IN_STACK/>
+           <NEEDS_STRETCHING/>
+           <HIDDEN/>
+           <TYPE>T</TYPE>
+           <COLLAPSED/>
+           <TITLE Transl="true">5</TITLE>
+           <TOOLTIP Transl="true"/>
+           <IMAGE/>
+           <PADDING/>
+           <INSTANCE_STYLE/>
+           <EXPLANATION_TEXT Transl="true"/>
+           <EXPLANATION_DOCUMENT/>
+           <DEFAULT_EDIT_PAGE/>
+           <DEFAULT_DETAILS_PAGE/>
+           <Node Name="UIBB_TOOLBAR" SimpleFormat="true">
+            <Item Index="000001" SimpleFormat="true">
+             <CAPTURE_ACTIONS/>
+             <INSTANCE_STYLE/>
+             <Node Name="UIBB_BUTTON" SimpleFormat="true">
+              <Item Index="000001" SimpleFormat="true">
+               <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE8B412A</ELEMENT_ID>
+               <TYPE>BU</TYPE>
+               <INDEX>1</INDEX>
+               <TEXT Transl="true">6</TEXT>
+               <IMAGE>~Icon/Edit</IMAGE>
+               <IMAGE_IS_DECORATIVE/>
+               <TOOLTIP Transl="true"/>
+               <EXPLANATION_TEXT Transl="true"/>
+               <SPECIAL_PROPERTIES/>
+               <ENABLED>X</ENABLED>
+               <VISIBILITY>02</VISIBILITY>
+               <ALIGNMENT>LEFT</ALIGNMENT>
+               <HAS_SEPARATOR/>
+               <INSTANCE_STYLE/>
+               <Node Name="UIBB_BUTTON_SUB_ITEM" SimpleFormat="true">
+                <Item Index="000001" SimpleFormat="true">
+                 <ACTION_ID Final="5 ">FPM_LOCAL_EDIT_FPM_SADL_OVERVIEW_Z4MONSTER_HEADER_RECORD</ACTION_ID>
+                 <INDEX/>
+                 <TEXT Transl="true"/>
+                 <IMAGE/>
+                 <HOTKEY/>
+                 <ENABLED>X</ENABLED>
+                 <VISIBILITY>02</VISIBILITY>
+                 <HAS_SEPARATOR/>
+                </Item>
+               </Node>
+              </Item>
+             </Node>
+            </Item>
+           </Node>
+          </Item>
+          <Item Index="000002" SimpleFormat="true">
+           <FPM_PRIMARY_ATTRIBUTE Final="5 ">_GENP_005056B074C91EDBA9FF287BAE89A12A</FPM_PRIMARY_ATTRIBUTE>
+           <COMPONENT>FPM_LIST_UIBB_ATS</COMPONENT>
+           <INTERFACE_VIEW>LIST_WINDOW</INTERFACE_VIEW>
+           <CONFIG_ID>Z4_MONSTER_MONSTER_ITEMS</CONFIG_ID>
+           <CONFIG_TYPE/>
+           <CONFIG_VAR/>
+           <INSTANCE_ID/>
+           <LOCATION>1</LOCATION>
+           <ROW>2</ROW>
+           <INDEX>1</INDEX>
+           <DEFAULT_IN_STACK/>
+           <NEEDS_STRETCHING/>
+           <HIDDEN/>
+           <TYPE>T</TYPE>
+           <COLLAPSED/>
+           <TITLE Transl="true">7</TITLE>
+           <TOOLTIP Transl="true"/>
+           <IMAGE/>
+           <PADDING/>
+           <INSTANCE_STYLE/>
+           <EXPLANATION_TEXT Transl="true"/>
+           <EXPLANATION_DOCUMENT/>
+           <DEFAULT_EDIT_PAGE>FPM_SADL_EDIT_MONSTER_ITEMS</DEFAULT_EDIT_PAGE>
+           <DEFAULT_DETAILS_PAGE/>
+           <Node Name="UIBB_TOOLBAR" SimpleFormat="true">
+            <Item Index="000001" SimpleFormat="true">
+             <CAPTURE_ACTIONS/>
+             <INSTANCE_STYLE/>
+             <Node Name="UIBB_BUTTON" SimpleFormat="true">
+              <Item Index="000001" SimpleFormat="true">
+               <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE8C212A</ELEMENT_ID>
+               <TYPE>BU</TYPE>
+               <INDEX>6</INDEX>
+               <TEXT Transl="true"/>
+               <IMAGE>~Icon/Maximize</IMAGE>
+               <IMAGE_IS_DECORATIVE/>
+               <TOOLTIP Transl="true"/>
+               <EXPLANATION_TEXT Transl="true"/>
+               <SPECIAL_PROPERTIES/>
+               <ENABLED>X</ENABLED>
+               <VISIBILITY>02</VISIBILITY>
+               <ALIGNMENT>RIGHT</ALIGNMENT>
+               <HAS_SEPARATOR/>
+               <INSTANCE_STYLE/>
+               <Node Name="UIBB_BUTTON_SUB_ITEM" SimpleFormat="true">
+                <Item Index="000001" SimpleFormat="true">
+                 <ACTION_ID Final="5 ">FPM_MAXIMIZE_UIBB_Z4_MONSTER_MONSTER_ITEMS</ACTION_ID>
+                 <INDEX/>
+                 <TEXT Transl="true"/>
+                 <IMAGE/>
+                 <HOTKEY/>
+                 <ENABLED>X</ENABLED>
+                 <VISIBILITY>02</VISIBILITY>
+                 <HAS_SEPARATOR/>
+                </Item>
+               </Node>
+              </Item>
+              <Item Index="000002" SimpleFormat="true">
+               <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE8C012A</ELEMENT_ID>
+               <TYPE>BU</TYPE>
+               <INDEX>1</INDEX>
+               <TEXT Transl="true">8</TEXT>
+               <IMAGE>~Icon/Edit</IMAGE>
+               <IMAGE_IS_DECORATIVE/>
+               <TOOLTIP Transl="true"/>
+               <EXPLANATION_TEXT Transl="true"/>
+               <SPECIAL_PROPERTIES/>
+               <ENABLED>X</ENABLED>
+               <VISIBILITY>02</VISIBILITY>
+               <ALIGNMENT>LEFT</ALIGNMENT>
+               <HAS_SEPARATOR/>
+               <INSTANCE_STYLE/>
+               <Node Name="UIBB_BUTTON_SUB_ITEM" SimpleFormat="true">
+                <Item Index="000001" SimpleFormat="true">
+                 <ACTION_ID Final="5 ">FPM_LOCAL_EDIT_Z4_MONSTER_MONSTER_ITEMS</ACTION_ID>
+                 <INDEX/>
+                 <TEXT Transl="true"/>
+                 <IMAGE/>
+                 <HOTKEY/>
+                 <ENABLED>X</ENABLED>
+                 <VISIBILITY>02</VISIBILITY>
+                 <HAS_SEPARATOR/>
+                </Item>
+               </Node>
+              </Item>
+              <Item Index="000003" SimpleFormat="true">
+               <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE8BE12A</ELEMENT_ID>
+               <TYPE>BU</TYPE>
+               <INDEX>4</INDEX>
+               <TEXT Transl="true"/>
+               <IMAGE>~Icon/Personalize</IMAGE>
+               <IMAGE_IS_DECORATIVE/>
+               <TOOLTIP Transl="true"/>
+               <EXPLANATION_TEXT Transl="true"/>
+               <SPECIAL_PROPERTIES/>
+               <ENABLED>X</ENABLED>
+               <VISIBILITY>02</VISIBILITY>
+               <ALIGNMENT>RIGHT</ALIGNMENT>
+               <HAS_SEPARATOR/>
+               <INSTANCE_STYLE/>
+               <Node Name="UIBB_BUTTON_SUB_ITEM" SimpleFormat="true">
+                <Item Index="000001" SimpleFormat="true">
+                 <ACTION_ID Final="5 ">FPM_LIST_P13N_Z4_MONSTER_MONSTER_ITEMS</ACTION_ID>
+                 <INDEX/>
+                 <TEXT Transl="true"/>
+                 <IMAGE/>
+                 <HOTKEY/>
+                 <ENABLED>X</ENABLED>
+                 <VISIBILITY>02</VISIBILITY>
+                 <HAS_SEPARATOR/>
+                </Item>
+               </Node>
+              </Item>
+              <Item Index="000004" SimpleFormat="true">
+               <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE8BC12A</ELEMENT_ID>
+               <TYPE>BU</TYPE>
+               <INDEX>5</INDEX>
+               <TEXT Transl="true"/>
+               <IMAGE>~Icon/ExportToSpreadsheet</IMAGE>
+               <IMAGE_IS_DECORATIVE/>
+               <TOOLTIP Transl="true"/>
+               <EXPLANATION_TEXT Transl="true"/>
+               <SPECIAL_PROPERTIES/>
+               <ENABLED>X</ENABLED>
+               <VISIBILITY>02</VISIBILITY>
+               <ALIGNMENT>RIGHT</ALIGNMENT>
+               <HAS_SEPARATOR/>
+               <INSTANCE_STYLE/>
+               <Node Name="UIBB_BUTTON_SUB_ITEM" SimpleFormat="true">
+                <Item Index="000001" SimpleFormat="true">
+                 <ACTION_ID Final="5 ">FPM_LIST_EXPORT_TO_EXCEL_Z4_MONSTER_MONSTER_ITEMS</ACTION_ID>
+                 <INDEX/>
+                 <TEXT Transl="true"/>
+                 <IMAGE/>
+                 <HOTKEY/>
+                 <ENABLED>X</ENABLED>
+                 <VISIBILITY>02</VISIBILITY>
+                 <HAS_SEPARATOR/>
+                </Item>
+               </Node>
+              </Item>
+              <Item Index="000005" SimpleFormat="true">
+               <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE8BA12A</ELEMENT_ID>
+               <TYPE>BU</TYPE>
+               <INDEX>3</INDEX>
+               <TEXT Transl="true"/>
+               <IMAGE>~Icon/Log</IMAGE>
+               <IMAGE_IS_DECORATIVE/>
+               <TOOLTIP Transl="true">9</TOOLTIP>
+               <EXPLANATION_TEXT Transl="true"/>
+               <SPECIAL_PROPERTIES/>
+               <ENABLED>X</ENABLED>
+               <VISIBILITY>02</VISIBILITY>
+               <ALIGNMENT>RIGHT</ALIGNMENT>
+               <HAS_SEPARATOR/>
+               <INSTANCE_STYLE/>
+               <Node Name="UIBB_BUTTON_SUB_ITEM" SimpleFormat="true">
+                <Item Index="000001" SimpleFormat="true">
+                 <ACTION_ID Final="5 ">FPM_GUIBB_OPEN_SEARCH_Z4_MONSTER_MONSTER_ITEMS</ACTION_ID>
+                 <INDEX/>
+                 <TEXT Transl="true"/>
+                 <IMAGE/>
+                 <HOTKEY/>
+                 <ENABLED>X</ENABLED>
+                 <VISIBILITY>02</VISIBILITY>
+                 <HAS_SEPARATOR/>
+                </Item>
+               </Node>
+              </Item>
+              <Item Index="000006" SimpleFormat="true">
+               <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE8B812A</ELEMENT_ID>
+               <TYPE>BU</TYPE>
+               <INDEX>2</INDEX>
+               <TEXT Transl="true"/>
+               <IMAGE>~Icon/NewItem</IMAGE>
+               <IMAGE_IS_DECORATIVE/>
+               <TOOLTIP Transl="true"/>
+               <EXPLANATION_TEXT Transl="true"/>
+               <SPECIAL_PROPERTIES/>
+               <ENABLED>X</ENABLED>
+               <VISIBILITY>02</VISIBILITY>
+               <ALIGNMENT>LEFT</ALIGNMENT>
+               <HAS_SEPARATOR/>
+               <INSTANCE_STYLE/>
+               <Node Name="UIBB_BUTTON_SUB_ITEM" SimpleFormat="true">
+                <Item Index="000001" SimpleFormat="true">
+                 <ACTION_ID Final="5 ">ACTION_ID_FPM_SADL_CRUD_CREATE_Z4_MONSTER_MONSTER_ITEMS</ACTION_ID>
+                 <INDEX/>
+                 <TEXT Transl="true"/>
+                 <IMAGE/>
+                 <HOTKEY/>
+                 <ENABLED>X</ENABLED>
+                 <VISIBILITY>02</VISIBILITY>
+                 <HAS_SEPARATOR/>
+                </Item>
+               </Node>
+              </Item>
+             </Node>
+            </Item>
+           </Node>
+          </Item>
+         </Node>
+        </Item>
+       </Node>
+       <Node Name="TOOLBAR" SimpleFormat="true">
+        <Item Index="000001" SimpleFormat="true">
+         <Node Name="BUTTON" SimpleFormat="true">
+          <Item Index="000001" SimpleFormat="true">
+           <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE8B212A</ELEMENT_ID>
+           <TYPE>BU</TYPE>
+           <INDEX>1</INDEX>
+           <TEXT Transl="true">10</TEXT>
+           <IMAGE>~Icon/Save</IMAGE>
+           <IMAGE_IS_DECORATIVE/>
+           <TOOLTIP Transl="true"/>
+           <EXPLANATION_TEXT Transl="true"/>
+           <SPECIAL_PROPERTIES/>
+           <ENABLED>X</ENABLED>
+           <VISIBILITY>02</VISIBILITY>
+           <ALIGNMENT>LEFT</ALIGNMENT>
+           <HAS_SEPARATOR/>
+           <INSTANCE_STYLE/>
+           <Node Name="BUTTON_SUB_ITEM" SimpleFormat="true">
+            <Item Index="000001" SimpleFormat="true">
+             <ACTION_ID Final="5 ">FPM_SAVE_FPM_SADL_OVERVIEW</ACTION_ID>
+             <INDEX/>
+             <TEXT Transl="true"/>
+             <IMAGE/>
+             <HOTKEY/>
+             <ENABLED>X</ENABLED>
+             <VISIBILITY>02</VISIBILITY>
+             <HAS_SEPARATOR/>
+            </Item>
+           </Node>
+          </Item>
+          <Item Index="000002" SimpleFormat="true">
+           <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE8B012A</ELEMENT_ID>
+           <TYPE>BU</TYPE>
+           <INDEX>2</INDEX>
+           <TEXT Transl="true">11</TEXT>
+           <IMAGE>~Icon/Cancel</IMAGE>
+           <IMAGE_IS_DECORATIVE/>
+           <TOOLTIP Transl="true"/>
+           <EXPLANATION_TEXT Transl="true"/>
+           <SPECIAL_PROPERTIES/>
+           <ENABLED>X</ENABLED>
+           <VISIBILITY>02</VISIBILITY>
+           <ALIGNMENT>LEFT</ALIGNMENT>
+           <HAS_SEPARATOR>X</HAS_SEPARATOR>
+           <INSTANCE_STYLE/>
+           <Node Name="BUTTON_SUB_ITEM" SimpleFormat="true">
+            <Item Index="000001" SimpleFormat="true">
+             <ACTION_ID Final="5 ">FPM_CANCEL_FPM_SADL_OVERVIEW</ACTION_ID>
+             <INDEX/>
+             <TEXT Transl="true"/>
+             <IMAGE/>
+             <HOTKEY/>
+             <ENABLED>X</ENABLED>
+             <VISIBILITY>02</VISIBILITY>
+             <HAS_SEPARATOR/>
+            </Item>
+           </Node>
+          </Item>
+          <Item Index="000003" SimpleFormat="true">
+           <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE8AE12A</ELEMENT_ID>
+           <TYPE>BU</TYPE>
+           <INDEX>3</INDEX>
+           <TEXT Transl="true">12</TEXT>
+           <IMAGE>~Icon/Delete</IMAGE>
+           <IMAGE_IS_DECORATIVE/>
+           <TOOLTIP Transl="true"/>
+           <EXPLANATION_TEXT Transl="true"/>
+           <SPECIAL_PROPERTIES/>
+           <ENABLED>X</ENABLED>
+           <VISIBILITY>02</VISIBILITY>
+           <ALIGNMENT>LEFT</ALIGNMENT>
+           <HAS_SEPARATOR>X</HAS_SEPARATOR>
+           <INSTANCE_STYLE/>
+           <Node Name="BUTTON_SUB_ITEM" SimpleFormat="true">
+            <Item Index="000001" SimpleFormat="true">
+             <ACTION_ID Final="5 ">ACTION_ID_FPM_SADL_CRUD_DELETE_FPM_SADL_OVERVIEW</ACTION_ID>
+             <INDEX/>
+             <TEXT Transl="true"/>
+             <IMAGE/>
+             <HOTKEY/>
+             <ENABLED>X</ENABLED>
+             <VISIBILITY>02</VISIBILITY>
+             <HAS_SEPARATOR/>
+            </Item>
+           </Node>
+          </Item>
+         </Node>
+        </Item>
+       </Node>
+      </Item>
+      <Item Index="000004" SimpleFormat="true">
+       <ID Final="5 ">FPM_SADL_CREATE</ID>
+       <TYPE>INIT</TYPE>
+       <TITLE Transl="true">13</TITLE>
+       <TITLE_HIDDEN/>
+       <TITLE_INSTANCE_STYLE/>
+       <DEFAULT/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <EXPLANATION_DOCUMENT/>
+       <INSTANCE_STYLE/>
+       <DLG_NAME/>
+       <DLG_BUTTON_SET/>
+       <DLG_TEXT_FOR_OK_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_YES_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_NO_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_CANCEL_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_CLOSE_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_OK_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_YES_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_NO_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_CANCEL_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_CLOSE_BUTTON Transl="true"/>
+       <DLG_WIDTH/>
+       <DLG_HEIGHT/>
+       <ACTION_TYPE_PERS_DIALOG/>
+       <ACTION_TYPE_DRAG_DROP_AB/>
+       <ACTION_TYPE_CLOSE/>
+       <ON_ENTER_ACTION_ID/>
+       <PERSONALIZATION_ENABLED/>
+       <UIBB_SELECTOR_ENABLED/>
+       <Node Name="SECTION" SimpleFormat="true">
+        <Item Index="000001" SimpleFormat="true">
+         <ID Final="5 ">FPM_SADL_SECTION_1</ID>
+         <LAYOUT_TYPE/>
+         <INDEX>1</INDEX>
+         <COLUMN_WIDTH_MODE/>
+         <Node Name="COLUMN_LAYOUT" SimpleFormat="true">
+          <Item Index="000001" SimpleFormat="true">
+           <COLUMN_ID Final="5 ">COLUMN_ID_1</COLUMN_ID>
+           <STACKED/>
+           <ROWS/>
+           <WIDTH/>
+          </Item>
+         </Node>
+         <Node Name="UIBB" SimpleFormat="true">
+          <Item Index="000001" SimpleFormat="true">
+           <FPM_PRIMARY_ATTRIBUTE Final="5 ">_GENP_005056B074C91EDBA9FF287BAE89412A</FPM_PRIMARY_ATTRIBUTE>
+           <COMPONENT>FPM_FORM_UIBB_GL2</COMPONENT>
+           <INTERFACE_VIEW>FORM_WINDOW</INTERFACE_VIEW>
+           <CONFIG_ID>Z4CREATE_NEW_MONSTER</CONFIG_ID>
+           <CONFIG_TYPE/>
+           <CONFIG_VAR/>
+           <INSTANCE_ID/>
+           <LOCATION>1</LOCATION>
+           <ROW/>
+           <INDEX>1</INDEX>
+           <DEFAULT_IN_STACK/>
+           <NEEDS_STRETCHING/>
+           <HIDDEN/>
+           <TYPE/>
+           <COLLAPSED/>
+           <TITLE Transl="true"/>
+           <TOOLTIP Transl="true"/>
+           <IMAGE/>
+           <PADDING/>
+           <INSTANCE_STYLE/>
+           <EXPLANATION_TEXT Transl="true"/>
+           <EXPLANATION_DOCUMENT/>
+           <DEFAULT_EDIT_PAGE/>
+           <DEFAULT_DETAILS_PAGE/>
+          </Item>
+          <Item Index="000002" SimpleFormat="true">
+           <FPM_PRIMARY_ATTRIBUTE Final="5 ">_GENP_005056B074C91EDBA9FF287BAE89612A</FPM_PRIMARY_ATTRIBUTE>
+           <COMPONENT>FPM_FORM_UIBB_GL2</COMPONENT>
+           <INTERFACE_VIEW>FORM_WINDOW</INTERFACE_VIEW>
+           <CONFIG_ID>Z4ENTER_MONSTER_NUMBER</CONFIG_ID>
+           <CONFIG_TYPE/>
+           <CONFIG_VAR/>
+           <INSTANCE_ID/>
+           <LOCATION>1</LOCATION>
+           <ROW/>
+           <INDEX>2</INDEX>
+           <DEFAULT_IN_STACK/>
+           <NEEDS_STRETCHING/>
+           <HIDDEN>T</HIDDEN>
+           <TYPE/>
+           <COLLAPSED/>
+           <TITLE Transl="true"/>
+           <TOOLTIP Transl="true"/>
+           <IMAGE/>
+           <PADDING/>
+           <INSTANCE_STYLE/>
+           <EXPLANATION_TEXT Transl="true"/>
+           <EXPLANATION_DOCUMENT/>
+           <DEFAULT_EDIT_PAGE/>
+           <DEFAULT_DETAILS_PAGE/>
+          </Item>
+         </Node>
+        </Item>
+       </Node>
+       <Node Name="TOOLBAR" SimpleFormat="true">
+        <Item Index="000001" SimpleFormat="true">
+         <Node Name="BUTTON" SimpleFormat="true">
+          <Item Index="000001" SimpleFormat="true">
+           <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE8AC12A</ELEMENT_ID>
+           <TYPE>BU</TYPE>
+           <INDEX>1</INDEX>
+           <TEXT Transl="true">14</TEXT>
+           <IMAGE>~Icon/Done</IMAGE>
+           <IMAGE_IS_DECORATIVE/>
+           <TOOLTIP Transl="true"/>
+           <EXPLANATION_TEXT Transl="true"/>
+           <SPECIAL_PROPERTIES/>
+           <ENABLED>X</ENABLED>
+           <VISIBILITY>02</VISIBILITY>
+           <ALIGNMENT>LEFT</ALIGNMENT>
+           <HAS_SEPARATOR/>
+           <INSTANCE_STYLE/>
+           <Node Name="BUTTON_SUB_ITEM" SimpleFormat="true">
+            <Item Index="000001" SimpleFormat="true">
+             <ACTION_ID Final="5 ">FPM_LEAVE_INITIAL_SCREEN_FPM_SADL_CREATE</ACTION_ID>
+             <INDEX/>
+             <TEXT Transl="true"/>
+             <IMAGE/>
+             <HOTKEY/>
+             <ENABLED>X</ENABLED>
+             <VISIBILITY>02</VISIBILITY>
+             <HAS_SEPARATOR/>
+            </Item>
+           </Node>
+          </Item>
+         </Node>
+        </Item>
+       </Node>
+      </Item>
+      <Item Index="000005" SimpleFormat="true">
+       <ID Final="5 ">FPM_SADL_KEY_ENTRY</ID>
+       <TYPE>INIT</TYPE>
+       <TITLE Transl="true">15</TITLE>
+       <TITLE_HIDDEN/>
+       <TITLE_INSTANCE_STYLE/>
+       <DEFAULT/>
+       <EXPLANATION_TEXT Transl="true"/>
+       <EXPLANATION_DOCUMENT/>
+       <INSTANCE_STYLE/>
+       <DLG_NAME/>
+       <DLG_BUTTON_SET/>
+       <DLG_TEXT_FOR_OK_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_YES_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_NO_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_CANCEL_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_CLOSE_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_OK_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_YES_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_NO_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_CANCEL_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_CLOSE_BUTTON Transl="true"/>
+       <DLG_WIDTH/>
+       <DLG_HEIGHT/>
+       <ACTION_TYPE_PERS_DIALOG/>
+       <ACTION_TYPE_DRAG_DROP_AB/>
+       <ACTION_TYPE_CLOSE/>
+       <ON_ENTER_ACTION_ID/>
+       <PERSONALIZATION_ENABLED/>
+       <UIBB_SELECTOR_ENABLED/>
+       <Node Name="SECTION" SimpleFormat="true">
+        <Item Index="000001" SimpleFormat="true">
+         <ID Final="5 ">FPM_SADL_SECTION_1</ID>
+         <LAYOUT_TYPE/>
+         <INDEX>1</INDEX>
+         <COLUMN_WIDTH_MODE/>
+         <Node Name="COLUMN_LAYOUT" SimpleFormat="true">
+          <Item Index="000001" SimpleFormat="true">
+           <COLUMN_ID Final="5 ">COLUMN_ID_1</COLUMN_ID>
+           <STACKED/>
+           <ROWS/>
+           <WIDTH/>
+          </Item>
+         </Node>
+         <Node Name="UIBB" SimpleFormat="true">
+          <Item Index="000001" SimpleFormat="true">
+           <FPM_PRIMARY_ATTRIBUTE Final="5 ">_GENP_005056B074C91EDBA9FF287BAE89212A</FPM_PRIMARY_ATTRIBUTE>
+           <COMPONENT>FPM_FORM_UIBB_GL2</COMPONENT>
+           <INTERFACE_VIEW>FORM_WINDOW</INTERFACE_VIEW>
+           <CONFIG_ID>Z4ENTER_MONSTER_NUMBER</CONFIG_ID>
+           <CONFIG_TYPE/>
+           <CONFIG_VAR/>
+           <INSTANCE_ID/>
+           <LOCATION>1</LOCATION>
+           <ROW/>
+           <INDEX>1</INDEX>
+           <DEFAULT_IN_STACK/>
+           <NEEDS_STRETCHING/>
+           <HIDDEN/>
+           <TYPE/>
+           <COLLAPSED/>
+           <TITLE Transl="true"/>
+           <TOOLTIP Transl="true"/>
+           <IMAGE/>
+           <PADDING/>
+           <INSTANCE_STYLE/>
+           <EXPLANATION_TEXT Transl="true"/>
+           <EXPLANATION_DOCUMENT/>
+           <DEFAULT_EDIT_PAGE/>
+           <DEFAULT_DETAILS_PAGE/>
+          </Item>
+         </Node>
+        </Item>
+       </Node>
+       <Node Name="TOOLBAR" SimpleFormat="true">
+        <Item Index="000001" SimpleFormat="true">
+         <Node Name="BUTTON" SimpleFormat="true">
+          <Item Index="000001" SimpleFormat="true">
+           <ELEMENT_ID Final="5 ">_GENP_005056B074C91EDBA9FF287BAE8AA12A</ELEMENT_ID>
+           <TYPE>BU</TYPE>
+           <INDEX>1</INDEX>
+           <TEXT Transl="true">16</TEXT>
+           <IMAGE>~Icon/Done</IMAGE>
+           <IMAGE_IS_DECORATIVE/>
+           <TOOLTIP Transl="true"/>
+           <EXPLANATION_TEXT Transl="true"/>
+           <SPECIAL_PROPERTIES/>
+           <ENABLED>X</ENABLED>
+           <VISIBILITY>02</VISIBILITY>
+           <ALIGNMENT>LEFT</ALIGNMENT>
+           <HAS_SEPARATOR/>
+           <INSTANCE_STYLE/>
+           <Node Name="BUTTON_SUB_ITEM" SimpleFormat="true">
+            <Item Index="000001" SimpleFormat="true">
+             <ACTION_ID Final="5 ">FPM_LEAVE_INITIAL_SCREEN_FPM_SADL_KEY_ENTRY</ACTION_ID>
+             <INDEX/>
+             <TEXT Transl="true"/>
+             <IMAGE/>
+             <HOTKEY/>
+             <ENABLED>X</ENABLED>
+             <VISIBILITY>02</VISIBILITY>
+             <HAS_SEPARATOR/>
+            </Item>
+           </Node>
+          </Item>
+         </Node>
+        </Item>
+       </Node>
+      </Item>
+      <Item Index="000006" SimpleFormat="true">
+       <ID Final="5 ">FPM_SADL_SEARCH</ID>
+       <TYPE>INIT</TYPE>
+       <TITLE Transl="true">17</TITLE>
+       <TITLE_HIDDEN/>
+       <TITLE_INSTANCE_STYLE/>
+       <DEFAULT>X</DEFAULT>
+       <EXPLANATION_TEXT Transl="true"/>
+       <EXPLANATION_DOCUMENT/>
+       <INSTANCE_STYLE/>
+       <DLG_NAME/>
+       <DLG_BUTTON_SET/>
+       <DLG_TEXT_FOR_OK_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_YES_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_NO_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_CANCEL_BUTTON Transl="true"/>
+       <DLG_TEXT_FOR_CLOSE_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_OK_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_YES_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_NO_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_CANCEL_BUTTON Transl="true"/>
+       <DLG_TOOLTIP_FOR_CLOSE_BUTTON Transl="true"/>
+       <DLG_WIDTH/>
+       <DLG_HEIGHT/>
+       <ACTION_TYPE_PERS_DIALOG/>
+       <ACTION_TYPE_DRAG_DROP_AB/>
+       <ACTION_TYPE_CLOSE/>
+       <ON_ENTER_ACTION_ID/>
+       <PERSONALIZATION_ENABLED/>
+       <UIBB_SELECTOR_ENABLED/>
+       <Node Name="SECTION" SimpleFormat="true">
+        <Item Index="000001" SimpleFormat="true">
+         <ID Final="5 ">FPM_SADL_SEARCH</ID>
+         <LAYOUT_TYPE/>
+         <INDEX>1</INDEX>
+         <COLUMN_WIDTH_MODE/>
+         <Node Name="COLUMN_LAYOUT" SimpleFormat="true">
+          <Item Index="000001" SimpleFormat="true">
+           <COLUMN_ID Final="5 ">COLUMN_ID_1</COLUMN_ID>
+           <STACKED/>
+           <ROWS/>
+           <WIDTH/>
+          </Item>
+         </Node>
+         <Node Name="UIBB" SimpleFormat="true">
+          <Item Index="000001" SimpleFormat="true">
+           <FPM_PRIMARY_ATTRIBUTE Final="5 ">_GENP_005056B074C91EDBA9FF287BAE89012A</FPM_PRIMARY_ATTRIBUTE>
+           <COMPONENT>FPM_SEARCH_UIBB</COMPONENT>
+           <INTERFACE_VIEW>SEARCH_WINDOW</INTERFACE_VIEW>
+           <CONFIG_ID>Z4SEARCH_FOR_MONSTERS</CONFIG_ID>
+           <CONFIG_TYPE/>
+           <CONFIG_VAR/>
+           <INSTANCE_ID/>
+           <LOCATION>1</LOCATION>
+           <ROW/>
+           <INDEX>1</INDEX>
+           <DEFAULT_IN_STACK/>
+           <NEEDS_STRETCHING/>
+           <HIDDEN/>
+           <TYPE/>
+           <COLLAPSED/>
+           <TITLE Transl="true"/>
+           <TOOLTIP Transl="true"/>
+           <IMAGE/>
+           <PADDING/>
+           <INSTANCE_STYLE/>
+           <EXPLANATION_TEXT Transl="true"/>
+           <EXPLANATION_DOCUMENT/>
+           <DEFAULT_EDIT_PAGE/>
+           <DEFAULT_DETAILS_PAGE/>
+          </Item>
+         </Node>
+        </Item>
+       </Node>
+      </Item>
+     </Node>
+     <Node Name="PERSONALIZATION" SimpleFormat="true">
+      <Item Index="000001" SimpleFormat="true">
+       <Node Name="P_CONTENT_AREA" SimpleFormat="true"/>
+      </Item>
+     </Node>
+     <Node Name="WIRE_MODEL" SimpleFormat="true">
+      <Item Index="000001" SimpleFormat="true">
+       <TRANSACTION>CL_FPM_SADL_CRUD_TA_MANAGER</TRANSACTION>
+       <Node Name="WIRE" SimpleFormat="true">
+        <Item Index="000001" SimpleFormat="true">
+         <FPM_PRIMARY_ATTRIBUTE Final="5 ">_GENP_005056B074C91EDBA9FF287BAE8A012A</FPM_PRIMARY_ATTRIBUTE>
+         <COMPONENT>FPM_LIST_UIBB_ATS</COMPONENT>
+         <CONFIG_ID>Z4RESULT_LIST_OF_MONSTERS</CONFIG_ID>
+         <CONFIG_TYPE/>
+         <CONFIG_VAR/>
+         <INSTANCE_ID/>
+         <SRC_COMPONENT>FPM_SEARCH_UIBB</SRC_COMPONENT>
+         <SRC_CONFIG_ID>Z4SEARCH_FOR_MONSTERS</SRC_CONFIG_ID>
+         <SRC_CONFIG_TYPE/>
+         <SRC_CONFIG_VAR/>
+         <SRC_INSTANCE_ID/>
+         <PORT_TYPE>CO</PORT_TYPE>
+         <PORT_IDENTIFIER>ROOT</PORT_IDENTIFIER>
+         <CONNECTOR>CL_FPM_SADL_CONNECTOR</CONNECTOR>
+         <DEPENDENCY_PARAM/>
+        </Item>
+        <Item Index="000002" SimpleFormat="true">
+         <FPM_PRIMARY_ATTRIBUTE Final="5 ">_GENP_005056B074C91EDBA9FF287BAE8A212A</FPM_PRIMARY_ATTRIBUTE>
+         <COMPONENT>FPM_FORM_UIBB_GL2</COMPONENT>
+         <CONFIG_ID>Z4ENTER_MONSTER_NUMBER</CONFIG_ID>
+         <CONFIG_TYPE/>
+         <CONFIG_VAR/>
+         <INSTANCE_ID/>
+         <SRC_COMPONENT>FPM_FORM_UIBB_GL2</SRC_COMPONENT>
+         <SRC_CONFIG_ID>Z4CREATE_NEW_MONSTER</SRC_CONFIG_ID>
+         <SRC_CONFIG_TYPE/>
+         <SRC_CONFIG_VAR/>
+         <SRC_INSTANCE_ID/>
+         <PORT_TYPE>LS</PORT_TYPE>
+         <PORT_IDENTIFIER>ROOT</PORT_IDENTIFIER>
+         <CONNECTOR>CL_FPM_SADL_CRUD_CONNECTOR</CONNECTOR>
+         <DEPENDENCY_PARAM>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;STRUCTURE&gt;&lt;SADL_ASSOCIATION&gt;FPM_SADL________NO_ASSOCIATION&lt;/SADL_ASSOCIATION&gt;&lt;/STRUCTURE&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</DEPENDENCY_PARAM>
+        </Item>
+        <Item Index="000003" SimpleFormat="true">
+         <FPM_PRIMARY_ATTRIBUTE Final="5 ">_GENP_005056B074C91EDBA9FF287BAE8A412A</FPM_PRIMARY_ATTRIBUTE>
+         <COMPONENT>FPM_FORM_UIBB_GL2</COMPONENT>
+         <CONFIG_ID>Z4MONSTER_HEADER_RECORD</CONFIG_ID>
+         <CONFIG_TYPE/>
+         <CONFIG_VAR/>
+         <INSTANCE_ID/>
+         <SRC_COMPONENT>FPM_FORM_UIBB_GL2</SRC_COMPONENT>
+         <SRC_CONFIG_ID>Z4ENTER_MONSTER_NUMBER</SRC_CONFIG_ID>
+         <SRC_CONFIG_TYPE/>
+         <SRC_CONFIG_VAR/>
+         <SRC_INSTANCE_ID/>
+         <PORT_TYPE>LS</PORT_TYPE>
+         <PORT_IDENTIFIER>ROOT</PORT_IDENTIFIER>
+         <CONNECTOR>CL_FPM_SADL_CRUD_CONNECTOR</CONNECTOR>
+         <DEPENDENCY_PARAM>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;STRUCTURE&gt;&lt;SADL_ASSOCIATION&gt;FPM_SADL________NO_ASSOCIATION&lt;/SADL_ASSOCIATION&gt;&lt;/STRUCTURE&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</DEPENDENCY_PARAM>
+        </Item>
+        <Item Index="000004" SimpleFormat="true">
+         <FPM_PRIMARY_ATTRIBUTE Final="5 ">_GENP_005056B074C91EDBA9FF287BAE8A612A</FPM_PRIMARY_ATTRIBUTE>
+         <COMPONENT>FPM_LIST_UIBB_ATS</COMPONENT>
+         <CONFIG_ID>Z4_MONSTER_MONSTER_ITEMS</CONFIG_ID>
+         <CONFIG_TYPE/>
+         <CONFIG_VAR/>
+         <INSTANCE_ID/>
+         <SRC_COMPONENT>FPM_FORM_UIBB_GL2</SRC_COMPONENT>
+         <SRC_CONFIG_ID>Z4MONSTER_HEADER_RECORD</SRC_CONFIG_ID>
+         <SRC_CONFIG_TYPE/>
+         <SRC_CONFIG_VAR/>
+         <SRC_INSTANCE_ID/>
+         <PORT_TYPE>LS</PORT_TYPE>
+         <PORT_IDENTIFIER>ROOT</PORT_IDENTIFIER>
+         <CONNECTOR>CL_FPM_SADL_CRUD_CONNECTOR</CONNECTOR>
+         <DEPENDENCY_PARAM>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;STRUCTURE&gt;&lt;SADL_ASSOCIATION&gt;MONSTER_ITEMS&lt;/SADL_ASSOCIATION&gt;&lt;/STRUCTURE&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</DEPENDENCY_PARAM>
+        </Item>
+        <Item Index="000005" SimpleFormat="true">
+         <FPM_PRIMARY_ATTRIBUTE Final="5 ">_GENP_005056B074C91EDBA9FF287BAE8A812A</FPM_PRIMARY_ATTRIBUTE>
+         <COMPONENT>FPM_FORM_UIBB_GL2</COMPONENT>
+         <CONFIG_ID>Z4_DETAILS_OF_MONSTER_ITEMS</CONFIG_ID>
+         <CONFIG_TYPE/>
+         <CONFIG_VAR/>
+         <INSTANCE_ID/>
+         <SRC_COMPONENT>FPM_LIST_UIBB_ATS</SRC_COMPONENT>
+         <SRC_CONFIG_ID>Z4_MONSTER_MONSTER_ITEMS</SRC_CONFIG_ID>
+         <SRC_CONFIG_TYPE/>
+         <SRC_CONFIG_VAR/>
+         <SRC_INSTANCE_ID/>
+         <PORT_TYPE>LS</PORT_TYPE>
+         <PORT_IDENTIFIER>FPM_SADL_CRUD_PAGE_NAVI_BY_ROW</PORT_IDENTIFIER>
+         <CONNECTOR>CL_FPM_SADL_CRUD_CONNECTOR</CONNECTOR>
+         <DEPENDENCY_PARAM>﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;asx:abap xmlns:asx=&quot;http://www.sap.com/abapxml&quot; version=&quot;1.0&quot;&gt;&lt;asx:values&gt;&lt;STRUCTURE&gt;&lt;SADL_ASSOCIATION&gt;FPM_SADL________NO_ASSOCIATION&lt;/SADL_ASSOCIATION&gt;&lt;/STRUCTURE&gt;&lt;/asx:values&gt;&lt;/asx:abap&gt;</DEPENDENCY_PARAM>
+        </Item>
+       </Node>
+      </Item>
+     </Node>
+     <Node Name="ACTION" SimpleFormat="true">
+      <Item Index="000001" SimpleFormat="true">
+       <ID Final="5 ">ACTION_ID_FPM_SADL_CRUD_CREATE_Z4_MONSTER_MONSTER_ITEMS</ID>
+       <EVENT_ID>FPM_SADL_CRUD_CREATE</EVENT_ID>
+       <ACTION_TYPE/>
+       <ACTION_CATEGORY/>
+       <TARGET_CONTENT_AREA>FPM_SADL_EDIT_MONSTER_ITEMS</TARGET_CONTENT_AREA>
+       <COMPONENT>FPM_LIST_UIBB_ATS</COMPONENT>
+       <INTERFACE_VIEW>LIST_WINDOW</INTERFACE_VIEW>
+       <CONFIG_ID>Z4_MONSTER_MONSTER_ITEMS</CONFIG_ID>
+       <CONFIG_TYPE/>
+       <CONFIG_VAR/>
+       <INSTANCE_ID/>
+      </Item>
+      <Item Index="000002" SimpleFormat="true">
+       <ID Final="5 ">ACTION_ID_FPM_SADL_CRUD_DELETE_FPM_SADL_OVERVIEW</ID>
+       <EVENT_ID>FPM_SADL_CRUD_DELETE</EVENT_ID>
+       <ACTION_TYPE/>
+       <ACTION_CATEGORY/>
+       <TARGET_CONTENT_AREA>FPM_SADL_CONFIRM</TARGET_CONTENT_AREA>
+       <COMPONENT>FPM_FORM_UIBB_GL2</COMPONENT>
+       <INTERFACE_VIEW>FORM_WINDOW</INTERFACE_VIEW>
+       <CONFIG_ID>Z4MONSTER_HEADER_RECORD</CONFIG_ID>
+       <CONFIG_TYPE/>
+       <CONFIG_VAR/>
+       <INSTANCE_ID/>
+      </Item>
+      <Item Index="000003" SimpleFormat="true">
+       <ID Final="5 ">FPM_CANCEL_FPM_SADL_OVERVIEW</ID>
+       <EVENT_ID>FPM_CANCEL</EVENT_ID>
+       <ACTION_TYPE>1</ACTION_TYPE>
+       <ACTION_CATEGORY/>
+       <TARGET_CONTENT_AREA/>
+       <COMPONENT/>
+       <INTERFACE_VIEW/>
+       <CONFIG_ID/>
+       <CONFIG_TYPE/>
+       <CONFIG_VAR/>
+       <INSTANCE_ID/>
+      </Item>
+      <Item Index="000004" SimpleFormat="true">
+       <ID Final="5 ">FPM_DONE_AND_BACK_TO_MAIN_FPM_SADL_EDIT_MONSTER_ITEMS</ID>
+       <EVENT_ID>FPM_DONE_AND_BACK_TO_MAIN</EVENT_ID>
+       <ACTION_TYPE/>
+       <ACTION_CATEGORY/>
+       <TARGET_CONTENT_AREA/>
+       <COMPONENT/>
+       <INTERFACE_VIEW/>
+       <CONFIG_ID/>
+       <CONFIG_TYPE/>
+       <CONFIG_VAR/>
+       <INSTANCE_ID/>
+      </Item>
+      <Item Index="000005" SimpleFormat="true">
+       <ID Final="5 ">FPM_GUIBB_OPEN_SEARCH_Z4_MONSTER_MONSTER_ITEMS</ID>
+       <EVENT_ID>FPM_GUIBB_OPEN_SEARCH</EVENT_ID>
+       <ACTION_TYPE/>
+       <ACTION_CATEGORY/>
+       <TARGET_CONTENT_AREA/>
+       <COMPONENT>FPM_LIST_UIBB_ATS</COMPONENT>
+       <INTERFACE_VIEW>LIST_WINDOW</INTERFACE_VIEW>
+       <CONFIG_ID>Z4_MONSTER_MONSTER_ITEMS</CONFIG_ID>
+       <CONFIG_TYPE/>
+       <CONFIG_VAR/>
+       <INSTANCE_ID/>
+      </Item>
+      <Item Index="000006" SimpleFormat="true">
+       <ID Final="5 ">FPM_LEAVE_INITIAL_SCREEN_FPM_SADL_CREATE</ID>
+       <EVENT_ID>FPM_LEAVE_INITIAL_SCREEN</EVENT_ID>
+       <ACTION_TYPE/>
+       <ACTION_CATEGORY/>
+       <TARGET_CONTENT_AREA/>
+       <COMPONENT/>
+       <INTERFACE_VIEW/>
+       <CONFIG_ID/>
+       <CONFIG_TYPE/>
+       <CONFIG_VAR/>
+       <INSTANCE_ID/>
+      </Item>
+      <Item Index="000007" SimpleFormat="true">
+       <ID Final="5 ">FPM_LEAVE_INITIAL_SCREEN_FPM_SADL_KEY_ENTRY</ID>
+       <EVENT_ID>FPM_LEAVE_INITIAL_SCREEN</EVENT_ID>
+       <ACTION_TYPE/>
+       <ACTION_CATEGORY/>
+       <TARGET_CONTENT_AREA/>
+       <COMPONENT/>
+       <INTERFACE_VIEW/>
+       <CONFIG_ID/>
+       <CONFIG_TYPE/>
+       <CONFIG_VAR/>
+       <INSTANCE_ID/>
+      </Item>
+      <Item Index="000008" SimpleFormat="true">
+       <ID Final="5 ">FPM_LIST_EXPORT_TO_EXCEL_Z4_MONSTER_MONSTER_ITEMS</ID>
+       <EVENT_ID>FPM_LIST_EXPORT_TO_EXCEL</EVENT_ID>
+       <ACTION_TYPE/>
+       <ACTION_CATEGORY/>
+       <TARGET_CONTENT_AREA/>
+       <COMPONENT>FPM_LIST_UIBB_ATS</COMPONENT>
+       <INTERFACE_VIEW>LIST_WINDOW</INTERFACE_VIEW>
+       <CONFIG_ID>Z4_MONSTER_MONSTER_ITEMS</CONFIG_ID>
+       <CONFIG_TYPE/>
+       <CONFIG_VAR/>
+       <INSTANCE_ID/>
+      </Item>
+      <Item Index="000009" SimpleFormat="true">
+       <ID Final="5 ">FPM_LIST_P13N_Z4_MONSTER_MONSTER_ITEMS</ID>
+       <EVENT_ID>FPM_LIST_P13N</EVENT_ID>
+       <ACTION_TYPE/>
+       <ACTION_CATEGORY/>
+       <TARGET_CONTENT_AREA/>
+       <COMPONENT>FPM_LIST_UIBB_ATS</COMPONENT>
+       <INTERFACE_VIEW>LIST_WINDOW</INTERFACE_VIEW>
+       <CONFIG_ID>Z4_MONSTER_MONSTER_ITEMS</CONFIG_ID>
+       <CONFIG_TYPE/>
+       <CONFIG_VAR/>
+       <INSTANCE_ID/>
+      </Item>
+      <Item Index="000010" SimpleFormat="true">
+       <ID Final="5 ">FPM_LOCAL_EDIT_FPM_SADL_OVERVIEW_Z4MONSTER_HEADER_RECORD</ID>
+       <EVENT_ID>FPM_LOCAL_EDIT</EVENT_ID>
+       <ACTION_TYPE/>
+       <ACTION_CATEGORY/>
+       <TARGET_CONTENT_AREA/>
+       <COMPONENT/>
+       <INTERFACE_VIEW/>
+       <CONFIG_ID/>
+       <CONFIG_TYPE/>
+       <CONFIG_VAR/>
+       <INSTANCE_ID/>
+      </Item>
+      <Item Index="000011" SimpleFormat="true">
+       <ID Final="5 ">FPM_LOCAL_EDIT_Z4_MONSTER_MONSTER_ITEMS</ID>
+       <EVENT_ID>FPM_LOCAL_EDIT</EVENT_ID>
+       <ACTION_TYPE/>
+       <ACTION_CATEGORY/>
+       <TARGET_CONTENT_AREA/>
+       <COMPONENT/>
+       <INTERFACE_VIEW/>
+       <CONFIG_ID/>
+       <CONFIG_TYPE/>
+       <CONFIG_VAR/>
+       <INSTANCE_ID/>
+      </Item>
+      <Item Index="000012" SimpleFormat="true">
+       <ID Final="5 ">FPM_MAXIMIZE_UIBB_Z4_MONSTER_MONSTER_ITEMS</ID>
+       <EVENT_ID>FPM_MAXIMIZE_UIBB</EVENT_ID>
+       <ACTION_TYPE/>
+       <ACTION_CATEGORY/>
+       <TARGET_CONTENT_AREA/>
+       <COMPONENT/>
+       <INTERFACE_VIEW/>
+       <CONFIG_ID/>
+       <CONFIG_TYPE/>
+       <CONFIG_VAR/>
+       <INSTANCE_ID/>
+      </Item>
+      <Item Index="000013" SimpleFormat="true">
+       <ID Final="5 ">FPM_SAVE_FPM_SADL_OVERVIEW</ID>
+       <EVENT_ID>FPM_SAVE</EVENT_ID>
+       <ACTION_TYPE/>
+       <ACTION_CATEGORY/>
+       <TARGET_CONTENT_AREA/>
+       <COMPONENT/>
+       <INTERFACE_VIEW/>
+       <CONFIG_ID/>
+       <CONFIG_TYPE/>
+       <CONFIG_VAR/>
+       <INSTANCE_ID/>
+      </Item>
+     </Node>
+     <Node Name="APP_SPECIFIC_CC" SimpleFormat="true"/>
+     <Node Name="CONF_COMP_USAGE" SimpleFormat="true"/>
+     <Node Name="MSG_MAPPER_SETTING" SimpleFormat="true"/>
+     <Node Name="PAGE_SELECTOR" SimpleFormat="true"/>
+    </Item>
+   </Node>
+  </Item>
+ </Node>
+</Component>
