@@ -11,13 +11,84 @@
     <SCRLEN2>20</SCRLEN2>
     <SCRLEN3>40</SCRLEN3>
     <DDTEXT>Does the Monster Hide Under Beds?</DDTEXT>
-    <REPTEXT>Does the Monster Hide Under Beds?</REPTEXT>
+    <REPTEXT>Does the Monster Hide Under Beds? Does it?</REPTEXT>
     <SCRTEXT_S>BedHider</SCRTEXT_S>
     <SCRTEXT_M>Is Monster BedHider?</SCRTEXT_M>
     <SCRTEXT_L>Does the Monster Hide Under Beds?</SCRTEXT_L>
     <DTELMASTER>E</DTELMASTER>
     <REFKIND>D</REFKIND>
    </DD04V>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>DE</ID>
+      <OBJECT>Z4DE_MONSTER_BED_HIDER_FLAG</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00007</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>Z4DE_MONSTER_BED_HIDER_FLAG</TDNAME>
+      <TDID>DE</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFINITION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Does the Monster hide under beds?</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;USE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Most monsters like to hide under beds. In fact pretty much every night</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>as you are sleeping in your bed there are hundreds of Monsters</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>underneath your bed having a party. If you are foolish enough to wake up</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in the middle of the night and put your feet on the floor the Monsters</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>under your bed will drag you underneath and eat you, whilst the Monsters</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>hiding in your closet laugh.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEPENDENCIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
   </asx:values>
  </asx:abap>
 </abapGit>
