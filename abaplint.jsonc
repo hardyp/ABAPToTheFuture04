@@ -1,6 +1,6 @@
 {
   "global": {
-    "files": "/src/**/*.*",
+    "files": "/src/**/*.*" ,
     "exclude": ["z4_012_monster/", "z4_014_order/"],
     "skipGeneratedGatewayClasses": true,
     "skipGeneratedPersistentClasses": true,
