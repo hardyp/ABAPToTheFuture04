@@ -29,7 +29,32 @@
       "url": "https://github.com/sapmentors/abap2xlsx",
       "folder": "/deps2",
       "files": "/src/**/*.*"
-    }
+    },
+    {
+      "url": "https://github.com/AntonSikidin/zcl_docx",
+      "folder": "/deps3",
+      "files": "/src/**/*.*"
+    },
+    {
+      "url": "https://github.com/sbcgua/mockup_loader",
+      "folder": "/deps4",
+      "files": "/src/**/*.*"
+    },
+    {
+      "url": "https://github.com/hardyp/DesignByContract",
+      "folder": "/deps5",
+      "files": "/src/**/*.*"
+    },
+    {
+      "url": "https://github.com/hardyp/FunctionModuleWrapper",
+      "folder": "/deps6",
+      "files": "/src/**/*.*"
+    },
+    {
+      "url": "https://github.com/hardyp/OCPFactory",
+      "folder": "/deps7",
+      "files": "/src/**/*.*"
+    }    
   ],
   "syntax": {
     "version": "v755",
