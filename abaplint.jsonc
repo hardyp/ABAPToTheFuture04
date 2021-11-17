@@ -9,7 +9,12 @@
   "dependencies": [
     {
       "url": "https://github.com/abaplint/deps",
-      "folder": "/deps",
+      "folder": "/deps1",
+      "files": "/src/**/*.*"
+    },
+    {
+      "url": "https://github.com/sapmentors/abap2xlsx",
+      "folder": "/deps2",
       "files": "/src/**/*.*"
     }
   ],
