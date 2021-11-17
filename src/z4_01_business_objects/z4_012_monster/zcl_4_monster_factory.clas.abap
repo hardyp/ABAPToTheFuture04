@@ -1,3 +1,6 @@
+*--------------------------------------------------------------------*
+* Listing 05.11: Monster Object Factory Class Definition
+*--------------------------------------------------------------------*
 class ZCL_4_MONSTER_FACTORY definition
   public
   final
@@ -54,7 +57,7 @@ CLASS ZCL_4_MONSTER_FACTORY IMPLEMENTATION.
   METHOD get_logger.
 
     IF mo_logger IS NOT BOUND.
-      CREATE OBJECT mo_logger TYPE zcl_4_monster_logger.
+      mo_logger = NEW zcl_4_monster_logger( ).
     ENDIF.
 
     ro_logger = mo_logger.
@@ -65,7 +68,7 @@ CLASS ZCL_4_MONSTER_FACTORY IMPLEMENTATION.
   METHOD get_monster_bo_pl.
 
     IF mo_monster_bo_pl IS NOT BOUND.
-      CREATE OBJECT mo_monster_bo_pl TYPE zcl_4_monstermodel_pers_bopf.
+      mo_monster_bo_pl = NEW zcl_4_monstermodel_pers_bopf( ).
     ENDIF.
 
     ro_pl = mo_monster_bo_pl.
@@ -74,9 +77,11 @@ CLASS ZCL_4_MONSTER_FACTORY IMPLEMENTATION.
 
 
   METHOD get_monster_making_machine.
-
+*--------------------------------------------------------------------*
+* Listing 05.13: Monster Object Factory Returning Instance
+*--------------------------------------------------------------------*
     IF mo_monster_making_machine IS NOT BOUND.
-      CREATE OBJECT mo_monster_making_machine TYPE zcl_4_monster_making_machine.
+      mo_monster_making_machine = NEW zcl_4_monster_making_machine( ).
     ENDIF.
 
     ro_monster_making_machine = mo_monster_making_machine.
@@ -102,10 +107,9 @@ CLASS ZCL_4_MONSTER_FACTORY IMPLEMENTATION.
     ENDIF.
 
     IF mo_monster_sim_pl IS NOT BOUND.
-      CREATE OBJECT mo_monster_sim_pl TYPE zcl_4_monster_sim_pers_layer
-        EXPORTING
+      mo_monster_sim_pl = NEW zcl_4_monster_sim_pers_layer(
           id_valid_on = ld_valid_on
-          io_logger   = lo_logger.
+          io_logger   = lo_logger ).
     ENDIF.
 
     ro_monster_sim_pl = mo_monster_sim_pl.

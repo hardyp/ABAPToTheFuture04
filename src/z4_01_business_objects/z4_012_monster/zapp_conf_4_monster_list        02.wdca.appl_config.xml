@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Name="ZWDA_FPM_4_MONSTER_LIST" ConfId="ZAPP_CONF_4_MONSTER_LIST" ConfType="02" ConfVar="">
+ <Parameters>
+  <Parameter Name="FPM_TOOLBAR_LOCATION">G</Parameter>
+ </Parameters>
+ <Component Name="FPM_OVP_COMPONENT" Usage="ZWDA_FPM_4_MONSTER_LIST" ConfType="00" ConfId="ZCOMP_CONF_4_MONSTER_OVP" ConfVar="" Interface="False"/>
+</Application>

@@ -26,20 +26,33 @@ ENDCLASS.
 CLASS ZCL_Z_4_MONSTER_DPC_EXT IMPLEMENTATION.
 
 
-  method CONSTRUCTOR.
-
+  METHOD constructor.
+*-----------------------------------------------------------------------*
+* Listing 09.01: - Embedding Monster Model Class into Data Provider Class
+*-----------------------------------------------------------------------*
     super->constructor( ).
 
     mo_monster_model = NEW #( ).
 
-  endmethod.
+  ENDMETHOD.
 
 
   METHOD monsteritems_get_entityset.
+*--------------------------------------------------------------------*
+* Listing 09.03: - Coding Method to Get All Monster Items
+*--------------------------------------------------------------------*
     DATA: monster_header LIKE LINE OF et_entityset.
+
+    CLEAR: es_response_context.
 
     io_tech_request_context->get_converted_source_keys(
       IMPORTING es_key_values = monster_header ).
+
+    CALL FUNCTION 'CONVERSION_EXIT_ALPHA_INPUT'
+      EXPORTING
+        input  = monster_header-monster_number
+      IMPORTING
+        output = monster_header-monster_number.
 
     TRY.
         et_entityset =
@@ -54,7 +67,6 @@ CLASS ZCL_Z_4_MONSTER_DPC_EXT IMPLEMENTATION.
         "Put message in bottle....
         "Use CONV to convert from string to TEXT220
         message_container->add_message_text_only(
-          EXPORTING
           iv_msg_type = /iwbep/if_message_container=>gcs_message_type-error
           iv_msg_text = CONV #( monster_exception->get_text( ) ) ).
 
@@ -68,32 +80,48 @@ CLASS ZCL_Z_4_MONSTER_DPC_EXT IMPLEMENTATION.
 
 
   METHOD monsters_delete_entity.
-
-    DATA(message_container) =
-     /iwbep/if_mgw_conv_srv_runtime~get_message_container( ).
-
-    message_container->add_message_text_only(
-    EXPORTING
-    iv_msg_type = /iwbep/if_message_container=>gcs_message_type-error
-    iv_msg_text = |{ 'This monster does not want to be deleted'(001) }| ).
-
-    RAISE EXCEPTION NEW /iwbep/cx_mgw_busi_exception(
-        message_container = message_container ).
-
-  ENDMETHOD."Monsters Delete Entity
-
-
-  METHOD monsters_get_entity.
-
+*--------------------------------------------------------------------*
+* Listing 09.05: - Passing Exception Back to Calling Application
+*--------------------------------------------------------------------*
     DATA: monster_number TYPE z4de_monster_number.
 
     DATA(monster_keys) = io_tech_request_context->get_keys( ).
     monster_number = monster_keys[ name = 'MONSTER_NUMBER' ]-value.
 
+    DATA(message_container) =
+     /iwbep/if_mgw_conv_srv_runtime~get_message_container( ).
+
+    message_container->add_message_text_only(
+    iv_msg_type = /iwbep/if_message_container=>gcs_message_type-error
+    iv_msg_text = |{ 'Monster No'(003) } { monster_number ALPHA = OUT } { 'does not want to be deleted'(002) }| ).
+
+    RAISE EXCEPTION NEW /iwbep/cx_mgw_busi_exception( message_container = message_container ).
+
+  ENDMETHOD."Monsters Delete Entity
+
+
+  METHOD monsters_get_entity.
+*--------------------------------------------------------------------*
+* Listing 09.04: Monsters Get Entity Method
+*--------------------------------------------------------------------*
+    DATA: monster_number TYPE z4de_monster_number.
+
+    CLEAR: es_response_context.
+
+    DATA(monster_keys) = io_tech_request_context->get_keys( ).
+    monster_number = monster_keys[ name = 'MONSTER_NUMBER' ]-value.
+
+    CALL FUNCTION 'CONVERSION_EXIT_ALPHA_INPUT'
+      EXPORTING
+        input  = monster_number
+      IMPORTING
+        output = monster_number.
+
     TRY.
         er_entity =
         mo_monster_model->derive_monster_record( monster_number )-header.
 
+        "If the time stamps are empty you get a short dump
         IF er_entity-createdat IS INITIAL.
           GET TIME STAMP FIELD er_entity-createdat.
         ENDIF.
@@ -110,7 +138,6 @@ CLASS ZCL_Z_4_MONSTER_DPC_EXT IMPLEMENTATION.
         "Put message in bottle....
         "Use CONV to convert from string to TEXT220
         message_container->add_message_text_only(
-          EXPORTING
           iv_msg_type = /iwbep/if_message_container=>gcs_message_type-error
           iv_msg_text = CONV #( monster_exception->get_text( ) ) ).
 
@@ -124,6 +151,11 @@ CLASS ZCL_Z_4_MONSTER_DPC_EXT IMPLEMENTATION.
 
 
   METHOD monsters_get_entityset.
+*--------------------------------------------------------------------*
+* Listing 09.02: - Monsters Get Entity Set – Method Implementation
+*--------------------------------------------------------------------*
+    CLEAR: et_entityset,
+           es_response_context.
 
     "See if we have any selection criteria passed in
     DATA(odata_filter) = io_tech_request_context->get_filter( ).
@@ -136,17 +168,17 @@ CLASS ZCL_Z_4_MONSTER_DPC_EXT IMPLEMENTATION.
 
     IF odata_filter_select_options[] IS NOT INITIAL.
       LOOP AT odata_filter_select_options
-       INTO DATA(odata_select_option_structure).
+       ASSIGNING FIELD-SYMBOL(<odata_sel_option_structure>).
         APPEND INITIAL LINE TO abap_select_options
         ASSIGNING FIELD-SYMBOL(<abap_select_option>).
         <abap_select_option>-field =
-        odata_select_option_structure-property.
-        LOOP AT odata_select_option_structure-select_options
-          INTO DATA(odata_select_option).
-          <abap_select_option>-option = odata_select_option-option.
-          <abap_select_option>-sign   = odata_select_option-sign.
-          <abap_select_option>-low    = odata_select_option-low.
-          <abap_select_option>-high   = odata_select_option-high.
+        <odata_sel_option_structure>-property.
+        LOOP AT <odata_sel_option_structure>-select_options
+          ASSIGNING FIELD-SYMBOL(<odata_select_option>)."#EC CI_NESTED
+          <abap_select_option>-option = <odata_select_option>-option.
+          <abap_select_option>-sign   = <odata_select_option>-sign.
+          <abap_select_option>-low    = <odata_select_option>-low.
+          <abap_select_option>-high   = <odata_select_option>-high.
         ENDLOOP."Selection options for field being queried
       ENDLOOP."List of fields being queried
     ELSE.
@@ -218,15 +250,19 @@ CLASS ZCL_Z_4_MONSTER_DPC_EXT IMPLEMENTATION.
       ASSIGNING FIELD-SYMBOL(<filtered_monster_header>).
       APPEND INITIAL LINE TO et_entityset
       ASSIGNING FIELD-SYMBOL(<monster_header_record>).
-      MOVE-CORRESPONDING <filtered_monster_header>
-      TO <monster_header_record>.
+      <monster_header_record> = CORRESPONDING #( <filtered_monster_header> ).
+      CALL FUNCTION 'CONVERSION_EXIT_ALPHA_INPUT'
+        EXPORTING
+          input  = <monster_header_record>-monster_number
+        IMPORTING
+          output = <monster_header_record>-monster_number.
     ENDLOOP.
 
 * Change security settings to allow local testing as per
 * http://scn.sap.com/community/gateway/blog/2014/09/23/solve-cors-with-gateway-and-chrome
     DATA(http_name_value_pair) = VALUE ihttpnvp(
     name = 'Access-Control-Allow-Origin'
-    value = '*' ).
+    value = '*' ) ##NO_TEXT.
 
     /iwbep/if_mgw_conv_srv_runtime~set_header( http_name_value_pair ).
 

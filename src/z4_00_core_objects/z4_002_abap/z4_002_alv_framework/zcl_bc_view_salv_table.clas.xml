@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Base View Model for CL_SALV_TABLE</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>The control field is of type LVC_S_STYL</ENTRY>
+     <LENGTH>78</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>The edit control field is not in the ALV table</ENTRY>
+     <LENGTH>92</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>003</KEY>
+     <ENTRY>Report in Trouble</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>004</KEY>
+     <ENTRY>must exist</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+   </TPOOL>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>GET_ALV_GRID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Return ALV Grid from SALV Object</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>HANDLE_LINK_CLICK</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>User has clicked on a hotspot</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>HANDLE_USER_COMMAND</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>User has pressed a menu button</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>MC_CTX_UI_TECHNOLOGY</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>UI Technology used by this Class</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>MD_REPORT_NAME</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Report Program</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>MF_START_IN_EDIT_MODE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Start in Edit Mode</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>MO_AGGREGATIONS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>All Aggregation Objects</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>MO_ALV_GRID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Basis Class for Simple Tables</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>MO_COLUMN</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Column Description of Simple, Two-Dimensional Tables</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>MO_COLUMNS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Columns in Simple, Two-Dimensional Tables</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>MO_EVENTS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Events in Simple, Two-Dimensional Tables</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>MO_FUNCTIONS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Generic and User-Defined Functions in List-Type Tables</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>MO_LAYOUT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Settings for Layout</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>MO_SALV_MODEL</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>SALV Model for Getting Grid Access</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>MO_SELECTIONS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Selections in List-Type Output Tables</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>MO_SETTINGS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Appearance of the ALV Output</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>MO_SORTS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>All Sort Objects</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>MS_VARIANT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Layout (External Use)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>MT_DATA_TABLE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Data Table</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>MT_USER_COMMANDS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Toolbar Buttons</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_SALV_TABLE</CLSNAME>
+     <CMPNAME>STATUS_EXISTS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Does a status exist for the calling report?</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -75,7 +75,7 @@ CLASS ZCL_4_BC_BOPF_PL_HELPER IMPLEMENTATION.
 
 METHOD change_data_in_database.
 *--------------------------------------------------------------------*
-* Listing 07.22 - Updating a BOPF Object in the Database
+* Listing 07.20: - Updating a BOPF Object in the Database
 *--------------------------------------------------------------------*
   "Off we go!
   mo_transaction_manager->save(
@@ -92,9 +92,15 @@ METHOD change_data_in_database.
 ENDMETHOD."Change Data in Database / ZCL_4_BC_BOPF_PL_HELPER
 
 
-METHOD CHANGE_DATA_IN_MEMORY.
+METHOD change_data_in_memory.
 *--------------------------------------------------------------------*
-* Listing 07.21 - Method to Change the BOPF Data in Memory
+* Listing 07.19: - Method to Change the BOPF Data in Memory
+*--------------------------------------------------------------------*
+* In RAP terms this is the transactional phase. The data in memory is
+* updated but not the database. Only during the SAVE phase is the
+* database updated with the data in memory
+* So ... both the BOPF and the RAP ... are JUST LIKE DYNPRO PROGRAMS!
+* At least in this regard
 *--------------------------------------------------------------------*
 
   "Change Data in Memory
@@ -164,9 +170,9 @@ METHOD get_child_node_row.
 ENDMETHOD.
 
 
-METHOD GET_CHILD_NODE_TABLE.
+METHOD get_child_node_table.
 *--------------------------------------------------------------------*
-* Listing 07.07 - Getting the Item Table (Child Node Table)
+* Listing 07.07: - Getting the Item Table (Child Node Table)
 *--------------------------------------------------------------------*
   "Local Variables
   DATA: node_confguration_data TYPE /bobf/s_confro_node.
@@ -180,7 +186,7 @@ METHOD GET_CHILD_NODE_TABLE.
     IMPORTING es_assoc     = DATA(association_data) ).
 
   IF association_data-target_node IS NOT BOUND.
-    RAISE EXCEPTION TYPE /bobf/cx_dac."Error Messages of the data access
+    RAISE EXCEPTION NEW /bobf/cx_dac( )."Error Messages of the data access
   ENDIF.
 
   "The target node contains the name of the database table
@@ -219,9 +225,9 @@ METHOD GET_CHILD_NODE_TABLE.
 ENDMETHOD."Get Child Node Table
 
 
-METHOD GET_NODE_ROW.
+METHOD get_node_row.
 *--------------------------------------------------------------------*
-* Listing 07.05 - Getting a Header Record (Node Row)
+* Listing 07.05: - Getting a Header Record (Node Row)
 *--------------------------------------------------------------------*
   "Local Variables
   DATA ref_to_data_table TYPE REF TO data.
@@ -235,7 +241,7 @@ METHOD GET_NODE_ROW.
   id_edit_mode      = id_edit_mode ).
 
   IF ref_to_data_table IS NOT BOUND.
-    RAISE EXCEPTION TYPE /bobf/cx_dac."Data Access Exception
+    RAISE EXCEPTION NEW /bobf/cx_dac( )."Data Access Exception
   ENDIF.
 
   ASSIGN ref_to_data_table->* TO <data_table>.
@@ -244,7 +250,7 @@ METHOD GET_NODE_ROW.
   IF sy-subrc EQ 0.
     rdo_row_data = REF #( <table_row_data> ).
   ELSE.
-    RAISE EXCEPTION TYPE /bobf/cx_dac."Error Messages of the data access
+    RAISE EXCEPTION NEW /bobf/cx_dac( )."Error Messages of the data access
   ENDIF.
 
 ENDMETHOD."Get Node Row
@@ -252,7 +258,7 @@ ENDMETHOD."Get Node Row
 
 METHOD get_node_table.
 *--------------------------------------------------------------------*
-* Listing 07.06 - Getting a Table that Contains the Header Record
+* Listing 07.06: - Getting a Table that Contains the Header Record
 *--------------------------------------------------------------------*
   "Local Variables
   FIELD-SYMBOLS: <result_table> TYPE INDEX TABLE.

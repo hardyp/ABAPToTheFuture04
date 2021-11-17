@@ -14,12 +14,18 @@ public section.
     for ZIF_4_MONSTER_MODEL~DERIVE_HEADER_FIELDS .
   aliases DERIVE_ITEM_FIELDS
     for ZIF_4_MONSTER_MODEL~DERIVE_ITEM_FIELDS .
+  aliases INVITE_TO_PARTY
+    for ZIF_4_MONSTER_MODEL~INVITE_TO_PARTY .
   aliases IS_DERIVATION_RELEVANT
     for ZIF_4_MONSTER_MODEL~IS_DERIVATION_RELEVANT .
+  aliases IS_SCARY
+    for ZIF_4_MONSTER_MODEL~IS_SCARY .
   aliases VALIDATE_ACTION_HOWL
     for ZIF_4_MONSTER_MODEL~VALIDATE_ACTION_HOWL .
   aliases VALIDATE_MONSTER_HEADER
     for ZIF_4_MONSTER_MODEL~VALIDATE_MONSTER_HEADER .
+  aliases WANTS_TO_BLOW_UP_WORLD
+    for ZIF_4_MONSTER_MODEL~WANTS_TO_BLOW_UP_WORLD .
   aliases MTT_MONSTER_HEADERS
     for ZIF_4_MONSTER_MODEL~MTT_MONSTER_HEADERS .
   aliases MTT_MONSTER_ITEMS
@@ -40,15 +46,13 @@ public section.
     returning
       value(RS_MONSTER_RECORD) type Z4SC_MONSTER_RECORD
     raising
-      ZCX_MONSTER_EXCEPTIONS .
+      ZCX_4_MONSTER_EXCEPTIONS_LOP .
   class-methods UPDATE_MONSTER_RECORD
     importing
       !IS_MONSTER_RECORD type Z4SC_MONSTER_RECORD .
   class-methods DELETE_MONSTER_RECORD
     importing
-      !ID_MONSTER_NUMBER type Z4DE_MONSTER_NUMBER
-    raising
-      ZCX_MONSTER_EXCEPTIONS .
+      !ID_MONSTER_NUMBER type Z4DE_MONSTER_NUMBER .
   class-methods GET_INSTANCE
     importing
       !ID_MONSTER_NUMBER type Z4DE_MONSTER_NUMBER
@@ -62,25 +66,15 @@ public section.
   methods CONSTRUCTOR .
   class-methods GET_AHEAD_GET_A_HAT
     importing
-      !ID_MONSTER_NUMBER type ZDE_MONSTER_NUMBER
+      !ID_MONSTER_NUMBER type Z4DE_MONSTER_NUMBER
     exporting
       !ED_NUMBER_OF_HEADS type SY-TABIX
       !ED_NUMBER_OF_HATS type SY-TABIX .
-  methods INVITE_TO_PARTY
-    importing
-      !ID_MONSTER_NAME type ZDE_MONSTER_NAME
-      !ID_PARTY_NAME type STRING .
-  methods IS_MAD
+  class-methods IS_MAD
     importing
       !ID_MONSTER_NUMBER type ZDE_MONSTER_NUMBER
     returning
       value(RF_YES_IT_IS) type ABAP_BOOL .
-  methods IS_SCARY
-    returning
-      value(RF_YES_IT_IS) type ABAP_BOOL .
-  methods WANTS_TO_BLOW_UP_WORLD
-    returning
-      value(RF_YES_IT_DOES) type ABAP_BOOL .
 protected section.
 private section.
 
@@ -94,7 +88,6 @@ private section.
         WITH UNIQUE KEY monster_number .
 
   class-data MO_PL type ref to ZIF_4_MONSTERMODEL_PERS_LAYER .
-  class-data MO_RULES type ref to ZCL_MONSTER_RULES .
   class-data MT_MONSTER_MODELS type MTT_MONSTER_MODELS .
 ENDCLASS.
 
@@ -103,12 +96,12 @@ ENDCLASS.
 CLASS ZCL_4_MONSTER_MODEL IMPLEMENTATION.
 
 
-  METHOD ARM_ALL_MONSTERS.
+  METHOD arm_all_monsters.
 *--------------------------------------------------------------------*
 * Listing 03.06 : Creating Short-Lived Variables
 *--------------------------------------------------------------------*
     SELECT *
-      FROM ztmonster_header
+      FROM z4t_monster_head
       INTO TABLE @DATA(all_monsters).
 
     DATA(iterator) = NEW lcl_weapon_iterator( ).
@@ -119,7 +112,7 @@ CLASS ZCL_4_MONSTER_MODEL IMPLEMENTATION.
             monster_name = all_monsters[ sy-index ]-name
             date_string  =
            |{ sy-datum+6(2) } / { sy-datum+4(2) } / { sy-datum(4) }|
-        IN |Monster { monster_name } was issued a { weapon_name } on { date_string }| ).
+        IN |{ 'Monster'(008) } { monster_name } { 'was issued a'(009) } { weapon_name } on { date_string }| ).
       MESSAGE arming_description TYPE 'I'.
     ENDDO.
 
@@ -139,12 +132,12 @@ ENDMETHOD.
 
 METHOD create_monster_record.
 
-  mo_pl->create_monster_record( is_monster_record  ).
+  mo_pl->create_monster_record( is_monster_record ).
 
 ENDMETHOD."Create Monster Record
 
 
-  METHOD DELETE_MONSTER_RECORD.
+  METHOD delete_monster_record ##NEEDED.
 * Monsters do not like being deleted
   ENDMETHOD.
 
@@ -163,17 +156,15 @@ METHOD derive_monster_record_4_update.
 ENDMETHOD.                    "Retrieve Monster Record
 
 
-  method GET_AHEAD_GET_A_HAT.
+  METHOD get_ahead_get_a_hat ##NEEDED.
 * Used as ABAP example
-  endmethod.
+  ENDMETHOD.
 
 
-METHOD GET_INSTANCE.
-* Local Variables
-  DATA: monster_model_info TYPE m_typ_monster_model.
+METHOD get_instance.
 
-* Firstly, check buffer, the vampire slayer
-  READ TABLE mt_monster_models INTO monster_model_info
+  "Firstly, check buffer, the vampire slayer
+  READ TABLE mt_monster_models INTO DATA(monster_model_info)
   WITH TABLE KEY monster_number = id_monster_number.
 
   IF sy-subrc = 0.
@@ -181,30 +172,21 @@ METHOD GET_INSTANCE.
     RETURN.
   ENDIF.
 
-* If not in buffer, create new model, and add to buffer
-  CREATE OBJECT ro_monster_model TYPE zcl_4_monster_model.
+  "If not in buffer, create new model, and add to buffer
+  ro_monster_model = NEW zcl_4_monster_model( ).
 
-  monster_model_info-monster_number = id_monster_number.
-  monster_model_info-monster_model  = ro_monster_model.
-  INSERT monster_model_info INTO TABLE mt_monster_models.
+  INSERT VALUE #(
+  monster_number = id_monster_number
+  monster_model  = ro_monster_model )
+  INTO TABLE mt_monster_models.
 
 ENDMETHOD.
 
 
-  METHOD INVITE_TO_PARTY.
-* Another ABAP Example
-  ENDMETHOD.
-
-
-  METHOD IS_MAD.
+  METHOD is_mad.
 
     rf_yes_it_is = abap_true.
 
-  ENDMETHOD.
-
-
-  METHOD IS_SCARY.
-* Used for ABAP Example
   ENDMETHOD.
 
 
@@ -222,18 +204,10 @@ METHOD update_monster_record.
 ENDMETHOD."Update Monster Record
 
 
-  METHOD WANTS_TO_BLOW_UP_WORLD.
-
-    "Monsters are not environmentally friendly
-    rf_yes_it_does = abap_true.
-
-  ENDMETHOD.
-
-
-METHOD ZIF_4_MONSTER_MODEL~ACTION_HOWL_AT_THE_MOON.
-*--------------------------------------------------------------------*
-* Listing 08.16 - Coding the Howl at the Moon Method in the Model Class
-*--------------------------------------------------------------------*
+METHOD zif_4_monster_model~action_howl_at_the_moon.
+*------------------------------------------------------------------------*
+* Listing 08.15: - Coding the Howl at the Moon Method in the Model Class
+*------------------------------------------------------------------------*
   IF is_howl_request-no_of_howls = 0.
     RAISE EXCEPTION TYPE zcx_4_monster_exceptions.
   ENDIF.
@@ -256,9 +230,9 @@ METHOD ZIF_4_MONSTER_MODEL~ARE_VALUES_DERIVATION_RELEVANT.
 ENDMETHOD.
 
 
-METHOD ZIF_4_MONSTER_MODEL~DERIVE_HEADER_FIELDS.
+METHOD zif_4_monster_model~derive_header_fields.
 *--------------------------------------------------------------------*
-* Listing 07.09 - Filling Derived Header Fields
+* Listing 07.09: - Filling Derived Header Fields
 *--------------------------------------------------------------------*
 
   cs_monster_header-hat_size_description =
@@ -279,26 +253,31 @@ METHOD ZIF_4_MONSTER_MODEL~DERIVE_HEADER_FIELDS.
 ENDMETHOD."Derive Header Fields
 
 
-METHOD ZIF_4_MONSTER_MODEL~DERIVE_ITEM_FIELDS.
+METHOD zif_4_monster_model~derive_item_fields.
 
   CASE cs_monster_items-part_category.
     WHEN 'HD'.
-      cs_monster_items-part_description = 'Head'.
+      cs_monster_items-part_description = 'Head'(002).
     WHEN 'LG'.
-      cs_monster_items-part_description = 'Leg'.
+      cs_monster_items-part_description = 'Leg'(003).
     WHEN 'AR'.
-      cs_monster_items-part_description = 'Arm'.
+      cs_monster_items-part_description = 'Arm'(004).
     WHEN 'TA'.
-      cs_monster_items-part_description = 'Tail'.
+      cs_monster_items-part_description = 'Tail'(005).
     WHEN 'WI'.
-      cs_monster_items-part_description = 'Wing'.
+      cs_monster_items-part_description = 'Wing'(006).
     WHEN 'TN'.
-      cs_monster_items-part_description = 'Tentacle'.
+      cs_monster_items-part_description = 'Tentacle'(007).
     WHEN OTHERS.
       RETURN.
   ENDCASE.
 
 ENDMETHOD.
+
+
+  METHOD ZIF_4_MONSTER_MODEL~INVITE_TO_PARTY ##NEEDED.
+* Another ABAP Example
+  ENDMETHOD.
 
 
 METHOD ZIF_4_MONSTER_MODEL~IS_DERIVATION_RELEVANT.
@@ -314,9 +293,14 @@ METHOD ZIF_4_MONSTER_MODEL~IS_DERIVATION_RELEVANT.
 ENDMETHOD."Is Derivation Relevant
 
 
-METHOD ZIF_4_MONSTER_MODEL~VALIDATE_ACTION_HOWL.
+  METHOD ZIF_4_MONSTER_MODEL~IS_SCARY ##NEEDED.
+* Used for ABAP Example
+  ENDMETHOD.
+
+
+METHOD zif_4_monster_model~validate_action_howl.
 *--------------------------------------------------------------------*
-* Listing 08.18 - Validating the Howl Action in the Monster Model Class
+* This listing appears to have vanished in the fourth editon
 *--------------------------------------------------------------------*
   IF is_header_values-no_of_heads EQ 0.
     RAISE EXCEPTION TYPE zcx_4_monster_exceptions_mc
@@ -327,9 +311,9 @@ METHOD ZIF_4_MONSTER_MODEL~VALIDATE_ACTION_HOWL.
 ENDMETHOD."Validate Howl Action
 
 
-METHOD ZIF_4_MONSTER_MODEL~VALIDATE_MONSTER_HEADER.
+METHOD zif_4_monster_model~validate_monster_header.
 *--------------------------------------------------------------------*
-* Listing 07.14 - Validation Method in Main Monster Model
+* Listing 07.13: - Validation Method in Main Monster Model
 *--------------------------------------------------------------------*
   IF is_header_values-hat_size    GT 0 AND
      is_header_values-no_of_heads EQ 0.
@@ -338,5 +322,15 @@ METHOD ZIF_4_MONSTER_MODEL~VALIDATE_MONSTER_HEADER.
         textid = zcx_4_monster_exceptions_mc=>head_hat_disparity.
   ENDIF.
 
+* The Stamp Collecting Monster reads "Improving the Quality of ABAP Code" ISBN 978-1-4842-6710-3
+* He really knows how to have a good time!
 ENDMETHOD."Validate Monster Header
+
+
+  METHOD ZIF_4_MONSTER_MODEL~WANTS_TO_BLOW_UP_WORLD.
+
+    "Monsters are not environmentally friendly
+    rf_yes_it_does = abap_true.
+
+  ENDMETHOD.
 ENDCLASS.

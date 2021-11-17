@@ -1,0 +1,14 @@
+{
+"BASEINFO":
+{
+"FROM":
+[
+"Z4T_ORDER_HEADER",
+"Z4T_ORDER_ITEMS"
+],
+"ASSOCIATED":
+[],
+"BASE":
+[]
+}
+}

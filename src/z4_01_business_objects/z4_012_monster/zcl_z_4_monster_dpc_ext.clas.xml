@@ -14,9 +14,15 @@
    <TPOOL>
     <item>
      <ID>I</ID>
-     <KEY>001</KEY>
-     <ENTRY>This monster does not want to be deleted</ENTRY>
-     <LENGTH>80</LENGTH>
+     <KEY>002</KEY>
+     <ENTRY>does not want to be deleted</ENTRY>
+     <LENGTH>54</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>003</KEY>
+     <ENTRY>Monster No</ENTRY>
+     <LENGTH>20</LENGTH>
     </item>
    </TPOOL>
    <DESCRIPTIONS>

@@ -19,7 +19,7 @@ CLASS ZCL_4_V_MONSTERHEADER_CON_CHK IMPLEMENTATION.
 
   METHOD /bobf/if_frw_validation~execute.
 *--------------------------------------------------------------------*
-* Listing 07.15 - Executing a Validation
+* Listing 07.154: - Executing a Validation
 *--------------------------------------------------------------------*
 * Local Variables
     DATA: bopf_monster_header_records    TYPE z4tt_monster_header,
@@ -78,7 +78,7 @@ CLASS ZCL_4_V_MONSTERHEADER_CON_CHK IMPLEMENTATION.
             lifetime           = /bobf/if_frw_c=>sc_lifetime_set_by_bopf
             ms_origin_location = origin_location_information ).
 
-        zcl_bc_bopf_pl_helper=>put_message_in_bottle(
+        zcl_4_bc_bopf_pl_helper=>put_message_in_bottle(
          EXPORTING i_hope_that_someone_gets_my = message_in_a_bottle
          CHANGING  co_bottle                   = eo_message ).
 

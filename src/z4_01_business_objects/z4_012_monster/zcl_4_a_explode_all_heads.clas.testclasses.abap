@@ -1,6 +1,6 @@
 *"* use this source file for your ABAP unit test classes
 *--------------------------------------------------------------------*
-* Listing 07.25 : BUnit Test Definition
+* Listing 07.23: - BUnit Test Definition
 *--------------------------------------------------------------------*
 CLASS ltc_explode_all_heads DEFINITION FINAL FOR TESTING
 DURATION SHORT
@@ -16,7 +16,7 @@ RISK LEVEL HARMLESS.
 
   PRIVATE SECTION.
     DATA: mo_header TYPE REF TO /bobf/if_bunit_data_node,
-          mo_result TYPE REF TO /bobf/if_bunit_action_result.
+          mo_result TYPE REF TO /bobf/if_bunit_action_result ##NEEDED.
 
     METHODS:
       "IT SHOULD
@@ -25,10 +25,15 @@ RISK LEVEL HARMLESS.
       when_explode_action_occurs,
       then_heads_should_explode.
 
+*--------------------------------------------------------------------*
+* One Haunted Castle contains the ghost of a servant who was falsely accused of losing valuable dishes. She was killed
+* and thrown into the well in the castle. Her ghost now haunts the castle at night, counting dishes in a mournful tone;
+* she reaches nine before shrieking and returning to the well.
+*--------------------------------------------------------------------*
 ENDCLASS.
 
 *--------------------------------------------------------------------*
-* Listing 08.26 : BUnit Test Implementation
+* Listing 07.24: - BUnit Test Implementation
 *--------------------------------------------------------------------*
 CLASS ltc_explode_all_heads IMPLEMENTATION.
 

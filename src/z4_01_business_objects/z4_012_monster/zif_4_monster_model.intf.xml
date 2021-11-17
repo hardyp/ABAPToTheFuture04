@@ -15,7 +15,7 @@
      <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
      <CMPNAME>ACTION_HOWL_AT_THE_MOON</CMPNAME>
      <LANGU>E</LANGU>
-     <DESCRIPT>Howl at the Moon</DESCRIPT>
+     <DESCRIPT>@15@Howl at the Moon</DESCRIPT>
     </SEOCOMPOTX>
     <SEOCOMPOTX>
      <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
@@ -27,19 +27,31 @@
      <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
      <CMPNAME>DERIVE_HEADER_FIELDS</CMPNAME>
      <LANGU>E</LANGU>
-     <DESCRIPT>Derive some header fields values based upon others</DESCRIPT>
+     <DESCRIPT>@4M@Derive some header fields values based upon others</DESCRIPT>
     </SEOCOMPOTX>
     <SEOCOMPOTX>
      <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
      <CMPNAME>DERIVE_ITEM_FIELDS</CMPNAME>
      <LANGU>E</LANGU>
-     <DESCRIPT>Derive some item fields values based upon others</DESCRIPT>
+     <DESCRIPT>@4M@Derive some item fields values based upon others</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
+     <CMPNAME>INVITE_TO_PARTY</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Invite Monster to Party</DESCRIPT>
     </SEOCOMPOTX>
     <SEOCOMPOTX>
      <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
      <CMPNAME>IS_DERIVATION_RELEVANT</CMPNAME>
      <LANGU>E</LANGU>
      <DESCRIPT>Has a field changed that fill need derived values changing?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
+     <CMPNAME>IS_SCARY</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Return TRUE if the Monster is Scary</DESCRIPT>
     </SEOCOMPOTX>
     <SEOCOMPOTX>
      <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
@@ -57,13 +69,19 @@
      <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
      <CMPNAME>VALIDATE_ACTION_HOWL</CMPNAME>
      <LANGU>E</LANGU>
-     <DESCRIPT>Validate Howl Action</DESCRIPT>
+     <DESCRIPT>@38@Validate Howl Action</DESCRIPT>
     </SEOCOMPOTX>
     <SEOCOMPOTX>
      <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
      <CMPNAME>VALIDATE_MONSTER_HEADER</CMPNAME>
      <LANGU>E</LANGU>
-     <DESCRIPT>Validate Consistency of Monster Header</DESCRIPT>
+     <DESCRIPT>@38@Validate Consistency of Monster Header</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_4_MONSTER_MODEL</CLSNAME>
+     <CMPNAME>WANTS_TO_BLOW_UP_WORLD</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Does the Monster want to Blow Up the Entire World?</DESCRIPT>
     </SEOCOMPOTX>
    </DESCRIPTIONS>
   </asx:values>

@@ -1,10 +1,10 @@
 *"* use this source file for the definition and implementation of
 *"* local helper classes, interface definitions and type
 *"* declarations
-CLASS lcl_weapon_iterator DEFINITION.
+CLASS lcl_weapon_iterator DEFINITION ##CLASS_FINAL.
   PUBLIC SECTION.
     METHODS: constructor,
-      get_next_weapon RETURNING VALUE(rd_weapon) TYPE string.
+      get_next_weapon RETURNING VALUE(rd_weapon) TYPE string."INTF_IN_CLASS
 
   PRIVATE SECTION.
     DATA: weapon_table    TYPE TABLE OF string,

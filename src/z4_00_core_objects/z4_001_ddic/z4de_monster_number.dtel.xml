@@ -11,11 +11,11 @@
     <SCRLEN1>08</SCRLEN1>
     <SCRLEN2>15</SCRLEN2>
     <SCRLEN3>15</SCRLEN3>
-    <DDTEXT>Monster  Number</DDTEXT>
-    <REPTEXT>Monster  Number</REPTEXT>
+    <DDTEXT>Monster Number</DDTEXT>
+    <REPTEXT>Monster Number</REPTEXT>
     <SCRTEXT_S>M.Number</SCRTEXT_S>
-    <SCRTEXT_M>Monster  Number</SCRTEXT_M>
-    <SCRTEXT_L>Monster  Number</SCRTEXT_L>
+    <SCRTEXT_M>Monster Number</SCRTEXT_M>
+    <SCRTEXT_L>Monster Number</SCRTEXT_L>
     <DTELMASTER>E</DTELMASTER>
     <REFKIND>D</REFKIND>
    </DD04V>

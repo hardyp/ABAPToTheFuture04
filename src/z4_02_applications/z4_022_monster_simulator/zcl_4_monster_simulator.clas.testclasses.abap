@@ -1,14 +1,16 @@
 *"* use this source file for your ABAP unit test classes
 *--------------------------------------------------------------------*
-* Listing 05.15 - Defining a Test Class
+* Listing 05.15: - Defining a Test Class
 *--------------------------------------------------------------------*
 CLASS ltc_monster_simulator DEFINITION DEFERRED.
 
 "Need to make the class under test "friends" with the test class
 "in order to enable testing for private methods
 CLASS zcl_4_monster_simulator DEFINITION LOCAL FRIENDS ltc_monster_simulator.
-
-CLASS ltd_pers_layer DEFINITION FOR TESTING.
+*--------------------------------------------------------------------*
+* Listing 05.05: Coding the Implementation for a Test Double
+*--------------------------------------------------------------------*
+CLASS ltd_pers_layer DEFINITION FOR TESTING ##CLASS_FINAL.
   PUBLIC SECTION.
     INTERFACES zif_4_monster_sim_pers_layer PARTIALLY IMPLEMENTED.
 
@@ -16,20 +18,23 @@ CLASS ltd_pers_layer DEFINITION FOR TESTING.
             zif_4_monster_sim_pers_layer~derive_monsters_under_bed.
 ENDCLASS.
 
+*-------------------------------------------------------------------------*
+* Listing 05.06: Test Double Method Redefinitions of Assorted Real Methods
+*-------------------------------------------------------------------------*
 CLASS ltd_pers_layer IMPLEMENTATION.
 
-  METHOD derive_monsters_under_bed.
+  METHOD derive_monsters_under_bed ##NEEDED.
 
   ENDMETHOD.
 
 ENDCLASS.
 
-CLASS ltd_logger DEFINITION FOR TESTING.
+CLASS ltd_logger DEFINITION FOR TESTING ##CLASS_FINAL.
   PUBLIC SECTION.
     INTERFACES zif_4_monster_logger PARTIALLY IMPLEMENTED.
 ENDCLASS.
 
-CLASS ltd_mmm DEFINITION FOR TESTING.
+CLASS ltd_mmm DEFINITION FOR TESTING ##CLASS_FINAL.
   PUBLIC SECTION.
     INTERFACES zif_4_monster_making_machine PARTIALLY IMPLEMENTED.
 ENDCLASS.
@@ -41,12 +46,12 @@ ENDCLASS.
 *----------------------------------------------------------------------*
 *       CLASS lcl_my_contstraint DEFINITION
 *----------------------------------------------------------------------*
-* Listing 05.27 - ASSERT THAT
+* Listing 05.27: - ASSERT THAT
 * This constraint is used to demonstrate how to code a custom assertion
 * which can be used when your test logic is more complex than the
 * standard SAP assertions can cope with
 *----------------------------------------------------------------------*
-CLASS lcl_monster_constraint DEFINITION.
+CLASS lcl_monster_constraint DEFINITION ##CLASS_FINAL.
 
   PUBLIC SECTION.
     INTERFACES if_constraint.
@@ -58,7 +63,7 @@ ENDCLASS."Monster Constraint Defintion
 *----------------------------------------------------------------------*
 
 *--------------------------------------------------------------------*
-* Listing 05.16 - Test Class General Settings
+* Listing 05.16: - Test Class General Settings
 *--------------------------------------------------------------------*
 CLASS ltc_monster_simulator DEFINITION FOR TESTING
    RISK LEVEL HARMLESS
@@ -66,8 +71,8 @@ CLASS ltc_monster_simulator DEFINITION FOR TESTING
    FINAL.
 
 *--------------------------------------------------------------------*
-* Listing 05.17 - Defining Test Double Classes for Injecting into Test Class
-* Listing 05.18 - Variables for the Test Class Definition
+* Listing 05.17: - Defining Test Double Classes for Injecting into Test Class
+* Listing 05.18: - Variables for the Test Class Definition
 *--------------------------------------------------------------------*
   PUBLIC SECTION.
 
@@ -93,8 +98,8 @@ CLASS ltc_monster_simulator DEFINITION FOR TESTING
 *--------------------------------------------------------------*
 * Specifications
 *--------------------------------------------------------------*
-* Listing 05.19 - Test Methods that Define what an Application
-*                 SHOULD do (as in IT SHOULD......)
+* Listing 05.19: - Test Methods that Define what an Application
+*                  SHOULD do (as in IT SHOULD......)
 *--------------------------------------------------------------*
       "IT is the Monster Simulator hence LTC_MONSTER_SIMULATOR
       "IT SHOULD.....................
@@ -107,9 +112,9 @@ CLASS ltc_monster_simulator DEFINITION FOR TESTING
       mocking_framework_test         FOR TESTING,
       mocking_exception_test         FOR TESTING,
       mockup_loader                  FOR TESTING,
-*--------------------------------------------------------------*
-* Listing 05.20 - The GIVEN / WHEN / THEN Pattern for Unit Tests
-*--------------------------------------------------------------*
+*----------------------------------------------------------------*
+* Listing 05.20: - The GIVEN / WHEN / THEN Pattern for Unit Tests
+*----------------------------------------------------------------*
       "GIVEN.........................
       given_monster_details_entered,
       "WHEN..........................
@@ -129,12 +134,15 @@ CLASS ltc_monster_simulator DEFINITION FOR TESTING
       then_no_of_heads_should_be
         IMPORTING id_heads TYPE int4.
 
+* In one Haunted Castle nearby prisoners were granted pardons if they would agree to be lowered into the hole by a rope
+* and report back what they saw. When the first prisoner was lowered, he started screaming after a few seconds. When he
+* was raised back up, the story goes, he appeared to have aged 30 years.
 ENDCLASS."Test Class Definition
 
 *----------------------------------------------------------------------*
 *       CLASS lcl_monster_constraint IMPLEMENTATION
 *----------------------------------------------------------------------*
-* Listing 05.28 Implementation of a Custom Constraint Class
+* Listing 05.28: Implementation of a Custom Constraint Class
 * Custom logic to implement a more complex assertion than is possible
 * using standard SAP assertions
 *----------------------------------------------------------------------*
@@ -145,24 +153,29 @@ CLASS lcl_monster_constraint IMPLEMENTATION.
 * IMPORTING data_object TYPE data
 * RETURNING result      TYPE abap_bool
 *--------------------------------------------------------------------*
-    DATA(monster) = CAST zcl_monster_simulator( data_object ).
+    DATA(monster) = CAST zcl_4_monster_simulator( data_object ).
 
     result = abap_false.
 
-    CHECK monster->md_scariness     CS 'SCARY'.
-    CHECK monster->md_bolts_in_neck EQ 2.
-    CHECK monster->md_fluffiness    EQ 0.
-    CHECK monster->md_color         NE 'PINK'.
+    IF monster->md_scariness     CS 'SCARY' AND
+       monster->md_bolts_in_neck EQ 2       AND
+       monster->md_fluffiness    EQ 0       AND
+       monster->md_color         NE 'PINK'.
 
-    result = abap_true.
+      result = abap_true.
 
+    ENDIF.
+
+*-----------------------------------------------------------------------------------*
+* The Monster whose hobby is to Repair Watches has the Super-Power of Teleportation
+*-----------------------------------------------------------------------------------*
   ENDMETHOD.                    "IF_CONSTRAINT~is_valid
 
   METHOD if_constraint~get_description.
 *--------------------------------------------------------------------*
 * RETURNING result TYPE string_table
 *--------------------------------------------------------------------*
-    DATA(message) = |'Monster is no longer a monster!'(001)|.
+    DATA(message) = |{ 'Monster is no longer a monster!'(001) }|.
 
     APPEND message TO result.
 
@@ -174,8 +187,8 @@ ENDCLASS."Monster Constraint Implementation
 *----------------------------------------------------------------------*
 CLASS ltc_monster_simulator IMPLEMENTATION.
 *--------------------------------------------------------------------*
-* Listing 05.21 - Implementation of a Test Class
-* Listing 05.25 - Unit Test to Check for Basic Errors
+* Listing 05.21: - Implementation of a Test Class
+* Listing 05.25: - Unit Test to Check for Basic Errors
 *--------------------------------------------------------------------*
   METHOD return_a_bom_for_a_monster.
 
@@ -188,22 +201,25 @@ CLASS ltc_monster_simulator IMPLEMENTATION.
         then_resulting_bom_is_correct( ).
 
       CATCH zcx_violated_precondition.
-        cl_abap_unit_assert=>fail( 'Violated Contract Precondition' ).
+        cl_abap_unit_assert=>fail( 'Violated Contract Precondition'(002) ).
       CATCH zcx_violated_postcondition.
-        cl_abap_unit_assert=>fail( 'Violated Contract Postcondition' ).
+        cl_abap_unit_assert=>fail( 'Violated Contract Postcondition'(003) ).
     ENDTRY.
 
   ENDMETHOD."Return a BOM for a Monster (Test Class)
 
-  METHOD make_the_monster_sing.
+  METHOD make_the_monster_sing ##NEEDED.
   ENDMETHOD.                    "make_the_monster_sing
 
-  METHOD make_the_monster_dance.
+  METHOD make_the_monster_dance ##NEEDED.
   ENDMETHOD.                    "make_the_monster_dance
 
-  METHOD make_the_monster_go_to_france.
+  METHOD make_the_monster_go_to_france ##NEEDED.
   ENDMETHOD.                    "make_the_monster_go_to_france
 
+*--------------------------------------------------------------------*
+* Listing 05.39: Using the ATDF – Test Method
+*--------------------------------------------------------------------*
   METHOD calculate_heads_under_bed.
 
     given_customizing_that_says( for_monster_type        = insomniac_eater
@@ -219,9 +235,9 @@ CLASS ltc_monster_simulator IMPLEMENTATION.
 
   ENDMETHOD.
 
-*--------------------------------------------------------------------*
-* Listing 05.36 - Coding a Unit Test without Definitions and Implementations
-*--------------------------------------------------------------------*
+*-----------------------------------------------------------------------------------------*
+* Listing 05.36: - Coding a Unit Test without Test Double Definitions and Implementations
+*-----------------------------------------------------------------------------------------*
   METHOD mocking_framework_test.
 * Local Variables
     DATA: interface_name         TYPE seoclsname VALUE 'ZIF_4_MONSTER_SIMULATOR',
@@ -240,12 +256,12 @@ CLASS ltc_monster_simulator IMPLEMENTATION.
 
     "Say what method we are mocking and the input values
     TRY.
-        mock_monster_simulator->calculate_scariness( is_bom_input_data = ms_input_data ).
+        mock_monster_simulator->calculate_scariness( ms_input_data ).
 
         "Invoke the production code to be tested
         scariness_description = mock_monster_simulator->calculate_scariness( ms_input_data ).
-      CATCH zcx_violated_precondition_stat.
-        cl_abap_unit_assert=>fail( msg = 'Contract Precondition Violation' ).
+      CATCH zcx_violated_precondition.
+        cl_abap_unit_assert=>fail( 'Contract Precondition Violation' ).
     ENDTRY.
 
     "Was the correct value returned?
@@ -257,7 +273,7 @@ CLASS ltc_monster_simulator IMPLEMENTATION.
     cl_abap_testdouble=>verify_expectations( mock_monster_simulator ).
 
 *--------------------------------------------------------------------*
-* Listing 05.29 - Calling a Custom Assertion
+* Listing 05.29: - Calling a Custom Assertion
 *--------------------------------------------------------------------*
 * After having done some standard SAP assertions we now perform
 * a user-defined assertion, where we program our own rules to see
@@ -271,19 +287,19 @@ CLASS ltc_monster_simulator IMPLEMENTATION.
   ENDMETHOD."Mocking Framework Test
 
 *--------------------------------------------------------------------*
-* Listing 05.37 Mocking Exception using ATDF
+* Listing 05.40: Mocking Exception using ATDF
 *--------------------------------------------------------------------*
   METHOD mocking_exception_test.
 * Local Variables
     DATA: interface_name         TYPE seoclsname VALUE 'ZIF_4_MONSTER_SIMULATOR',
           mock_monster_simulator TYPE REF TO zif_4_monster_simulator,
-          scariness_description  TYPE string.
+          scariness_description  TYPE string ##NEEDED.
 
     "Create the Test Double Instance
     mock_monster_simulator ?= cl_abap_testdouble=>create( interface_name ).
 
     "What result do we expect back from the called method?
-    DATA(lo_violation) = NEW zcx_violated_precondition_stat( ).
+    DATA(lo_violation) = NEW zcx_violated_precondition( ).
     cl_abap_testdouble=>configure_call( mock_monster_simulator )->raise_exception( lo_violation ).
 
     "Prepare the simulated input details e.g. monster strength
@@ -291,36 +307,36 @@ CLASS ltc_monster_simulator IMPLEMENTATION.
 
     "Say what method we are mocking and the input values
     TRY.
-        mock_monster_simulator->calculate_scariness( is_bom_input_data = ms_input_data ).
+        mock_monster_simulator->calculate_scariness( ms_input_data ).
 
         "Invoke the production code to be tested
         scariness_description = mock_monster_simulator->calculate_scariness( ms_input_data ).
 
-      CATCH zcx_violated_precondition_stat.
+      CATCH zcx_violated_precondition.
         "All is well, we wanted the exception to be raised
         RETURN.
     ENDTRY.
 
     "Was the correct value returned?
-    cl_abap_unit_assert=>fail( msg = 'Expected Exception was not Raised' ).
+    cl_abap_unit_assert=>fail( 'Expected Exception was not Raised' ).
 
   ENDMETHOD."Mocking Exception Test
 
 *--------------------------------------------------------------------*
-* Listing 05.38 Test Method to Load Multiple Test Cases
+* Listing 05.45: Test Method to Load Multiple Test Cases
 *--------------------------------------------------------------------*
   METHOD mockup_loader.
 * Local Variables
     TYPES: BEGIN OF l_typ_monster_test_data,
-             strength   TYPE  zde_monster_strength,
-             brain_size TYPE  zde_monster_brain_size,
-             sanity     TYPE  zde_monster_sanity,
-             ssatn      TYPE  zde_component_type_percentage,
-             sspdt      TYPE  zde_component_type_percentage,
+             strength   TYPE  z4de_monster_strength,
+             brain_size TYPE  z4de_monster_brain_size,
+             sanity     TYPE  z4de_monster_sanity,
+             ssatn      TYPE  z4de_component_type_percentage,
+             sspdt      TYPE  z4de_component_type_percentage,
            END OF   l_typ_monster_test_data.
 
-* Need to specify the type of the table, to make sure
-* correct tests are done on the data loaded from MIME
+    "Need to specify the type of the table, to make sure
+    "correct tests are done on the data loaded from MIME. I a a MIME. My body is my tool.
     DATA test_cases_table TYPE TABLE OF l_typ_monster_test_data.
 
     "Name of Entry in SMW0
@@ -344,56 +360,57 @@ CLASS ltc_monster_simulator IMPLEMENTATION.
         cl_abap_unit_assert=>fail( loader_exception->get_text( ) ).
     ENDTRY.
 
-    LOOP AT test_cases_table INTO DATA(test_case).
+    LOOP AT test_cases_table ASSIGNING FIELD-SYMBOL(<test_case>).
       mo_class_under_test->get_component_split(
         EXPORTING
-          id_strength   = test_case-strength
-          id_brain_size = test_case-brain_size
-          id_sanity     = test_case-sanity
+          id_strength   = <test_case>-strength
+          id_brain_size = <test_case>-brain_size
+          id_sanity     = <test_case>-sanity
         IMPORTING
           id_ssatn      = DATA(actual_percentage_ssatn)
           id_sspdt      = DATA(actual_percentage_sspdt) ).
 
       cl_abap_unit_assert=>assert_equals(
-      exp = test_case-ssatn
+      exp = <test_case>-ssatn
       act = actual_percentage_ssatn
-      msg = |{ test_case-strength } + { test_case-brain_size } + { test_case-sanity } gets incorrect SSATN %age| ).
+      msg = |{ <test_case>-strength } + { <test_case>-brain_size } + { <test_case>-sanity } | &&
+            |gets incorrect SSATN %age| ).
 
       cl_abap_unit_assert=>assert_equals(
-      exp = test_case-sspdt
+      exp = <test_case>-sspdt
       act = actual_percentage_sspdt
-      msg = |{ test_case-strength } + { test_case-brain_size } + { test_case-sanity } gets incorrect SSPDT %age| ).
+      msg = |{ <test_case>-strength } + { <test_case>-brain_size } + { <test_case>-sanity } | &&
+            |gets incorrect SSPDT %age| ).
 
     ENDLOOP."Test Cases
 
   ENDMETHOD."Mockup Loader
 
-*--------------------------------------------------------------------*
-* Listing 05.14 - Dependency Lookup: Injection
-* Listing 05.22 - Create an Instance of the Class Under Test and
-*                 clear all global variables
-*--------------------------------------------------------------------*
+*--------------------------------------------------------------------------------------------*
+* Listing 05.22: - Create an Instance of the Class Under Test and clear all global variables
+*--------------------------------------------------------------------------------------------*
   METHOD: setup."Called before every test
 
     "Create Test Doubles - with manually defined test double classes
-    CREATE OBJECT mo_mock_pers_layer TYPE ltd_pers_layer.
-    CREATE OBJECT mo_mock_logger TYPE ltd_logger.
-    CREATE OBJECT mo_mock_mmm TYPE ltd_mmm.
+    mo_mock_pers_layer = NEW ltd_pers_layer( ).
+    mo_mock_logger = NEW ltd_logger( ).
+    mo_mock_mmm = NEW ltd_mmm( ).
 
-    "OR Create Test Doubles - using ATDF
+    "OR you Create Test Doubles - using ATDF
     mo_mock_pers_layer ?= cl_abap_testdouble=>create( pers_layer_interface ).
     mo_mock_logger     ?= cl_abap_testdouble=>create( logger_interface ).
     mo_mock_mmm        ?= cl_abap_testdouble=>create( mmm_interface ).
 
-    "Create Instance of Class Under Test
-    "Via Constructor Injection
+    "Create Instance of Class Under Test filling helper objects via Constructor Injection
     mo_class_under_test = NEW #(
       io_pers_layer             = mo_mock_pers_layer
       io_logger                 = mo_mock_logger
       io_monster_making_machine = mo_mock_mmm ).
 
-    "OR Create Instance of Class Under Test
-    "Via Injection via Factory (Dependency Lookup)
+*--------------------------------------------------------------------*
+* Listing 05.14: - Dependency Lookup: Injection
+*--------------------------------------------------------------------*
+    "OR you Create Instance of Class Under Test filling helper objects via Injection via Factory (Dependency Lookup)
     DATA(lo_injector) = NEW zcl_4_monster_injector( ).
     lo_injector->inject_monster_sim_pl( mo_mock_pers_layer ).
     lo_injector->inject_logger( mo_mock_logger ).
@@ -407,6 +424,9 @@ CLASS ltc_monster_simulator IMPLEMENTATION.
 
   ENDMETHOD."Setup - Implementation
 
+*--------------------------------------------------------------------*
+* Listing 05.36: Using the ATDF - GIVEN Methods
+*--------------------------------------------------------------------*
   "GIVEN.........................
   METHOD given_customizing_that_says.
 
@@ -429,7 +449,7 @@ CLASS ltc_monster_simulator IMPLEMENTATION.
   ENDMETHOD.
 
 *--------------------------------------------------------------------*
-* Listing 05.23 - Preparing Test Data by Simulating External Input
+* Listing 05.23: - Preparing Test Data by Simulating External Input
 *--------------------------------------------------------------------*
   METHOD given_monster_details_entered.
 
@@ -443,7 +463,8 @@ CLASS ltc_monster_simulator IMPLEMENTATION.
   ENDMETHOD."Monster Details Entered – Implementation
 
 *--------------------------------------------------------------------*
-* Listing 05.24 - Calling the Production Code to be Tested
+* Listing 05.24: - Calling the Production Code to be Tested
+* Listing 05.37: - Using the ATDF – WHEN Method
 *--------------------------------------------------------------------*
   "WHEN..........................
   METHOD when_head_nos_are_calculated.
@@ -454,14 +475,12 @@ CLASS ltc_monster_simulator IMPLEMENTATION.
 
   METHOD when_bom_is_calculated.
 
-    mo_class_under_test->simulate_monster_bom(
-    EXPORTING is_bom_input_data = ms_input_data
-    IMPORTING et_bom_data       = mt_bom_data ).
+    mt_bom_data = mo_class_under_test->simulate_monster_bom( ms_input_data ).
 
   ENDMETHOD."when_bom_is_calculated
 
 *--------------------------------------------------------------------*
-* Listing 05.26 - Using Assertions to See if the Test Passed
+* Listing 05.38: - Using the ATDF – THEN Method
 *--------------------------------------------------------------------*
   "THEN..........................
   METHOD then_no_of_heads_should_be.
@@ -474,7 +493,9 @@ CLASS ltc_monster_simulator IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD then_resulting_bom_is_correct.
-
+*--------------------------------------------------------------------*
+* Listing 05.26:  Using Assertions to Check If Test Passed
+*--------------------------------------------------------------------*
     DATA(bom_item_details) = mt_bom_data[ 1 ].
 
     cl_abap_unit_assert=>assert_equals( msg  = 'Monster has wrong number of Heads'
@@ -501,20 +522,18 @@ CLASS ltc_monster_simulator IMPLEMENTATION.
 * "design by contract" as implemented using ZCL_DBC
 * What we are doing here is coding a "class invariant"
 * After every method call, the monster must remain a monster
-* Listing 06.14 - Calling a Class Invariant at the end of each Method Call
 *--------------------------------------------------------------------*
     DATA(monster_constraint) = NEW lcl_monster_constraint( ).
 
     TRY.
 
         zcl_dbc=>ensure(
-          EXPORTING
             that             = 'The Monster is still a Monster'
             which_is_true_if = monster_constraint->if_constraint~is_valid( mo_class_under_test ) ).
 
       CATCH zcx_violated_postcondition.
         DATA(message_table) = monster_constraint->if_constraint~get_description( ).
-        cl_abap_unit_assert=>fail( msg = message_table[ 1 ] ).
+        cl_abap_unit_assert=>fail( message_table[ 1 ] ).
     ENDTRY.
 
   ENDMETHOD."Then Resulting BOM is correct - Implementation

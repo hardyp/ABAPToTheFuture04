@@ -2,7 +2,7 @@ class ZCL_4_MONSTER_MAKING_MACHINE definition
   public
   create public
 
-  global friends ZCL_MONSTER_OBJECT_FACTORY .
+  global friends ZCL_4_MONSTER_FACTORY .
 
 public section.
 
@@ -19,7 +19,7 @@ ENDCLASS.
 CLASS ZCL_4_MONSTER_MAKING_MACHINE IMPLEMENTATION.
 
 
-  method ZIF_4_MONSTER_MAKING_MACHINE~MAKE_MONSTER.
+  METHOD zif_4_monster_making_machine~make_monster ##NEEDED.
 
-  endmethod.
+  ENDMETHOD."#EC EMPTY_PROCEDURE
 ENDCLASS.

@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Excel Emailer</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Please find attached an email attachment showing the output from the</ENTRY>
+     <LENGTH>68</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>report in the form of a spreadsheet.</ENTRY>
+     <LENGTH>36</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>003</KEY>
+     <ENTRY>The selection criteria were as follows:-</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>004</KEY>
+     <ENTRY>selection includes</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>005</KEY>
+     <ENTRY>selection excludes</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>007</KEY>
+     <ENTRY>values between</ENTRY>
+     <LENGTH>14</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>008</KEY>
+     <ENTRY>values containing the pattern</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>009</KEY>
+     <ENTRY>values</ENTRY>
+     <LENGTH>6</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>010</KEY>
+     <ENTRY>Sheet</ENTRY>
+     <LENGTH>5</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>011</KEY>
+     <ENTRY>a valid EXCEL is object is passed in</ENTRY>
+     <LENGTH>36</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>012</KEY>
+     <ENTRY>Could not create new worksheet</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>013</KEY>
+     <ENTRY>Subtotals</ENTRY>
+     <LENGTH>9</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>014</KEY>
+     <ENTRY>Run by :</ENTRY>
+     <LENGTH>8</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>015</KEY>
+     <ENTRY>Date Run :</ENTRY>
+     <LENGTH>10</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>016</KEY>
+     <ENTRY>Records Found</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>017</KEY>
+     <ENTRY>Filters</ENTRY>
+     <LENGTH>7</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>018</KEY>
+     <ENTRY>selection equals</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>019</KEY>
+     <ENTRY>the value of</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>020</KEY>
+     <ENTRY>The excel extract of the report cannot be sent because the resulting file is beyond the</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>021</KEY>
+     <ENTRY>MB limit</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+   </TPOOL>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>ADD_DRILL_DOWN</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Enabel a cell for drill down</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>BUILD_HYPERLINK_URL</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get URL of Current SAP System</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>CONVERT_SALV_TO_EXCEL</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Convert SALV Object to Excel Object</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>CONVERT_TABLE_TO_EXCEL</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Convert any internal table to an Excel Object</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>CONVERT_TABLE_TO_SALV</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Convert any internal table to a SALV object</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>FIND_COLUMN</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Return Column given Title</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>FORMAT_WORKSHEET</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Apply Standard Settings to a given worksheet</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>GET_EMAIL_ADDRESS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get Email Address of Current User via HR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>GET_EMAIL_VIA_USER</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get Email Address of Current User via User Master</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>GET_MACRO_TEMPLATE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get Macro Enabled Excel Object</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>GET_NEXT_WORKSHEET</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get Existing Worksheet or create new one(s)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>IS_PRODUCTION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Are we running in production?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>MC_FILTER_ROW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Row with Filters</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>MC_HEADINGS_ROW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Row with Column Headings</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>MC_MACRO_ENABLED</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Macro Enabled Spreadsheet</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>MC_NORMAL</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Normal Spreadsheet</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>MC_PRODUCTION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Client control: Role of client (production, test,...)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>MC_SUBTOTAL_ROW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Row with Subtotals</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>MF_MACRO_ENABLED</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Is spreadsheet macro enabled?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>PREPARE_EMAIL_DETAILS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Prepare Email Input Parameters</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>SEND</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Send Excel Sheet via Email</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>SEND_EXCEL_OBJECT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Send Excel Object via Email</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EMAILER</CLSNAME>
+     <CMPNAME>SEND_ITAB</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Send Internal Table as Excel Sheet via Email</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

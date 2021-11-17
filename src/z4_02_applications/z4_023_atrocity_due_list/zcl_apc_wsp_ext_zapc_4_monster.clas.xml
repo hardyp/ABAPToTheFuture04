@@ -5,12 +5,38 @@
    <VSEOCLASS>
     <CLSNAME>ZCL_APC_WSP_EXT_ZAPC_4_MONSTER</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>Generated APC WebSocket protocol impementation class</DESCRIPT>
+    <DESCRIPT>APC WebSocket Protocol for Monsters</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>
     <UNICODE>X</UNICODE>
    </VSEOCLASS>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Monster Object has been Created!</ENTRY>
+     <LENGTH>64</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>Delivery Number</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>003</KEY>
+     <ENTRY>A New Atrocity needs to be Committed</ENTRY>
+     <LENGTH>72</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>004</KEY>
+     <ENTRY>Horrible, Horrible, Deed has Been Scheduled</ENTRY>
+     <LENGTH>86</LENGTH>
+    </item>
+   </TPOOL>
    <DESCRIPTIONS>
     <SEOCOMPOTX>
      <CLSNAME>ZCL_APC_WSP_EXT_ZAPC_4_MONSTER</CLSNAME>

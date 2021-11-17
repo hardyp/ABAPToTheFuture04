@@ -1,0 +1,14 @@
+{
+"BASEINFO":
+{
+"FROM":
+[
+"Z4T_MONSTER_HEAD",
+"Z4T_MONSTER_ITMS"
+],
+"ASSOCIATED":
+[],
+"BASE":
+[]
+}
+}

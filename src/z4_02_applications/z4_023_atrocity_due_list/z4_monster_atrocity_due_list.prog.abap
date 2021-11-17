@@ -11,10 +11,10 @@
 * The target Monitor report will then update itself without the user
 * who is running it having to do anything (e.g. press 'refresh').
 *--------------------------------------------------------------------*
-* First, need to set PID of SAPGUI_PUSH_CHANNEL = X”.
+* First, need to set PID of SAPGUI_PUSH_CHANNEL = "X"
 * Then need to define the ABAP Messaging Channel
 * In SAMC and application ID and a channel have to be defined
-* I am hoping to use the PCP message type
+* I am using the PCP message type
 * Then you "whitelist" programs which can send and receive information
 *--------------------------------------------------------------------*
 * I will make this a SALV report which will have a user command
@@ -26,21 +26,20 @@
 *--------------------------------------------------------------------*
 INCLUDE z4_monster_adl_top.
 
-TABLES: ztmonster_adl.
 **********************************************************************
 * Selection Screen
 **********************************************************************
 * Monster Header Data
 SELECTION-SCREEN BEGIN OF BLOCK blk1 WITH FRAME TITLE TEXT-001.
 
-SELECT-OPTIONS: s_date FOR ztmonster_adl-due_date,
-                s_cstl FOR ztmonster_adl-castle_number.
+SELECT-OPTIONS: s_date FOR gs_selections-duedate,
+                s_cstl FOR gs_selections-castlenumber.
 
 SELECTION-SCREEN END OF BLOCK blk1.
 
 * Display Options
 SELECTION-SCREEN BEGIN OF BLOCK blk2 WITH FRAME TITLE TEXT-002.
-PARAMETERS: p_vari LIKE disvariant-variant.
+PARAMETERS: p_vari TYPE disvariant-variant.
 PARAMETERS: p_edit AS CHECKBOX.                            "Open in Edit Mode
 SELECTION-SCREEN END OF BLOCK blk2.
 
@@ -109,7 +108,7 @@ INCLUDE z4_monster_adl_io1.
 *&---------------------------------------------------------------------*
 *&      Form  INITALISATION
 *&---------------------------------------------------------------------*
-FORM initalisation.
+FORM initalisation ##NEEDED.
 
 ENDFORM.                    " INITALISATION
 *&---------------------------------------------------------------------*
@@ -122,13 +121,14 @@ FORM production_run.
 
   TRY.
       lcl_application=>main( ).
-    CATCH cx_sy_no_handler INTO go_no_handler.
+    CATCH cx_sy_no_handler INTO DATA(lo_no_handler).
       "An exception was raised that was not caught at any point in the call stack
-      gd_error_class = |Fatal Error concerning Class { go_no_handler->classname } - Please Call the Helpdesk|.
-      MESSAGE gd_error_class TYPE 'I'.
+      "Fatal Error concerning Class &1 - Please Call the Helpdesk
+      MESSAGE i012(z4monsters) WITH lo_no_handler->classname.
     CATCH cx_root ##catch_all.
       "We do not know what was happened, output a message instead of dumping
-      MESSAGE 'Report in Trouble - please call helpdesk' TYPE 'I'.
+      "Report in Trouble - please call the Helpdesk
+      MESSAGE i011(z4monsters).
   ENDTRY.
 
 ENDFORM.
@@ -147,14 +147,14 @@ FORM non_production_run.
 
   TRY.
       lcl_application=>main( ).
-    CATCH zcx_violated_precondition INTO go_precondition.
+    CATCH zcx_violated_precondition INTO DATA(lo_precondition).
       "A bug was detected at the start of a subroutine - the caller of the
       "subroutine is at fault
-      go_precondition->mo_error_log->show_error_log( ).
-    CATCH zcx_violated_postcondition INTO go_postcondition.
+      lo_precondition->mo_error_log->popup( ).
+    CATCH zcx_violated_postcondition INTO DATA(lo_postcondition).
       "A bug was detected at the end of a subroutine - the subroutine is
       "at fault
-      go_postcondition->mo_error_log->show_error_log( ).
+      lo_postcondition->mo_error_log->popup( ).
   ENDTRY.
 
 ENDFORM.

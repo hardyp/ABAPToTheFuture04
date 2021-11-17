@@ -5,6 +5,7 @@
    <VSEOCLASS>
     <CLSNAME>ZCL_4_A_V_CHECK_HOWLING_STATUS</CLSNAME>
     <LANGU>E</LANGU>
+    <DESCRIPT>Monster Action Validation: Check Howling Status</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>

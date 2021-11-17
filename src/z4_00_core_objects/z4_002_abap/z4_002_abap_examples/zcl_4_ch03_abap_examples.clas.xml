@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Chapter 03 : ABAP Examples</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Bang!</ENTRY>
+     <LENGTH>15</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>Monster Model</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>003</KEY>
+     <ENTRY>Evilness</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>004</KEY>
+     <ENTRY>Brain Size</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>005</KEY>
+     <ENTRY>Scariness</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>006</KEY>
+     <ENTRY>Usage</ENTRY>
+     <LENGTH>15</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>007</KEY>
+     <ENTRY>Color</ENTRY>
+     <LENGTH>15</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>008</KEY>
+     <ENTRY>Oh No! Send for the Fire Brigade!</ENTRY>
+     <LENGTH>66</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>009</KEY>
+     <ENTRY>A result table is returned</ENTRY>
+     <LENGTH>52</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>010</KEY>
+     <ENTRY>This table is empty</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>011</KEY>
+     <ENTRY>This table is as full as full can be</ENTRY>
+     <LENGTH>72</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>012</KEY>
+     <ENTRY>1 does not equal 2</ENTRY>
+     <LENGTH>28</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>013</KEY>
+     <ENTRY>1 equals 2, and the world is made of snow</ENTRY>
+     <LENGTH>82</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>014</KEY>
+     <ENTRY>Tuesday</ENTRY>
+     <LENGTH>17</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>015</KEY>
+     <ENTRY>Bonkers Monsters of Type</ENTRY>
+     <LENGTH>48</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>016</KEY>
+     <ENTRY> have</ENTRY>
+     <LENGTH>15</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>017</KEY>
+     <ENTRY> heads</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>018</KEY>
+     <ENTRY>Monster</ENTRY>
+     <LENGTH>17</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>019</KEY>
+     <ENTRY>was issued a</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>020</KEY>
+     <ENTRY>on</ENTRY>
+     <LENGTH>12</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>021</KEY>
+     <ENTRY>Problem with monster number</ENTRY>
+     <LENGTH>54</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>022</KEY>
+     <ENTRY>&apos;s Monster Number is</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+   </TPOOL>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_01_QUERY_WITHOUT_VALUE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.01 : Query without VALUE</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_02_QUERY_WITH_VALUE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.02 : Query with VALUE</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_03_VALUE_TO_FILL_ITAB</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.03 : Using VALUE to fill Internal Table</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_04_FILLING_ITAB_HARDCODE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.04 : Fill Internal Table using Hard Coding</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_05_FILLING_ITAB_VIA_FOR</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.05 : Filling Internal Tables using FOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_06_SHORT_LIVED_VARIABLES</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.06 : Creating Short-Lived Variables (LET)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_07_BASIC_ENUMERATION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.07 : Basic Enumeration</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_08_NON_INTEGER_ENUMERATION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.08 : Non-Integer Enumeration</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_09_STRUCTURED_ENUMERATION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.09 : Enumeration with Structure</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_10_ALPHA_INPUT_OUTPUT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.10 : Remove/Add Leading Zeroes by Function</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_11_ALPHA_FOMATTING_OPTION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.11 : ALPHA Formatting Option</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_12_METHOD_GUESS_DATA_TYPE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.12 : Call Method / Guess Data Types</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_13_METHOD_INLINE_DECS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.13 : Call Method + Inline Declarations</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_14_METHOD_CALL_W_HELPER</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.14 : Method Call with Helper Variable</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_15_METHOD_CALL_W_CONV</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.15 : Method Call with CONV</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_16_TYPE_REF_TO_OLD</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.16 : Using TYPE REF TO previously</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_17_ABAP_TRUE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.17 : Needing ABAP_TRUE</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_18_NO_ABAP_TRUE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.18 : Not Needing ABAP_TRUE</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_19_IF_WRONG_CHECK</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.19 : IF with Incorrect Check</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_20_BOOLC</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.20 : Demonstration of BOOLC</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_21_NEGATIVE_TESTING</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.21 : Testing for a Negative</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_22_XSDBOOL</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.22 : Using XSDBOOL for Correct Logic Test Results</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_23_CASE_STATEMENT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.23 : Filling in a Variable Using CASE Statement</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_24_SWITCH_STATEMENT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.24 : Filling in a Variable Using SWITCH Statement</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_26_CASE_STATEMENT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.26 : CASE Statement to Determine Monster Sanity</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_27_COND_STATEMENT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.27 : Using COND Constructor Operator</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_28_COND_STATEMENT_UPDATED</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.28 : COND Constructor Operator with Updated Logic</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_29_INTERNAL_TABLES_WA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.29 : Reading into Work Area and Looping</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_30_INTERNAL_TABLES_FS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.30 : Field Symbols for Work Area</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_31_READING_TABLE_LINE_OLD</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.31 : Reading Line from Internal Table before 7.4</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_32_READING_TABLE_LINE_NEW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.32 : Reading Line from Internal Table after 7.4</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_33_READING_TABLE_OPTIONAL</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.33 : Reading Line from Interal Table - OPTIONAL</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_34_COPYING_ITABS_OLD</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.34 : Moving One Table to Another before 7.4</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_35_COPYING_ITABS_NEW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.35 : Moving One Table to Another after 7.4</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_36_COPY_TO_HASHED_ITAB</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.36 : Moving Corresponding Fields to a HASHED ITAB</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_37_DEEP_STRUCTURE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.37 : Deep Structure</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_38_CORRESPONDING_OLD</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.38 : MOVE-CORRESPONDING (Before) V1</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_39_CORRESPONDING_OLD_V2</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.39 : MOVE-CORRESPONDING (Before) V2</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_40_CORRESPONDING_NEW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.40 : MOVE_CORRESPONDING (After)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_41_CORRESPONDING_DYNAMIC</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.41 : Dynamic MOVE-CORRESPONDING Usage</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_42_GETTING_ROW_NO_OLD</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.42 : Reading Internal Table to Get Row Number</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_43_GETTING_ROW_NO_NEW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.43 : Get Row Number using LINE_INDEX</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_44_GETTING_ROW_NO_NEWER</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.44 : LINE_INDEX at Operand Position</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_45_ITAB_ROW_EXISTS_OLD</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.45 : Checking if Internal Table Line Exists</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_46_ITAB_ROW_EXISTS_NEW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.46 : Checking if Internal Table Line Exists</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_47_ITAB_ROW_EXISTS_NEWER</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.47 : Checking if Internal Table Line Exists</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_48_REDUCE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.48 : Using REDUCE to Count Table Entries</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_49_GROUP_BY</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.49 : Using GROUP_BY</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_50_TABLE_EXTRACTION_OLD</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.50 : Table Extraction before 7.4</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_51_TABLE_EXTRACTION_NEW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.51 : Table Extraction after 7.4</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_52_FAE_DATABASE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.51 : FOR ALL ENTRIES on Database Table</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_53_FAE_ITAB</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.52 : FOR ALL ENTRIES on Internal Table</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_54_VIRTUAL_SORTING</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.54 : Virtual Sorting</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_55_VIRTUAL_SORTING_PART_2</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.55 : Virtual Sorting Results</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_56_QUERY_DDIC_NO_CAST</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.56 : Get Structure Info without CAST</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_57_QUERY_DDIC_WITH_CAST</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.57 : Get Structure Info with CAST</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_58_FIND_A_SUBCLASS_OLD</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.58 : Finding a Subclass pre 7.5</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_59_FIND_A_SUBCLASS_NEW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.59 : Finding a Subclass post 7.5</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_60_FIND_A_SUBCLASS_NEW_V2</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.60 : Finding a Subclass post 7.5 (Alternate)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_4_CH03_ABAP_EXAMPLES</CLSNAME>
+     <CMPNAME>L03_61_FUNCTIONAL_METHOD_PLUS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Listing 03.61 : Functional Method + Extra Parameters</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

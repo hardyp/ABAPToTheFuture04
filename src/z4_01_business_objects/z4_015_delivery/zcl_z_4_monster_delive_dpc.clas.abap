@@ -857,10 +857,13 @@ lo_logger = /iwbep/if_mgw_conv_srv_runtime~get_logger( ).
   endmethod.
 
 
-  method Z4CDS_MONSTER_DE_GET_ENTITY.
+  METHOD z4cds_monster_de_get_entity.
+*--------------------------------------------------------------------*
+* Listing 09.06: - Automatically Generated DPC Method
+*--------------------------------------------------------------------*
     if_sadl_gw_dpc_util~get_dpc( )->get_entity( EXPORTING io_tech_request_context = io_tech_request_context
                                                 IMPORTING es_data                 = er_entity ).
-  endmethod.
+  ENDMETHOD.
 
 
   method Z4CDS_MONSTER_DE_GET_ENTITYSET.

@@ -19,6 +19,18 @@
      <ENTRY>Monster is no longer a monster!</ENTRY>
      <LENGTH>62</LENGTH>
     </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>Violated Contract Precondition</ENTRY>
+     <LENGTH>60</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>003</KEY>
+     <ENTRY>Violated Contract Postcondition</ENTRY>
+     <LENGTH>62</LENGTH>
+    </item>
    </TPOOL>
    <DESCRIPTIONS>
     <SEOCOMPOTX>
@@ -26,12 +38,6 @@
      <CMPNAME>CONSTRUCTOR</CMPNAME>
      <LANGU>E</LANGU>
      <DESCRIPT>Constructor</DESCRIPT>
-    </SEOCOMPOTX>
-    <SEOCOMPOTX>
-     <CLSNAME>ZCL_4_MONSTER_SIMULATOR</CLSNAME>
-     <CMPNAME>GET_COMPONENT_SPLIT</CMPNAME>
-     <LANGU>E</LANGU>
-     <DESCRIPT>Get Split between SSATN and SSPDT</DESCRIPT>
     </SEOCOMPOTX>
     <SEOCOMPOTX>
      <CLSNAME>ZCL_4_MONSTER_SIMULATOR</CLSNAME>
@@ -74,18 +80,6 @@
      <CMPNAME>MO_PERS_LAYER</CMPNAME>
      <LANGU>E</LANGU>
      <DESCRIPT>Monster Simulator Persistency Layer</DESCRIPT>
-    </SEOCOMPOTX>
-    <SEOCOMPOTX>
-     <CLSNAME>ZCL_4_MONSTER_SIMULATOR</CLSNAME>
-     <CMPNAME>OPEN_MONSTERS_EYES</CMPNAME>
-     <LANGU>E</LANGU>
-     <DESCRIPT>Open Monsters Eyes</DESCRIPT>
-    </SEOCOMPOTX>
-    <SEOCOMPOTX>
-     <CLSNAME>ZCL_4_MONSTER_SIMULATOR</CLSNAME>
-     <CMPNAME>SIMULATE_MONSTER_BOM</CMPNAME>
-     <LANGU>E</LANGU>
-     <DESCRIPT>Simulate Monster BOM</DESCRIPT>
     </SEOCOMPOTX>
    </DESCRIPTIONS>
   </asx:values>

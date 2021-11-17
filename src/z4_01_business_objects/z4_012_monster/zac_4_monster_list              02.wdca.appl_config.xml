@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Name="ZWDC_4_MONSTER_LIST" ConfId="ZAC_4_MONSTER_LIST" ConfType="02" ConfVar="">
+ <Component Name="ZWDC_4_MONSTER_LIST" Usage="ZWDC_4_MONSTER_LIST" ConfType="00" ConfId="" ConfVar="" Interface="False"/>
+</Application>

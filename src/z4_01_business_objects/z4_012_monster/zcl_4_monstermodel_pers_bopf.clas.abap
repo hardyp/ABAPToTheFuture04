@@ -12,6 +12,8 @@ public section.
     for ZIF_4_MONSTERMODEL_PERS_LAYER~CREATE_MONSTER_RECORD .
   aliases DERIVE_MONSTER_RECORD_4_UPDATE
     for ZIF_4_MONSTERMODEL_PERS_LAYER~DERIVE_MONSTER_RECORD_4_UPDATE .
+  aliases GET_BOPF_KEY_4_MONSTER_NUMBER
+    for ZIF_4_MONSTERMODEL_PERS_LAYER~GET_BOPF_KEY_4_MONSTER_NUMBER .
   aliases RETRIEVE_HEADERS_BY_ATTRIBUTE
     for ZIF_4_MONSTERMODEL_PERS_LAYER~DERIVE_HEADERS_BY_ATTRIBUTE .
   aliases RETRIEVE_MONSTER_RECORD
@@ -20,11 +22,6 @@ public section.
     for ZIF_4_MONSTERMODEL_PERS_LAYER~UPDATE_MONSTER_RECORD .
 
   methods CONSTRUCTOR .
-  methods GET_BOPF_KEY_4_MONSTER_NUMBER
-    importing
-      !ID_MONSTER_NUMBER type Z4DE_MONSTER_NUMBER
-    returning
-      value(RD_BOPF_KEY) type /BOBF/CONF_KEY .
 protected section.
 private section.
 
@@ -57,7 +54,7 @@ CLASS ZCL_4_MONSTERMODEL_PERS_BOPF IMPLEMENTATION.
 
   METHOD constructor.
 *--------------------------------------------------------------------*
-* Listing 07.02 - BOPF Specific Persistency Layer Constructor
+* Listing 07.02: - BOPF Specific Persistency Layer Constructor
 *--------------------------------------------------------------------*
     TRY.
 
@@ -106,117 +103,81 @@ CLASS ZCL_4_MONSTERMODEL_PERS_BOPF IMPLEMENTATION.
   ENDMETHOD.
 
 
-  METHOD get_bopf_key_4_monster_number.
-*---------------------------------------------------------------*
-* Listing 07.04 - Using a Custom Query to turn a Monster Number into a Key
-*---------------------------------------------------------------*
-    "Local Variables
-    DATA : bopf_selection_parameters TYPE /bobf/t_frw_query_selparam.
-
-    "This builds the dynamic WHERE clause for the database read
-    APPEND INITIAL LINE TO bopf_selection_parameters
-    ASSIGNING FIELD-SYMBOL(<bopf_selection_parameter>).
-
-    <bopf_selection_parameter> = VALUE #(
-    attribute_name =
-    zif_4_monster_c=>sc_query_attribute-monster_header-select_by_elements-monster_number
-    sign   = 'I'
-    option = 'EQ'
-    low    = id_monster_number ).
-
-    "This builds a fully dynamic SQL Statement
-    mo_service_manager->query(
-      EXPORTING
-        iv_query_key            =
-        zif_4_monster_c=>sc_query-monster_header-select_by_elements
-        it_selection_parameters = bopf_selection_parameters
-      IMPORTING
-        et_key                  = DATA(monster_keys) ).
-
-    "The result is always a table, but we have a unique key, so
-    "as someone once said THERE CAN BE ONLY ONE!
-    READ TABLE monster_keys INDEX 1
-    ASSIGNING FIELD-SYMBOL(<monster_key>).
-
-    IF sy-subrc EQ 0.
-      rd_bopf_key = <monster_key>-key.
-    ENDIF.
-
-  ENDMETHOD.
-
-
-METHOD ZIF_4_MONSTERMODEL_PERS_LAYER~CREATE_MONSTER_RECORD.
+METHOD zif_4_monstermodel_pers_layer~create_monster_record.
+*--------------------------------------------------------------------*
+* Listing 07.18: - Creating New Monster Record
+*--------------------------------------------------------------------*
 * Local variables
-DATA : all_changes_to_be_made     TYPE /bobf/t_frw_modification,
-       bopf_monster_header_record TYPE REF TO z4sc_monster_header.
+  DATA: all_changes_to_be_made     TYPE /bobf/t_frw_modification,
+        bopf_monster_header_record TYPE REF TO z4sc_monster_header.
 
-FIELD-SYMBOLS: <bopf_monster_header_record> TYPE z4sc_monster_header.
+  FIELD-SYMBOLS: <bopf_monster_header_record> TYPE z4sc_monster_header.
 
 *------------------------------------------------------------*
 * Create Header Record
 *------------------------------------------------------------*
-TRY.
-"The data component of the change to be made is typed as TYPE REF TO DATA
-CREATE DATA bopf_monster_header_record.
+  TRY.
+      "The data component of the change to be made is typed as TYPE REF TO DATA
+      CREATE DATA bopf_monster_header_record.
 
-ASSIGN bopf_monster_header_record->* TO <bopf_monster_header_record>.
+      ASSIGN bopf_monster_header_record->* TO <bopf_monster_header_record>.
 
-<bopf_monster_header_record> = CORRESPONDING #( is_monster_record-header ).
+      <bopf_monster_header_record> = CORRESPONDING #( is_monster_record-header ).
 
-"I've got a brand new pair of roller skates, you've got a  brand new key
-<bopf_monster_header_record>-key = /bobf/cl_frw_factory=>get_new_key( ).
+      "I've got a brand new pair of roller skates, you've got a  brand new key
+      <bopf_monster_header_record>-key = /bobf/cl_frw_factory=>get_new_key( ).
 
-APPEND INITIAL LINE TO all_changes_to_be_made
-ASSIGNING FIELD-SYMBOL(<change_to_be_made>).
-<change_to_be_made>-node = zif_4_monster_c=>sc_node-monster_header.
-<change_to_be_made>-change_mode = /bobf/if_frw_c=>sc_modify_create.
-<change_to_be_made>-key         = bopf_monster_header_record->key.
-<change_to_be_made>-data        = bopf_monster_header_record.
+      APPEND INITIAL LINE TO all_changes_to_be_made
+      ASSIGNING FIELD-SYMBOL(<change_to_be_made>).
+      <change_to_be_made>-node = zif_4_monster_c=>sc_node-monster_header.
+      <change_to_be_made>-change_mode = /bobf/if_frw_c=>sc_modify_create.
+      <change_to_be_made>-key         = bopf_monster_header_record->key.
+      <change_to_be_made>-data        = bopf_monster_header_record.
 
 *------------------------------------------------------------*
 * Time for the item table
 *------------------------------------------------------------*
-DATA: bopf_monster_item_record TYPE REF TO z4sc_monster_items.
+      DATA: bopf_monster_item_record TYPE REF TO z4sc_monster_items.
 
-FIELD-SYMBOLS: <bopf_monster_item_record> TYPE z4sc_monster_items.
+      FIELD-SYMBOLS: <bopf_monster_item_record> TYPE z4sc_monster_items.
 
-LOOP AT is_monster_record-items INTO DATA(monster_item_record_ex).
+      LOOP AT is_monster_record-items ASSIGNING FIELD-SYMBOL(<monster_item_record_ex>).
 
-CREATE DATA bopf_monster_item_record.
+        CREATE DATA bopf_monster_item_record.
 
-ASSIGN bopf_monster_item_record->* TO <bopf_monster_item_record>.
+        ASSIGN bopf_monster_item_record->* TO <bopf_monster_item_record>.
 
-<bopf_monster_item_record> = CORRESPONDING #( monster_item_record_ex ).
-<bopf_monster_item_record>-key = /bobf/cl_frw_factory=>get_new_key( ).
+        <bopf_monster_item_record> = CORRESPONDING #( <monster_item_record_ex> ).
+        <bopf_monster_item_record>-key = /bobf/cl_frw_factory=>get_new_key( ).
 
-APPEND INITIAL LINE TO all_changes_to_be_made
-ASSIGNING <change_to_be_made>.
-<change_to_be_made>-node        = zif_4_monster_c=>sc_node-monster_items.
-<change_to_be_made>-change_mode = /bobf/if_frw_c=>sc_modify_create.
-<change_to_be_made>-source_node = zif_4_monster_c=>sc_node-monster_header.
-<change_to_be_made>-association =
-zif_4_monster_c=>sc_association-monster_header-monster_items.
-<change_to_be_made>-source_key = bopf_monster_header_record->key.
-<change_to_be_made>-key        = bopf_monster_item_record->key.
-<change_to_be_made>-data       = bopf_monster_item_record.
+        APPEND INITIAL LINE TO all_changes_to_be_made
+        ASSIGNING <change_to_be_made>.
+        <change_to_be_made>-node        = zif_4_monster_c=>sc_node-monster_items.
+        <change_to_be_made>-change_mode = /bobf/if_frw_c=>sc_modify_create.
+        <change_to_be_made>-source_node = zif_4_monster_c=>sc_node-monster_header.
+        <change_to_be_made>-association =
+        zif_4_monster_c=>sc_association-monster_header-monster_items.
+        <change_to_be_made>-source_key = bopf_monster_header_record->key.
+        <change_to_be_made>-key        = bopf_monster_item_record->key.
+        <change_to_be_made>-data       = bopf_monster_item_record.
 
-ENDLOOP."Monster items
+      ENDLOOP."Monster items
 
 *------------------------------------------------------------*
 * Here we go!
 *------------------------------------------------------------*
-mo_bopf_pl_helper->change_data_in_memory( all_changes_to_be_made ).
+      mo_bopf_pl_helper->change_data_in_memory( all_changes_to_be_made ).
 
-mo_bopf_pl_helper->change_data_in_database( ).
+      mo_bopf_pl_helper->change_data_in_database( ).
 
-CATCH /bobf/cx_frw INTO DATA(bobf_exception).
-"Need to extract actual error information from the BOBF error
-"Both BOBF exception and monster exception implement the
-"T100 interface; we can just pass the information on directly
-    RAISE EXCEPTION TYPE zcx_4_monster_exceptions_mc
-      EXPORTING
-        textid = bobf_exception->if_t100_message~t100key.
-ENDTRY.
+    CATCH /bobf/cx_frw INTO DATA(bobf_exception).
+      "Need to extract actual error information from the BOBF error
+      "Both BOBF exception and monster exception implement the
+      "T100 interface; we can just pass the information on directly
+      RAISE EXCEPTION TYPE zcx_4_monster_exceptions_mc
+        EXPORTING
+          textid = bobf_exception->if_t100_message~t100key.
+  ENDTRY.
 
 ENDMETHOD."Create Monster Record / ZCL_4_MONSTERMODEL_PERS_BOPF
 
@@ -227,20 +188,22 @@ ENDMETHOD."Create Monster Record / ZCL_4_MONSTERMODEL_PERS_BOPF
     DATA bopf_selection_parameters TYPE /bobf/t_frw_query_selparam.
 
     "Adapt generic query structure to specific BOPF query structure
-    LOOP AT it_selections INTO DATA(generic_selection_parameter).
+    LOOP AT it_selections ASSIGNING FIELD-SYMBOL(<generic_selection_parameter>).
 
       APPEND INITIAL LINE TO bopf_selection_parameters
       ASSIGNING FIELD-SYMBOL(<bopf_selection_parameter>).
 
-      <bopf_selection_parameter>-attribute_name = generic_selection_parameter-field.
-      <bopf_selection_parameter>-sign           = generic_selection_parameter-sign.
-      <bopf_selection_parameter>-option         = generic_selection_parameter-option.
-      <bopf_selection_parameter>-low            = generic_selection_parameter-low.
-      <bopf_selection_parameter>-high           = generic_selection_parameter-high.
+      <bopf_selection_parameter>-attribute_name = <generic_selection_parameter>-field.
+      <bopf_selection_parameter>-sign           = <generic_selection_parameter>-sign.
+      <bopf_selection_parameter>-option         = <generic_selection_parameter>-option.
+      <bopf_selection_parameter>-low            = <generic_selection_parameter>-low.
+      <bopf_selection_parameter>-high           = <generic_selection_parameter>-high.
 
     ENDLOOP.
 
-    CHECK bopf_selection_parameters[] IS NOT INITIAL.
+    IF bopf_selection_parameters[] IS INITIAL.
+      RETURN.
+    ENDIF.
 
     DATA: bopf_monster_header_records TYPE z4tt_monster_header.
 
@@ -255,9 +218,9 @@ ENDMETHOD."Create Monster Record / ZCL_4_MONSTERMODEL_PERS_BOPF
     rt_monster_headers = external_headers_view( bopf_monster_header_records ).
 
     LOOP AT rt_monster_headers ASSIGNING FIELD-SYMBOL(<ls_headers>).
-      IF <ls_headers>-creation_date IS INITIAL.
-        "Gateway dumps if a date is initial
-        <ls_headers>-creation_date = sy-datum.
+      "Gateway dumps if ay date field is initial
+      IF <ls_headers>-createdat IS INITIAL.
+        GET TIME STAMP FIELD <ls_headers>-createdat.
       ENDIF.
       IF <ls_headers>-lastchangedat IS INITIAL.
         GET TIME STAMP FIELD <ls_headers>-lastchangedat.
@@ -268,11 +231,13 @@ ENDMETHOD."Create Monster Record / ZCL_4_MONSTERMODEL_PERS_BOPF
 
 
   METHOD zif_4_monstermodel_pers_layer~derive_monster_record.
-*------------------------------------------------------------*
+*--------------------------------------------------------------------*
+* Listing 07.03: - Model Class Data Retrieval Method
+*--------------------------------------------------------------------*
 * We could do this the traditional way via a SELECT statement
 * But that’s just what they’re EXPECTING us to do!
 * Instead, let’s go down the BOPF path...
-*------------------------------------------------------------*
+*--------------------------------------------------------------------*
     TRY.
         "To get a BOPF object, we need a key, not a number
         DATA(monster_key) = get_bopf_key_4_monster_number( id_monster_number ).
@@ -357,67 +322,111 @@ ENDMETHOD."Create Monster Record / ZCL_4_MONSTERMODEL_PERS_BOPF
   ENDMETHOD.
 
 
-METHOD ZIF_4_MONSTERMODEL_PERS_LAYER~UPDATE_MONSTER_RECORD.
-* Local variables
-  DATA : all_changes_to_be_made TYPE /bobf/t_frw_modification.
+  METHOD ZIF_4_MONSTERMODEL_PERS_LAYER~GET_BOPF_KEY_4_MONSTER_NUMBER.
+*--------------------------------------------------------------------------*
+* Listing 07.04: - Using a Custom Query to turn a Monster Number into a Key
+*--------------------------------------------------------------------------*
+    "Local Variables
+    DATA: bopf_selection_parameters TYPE /bobf/t_frw_query_selparam.
+
+    "This builds the dynamic WHERE clause for the database read
+    APPEND INITIAL LINE TO bopf_selection_parameters
+    ASSIGNING FIELD-SYMBOL(<bopf_selection_parameter>).
+
+    <bopf_selection_parameter> = VALUE #(
+    attribute_name =
+    zif_4_monster_c=>sc_query_attribute-monster_header-select_by_elements-monster_number
+    sign   = 'I'
+    option = 'EQ'
+    low    = id_monster_number ).
+
+    "This builds a fully dynamic SQL Statement
+    mo_service_manager->query(
+      EXPORTING
+        iv_query_key            =
+        zif_4_monster_c=>sc_query-monster_header-select_by_elements
+        it_selection_parameters = bopf_selection_parameters
+      IMPORTING
+        et_key                  = DATA(monster_keys) ).
+
+    "The result is always a table, but we have a unique key, so
+    "as someone once said THERE CAN BE ONLY ONE!
+    READ TABLE monster_keys INDEX 1
+    ASSIGNING FIELD-SYMBOL(<monster_key>).
+
+    IF sy-subrc EQ 0.
+      rd_bopf_key = <monster_key>-key.
+    ENDIF.
+*--------------------------------------------------------------------*
+* One Haunted Castle can be found at 134.6 degrees Longtitude
+*--------------------------------------------------------------------*
+  ENDMETHOD.
+
+
+METHOD zif_4_monstermodel_pers_layer~update_monster_record.
+*--------------------------------------------------------------------*
+* Listing 07.21: - Updating (Changing) Existing BOPF Record
+*--------------------------------------------------------------------*
+  "Local variables
+  DATA: all_changes_to_be_made TYPE /bobf/t_frw_modification.
 
   FIELD-SYMBOLS: <bopf_monster_header> TYPE z4sc_monster_header.
 
-  DATA : bopf_monster_header TYPE REF TO z4sc_monster_header.
+  DATA: bopf_monster_header TYPE REF TO z4sc_monster_header.
 
 *------------------------------------------------------------*
 * Update header
 *------------------------------------------------------------*
-TRY.
-CREATE DATA bopf_monster_header.
+  TRY.
+      CREATE DATA bopf_monster_header.
 
-ASSIGN bopf_monster_header->* TO <bopf_monster_header>.
+      ASSIGN bopf_monster_header->* TO <bopf_monster_header>.
 
-<bopf_monster_header> = CORRESPONDING #( is_monster_record-header ).
+      <bopf_monster_header> = CORRESPONDING #( is_monster_record-header ).
 
-APPEND INITIAL LINE TO all_changes_to_be_made
-ASSIGNING FIELD-SYMBOL(<change_to_be_made>).
-<change_to_be_made>-node        = zif_4_monster_c=>sc_node-monster_header.
-<change_to_be_made>-change_mode = /bobf/if_frw_c=>sc_modify_update.
-<change_to_be_made>-key         = bopf_monster_header->key.
-<change_to_be_made>-data        = bopf_monster_header.
+      APPEND INITIAL LINE TO all_changes_to_be_made
+      ASSIGNING FIELD-SYMBOL(<change_to_be_made>).
+      <change_to_be_made>-node        = zif_4_monster_c=>sc_node-monster_header.
+      <change_to_be_made>-change_mode = /bobf/if_frw_c=>sc_modify_update.
+      <change_to_be_made>-key         = bopf_monster_header->key.
+      <change_to_be_made>-data        = bopf_monster_header.
 
 *------------------------------------------------------------*
 * Update items
 *------------------------------------------------------------*
-DATA: bopf_monster_item_record TYPE REF TO z4sc_monster_items.
+      DATA: bopf_monster_item_record TYPE REF TO z4sc_monster_items.
 
-FIELD-SYMBOLS: <bopf_monster_item_record> TYPE z4sc_monster_items.
+      FIELD-SYMBOLS: <bopf_monster_item_record> TYPE z4sc_monster_items.
 
-LOOP AT is_monster_record-items INTO DATA(monster_item_record_ex).
+      LOOP AT is_monster_record-items ASSIGNING FIELD-SYMBOL(<monster_item_record_ex>).
 
-CREATE DATA bopf_monster_item_record.
+        CREATE DATA bopf_monster_item_record.
 
-ASSIGN bopf_monster_item_record->* TO <bopf_monster_item_record>.
+        ASSIGN bopf_monster_item_record->* TO <bopf_monster_item_record>.
 
-<bopf_monster_item_record> = CORRESPONDING #( monster_item_record_ex ).
+        <bopf_monster_item_record> = CORRESPONDING #( <monster_item_record_ex> ).
 
-APPEND INITIAL LINE TO all_changes_to_be_made
-ASSIGNING <change_to_be_made>.
-<change_to_be_made>-node        = zif_4_monster_c=>sc_node-monster_items.
-<change_to_be_made>-change_mode = /bobf/if_frw_c=>sc_modify_update.
-<change_to_be_made>-source_node = zif_4_monster_c=>sc_node-monster_header.
-<change_to_be_made>-association =
-zif_4_monster_c=>sc_association-monster_header-monster_items.
-<change_to_be_made>-source_key = bopf_monster_header->key.
-<change_to_be_made>-key        = bopf_monster_item_record->key.
-<change_to_be_made>-data       = bopf_monster_item_record.
+        APPEND INITIAL LINE TO all_changes_to_be_made
+        ASSIGNING <change_to_be_made>.
+        <change_to_be_made>-node        = zif_4_monster_c=>sc_node-monster_items.
+        <change_to_be_made>-change_mode = /bobf/if_frw_c=>sc_modify_update.
+        <change_to_be_made>-source_node = zif_4_monster_c=>sc_node-monster_header.
+        <change_to_be_made>-association =
+        zif_4_monster_c=>sc_association-monster_header-monster_items.
+        <change_to_be_made>-source_key = bopf_monster_header->key.
+        <change_to_be_made>-key        = bopf_monster_item_record->key.
+        <change_to_be_made>-data       = bopf_monster_item_record.
 
-ENDLOOP."Monster items
+      ENDLOOP."Monster items
 
-mo_bopf_pl_helper->change_data_in_memory( all_changes_to_be_made ).
+      mo_bopf_pl_helper->change_data_in_memory( all_changes_to_be_made ).
 
-mo_bopf_pl_helper->change_data_in_database( ).
+      mo_bopf_pl_helper->change_data_in_database( ).
 
-CATCH /bobf/cx_frw INTO DATA(bopf_exception).
-  RAISE EXCEPTION NEW zcx_4_monster_exceptions_mc(
-    textid = bopf_exception->if_t100_message~t100key ).
-ENDTRY.
+    CATCH /bobf/cx_frw INTO DATA(bopf_exception).
+      RAISE EXCEPTION NEW zcx_4_monster_exceptions_mc(
+        textid = bopf_exception->if_t100_message~t100key ).
+  ENDTRY.
 
 ENDMETHOD."Update Monster Record / ZCL_4_MONSTER_MODEL_PERS_BOPF
 ENDCLASS.

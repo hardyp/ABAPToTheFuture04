@@ -10,7 +10,7 @@
 * This report will then update itself without the user
 * who is running it having to do anything (e.g. press 'refresh').
 *--------------------------------------------------------------------*
-* First, need to set PID of SAPGUI_PUSH_CHANNEL = X”.
+* First, need to set PID of SAPGUI_PUSH_CHANNEL = "X".
 * Then need to define the ABAP Messaging Channel
 * In SAMC and application ID and a channel have to be defined
 * We will call them "ZAMC_4_MONSTERS" and "/monsters" respectively
@@ -34,14 +34,14 @@ SELECTION-SCREEN BEGIN OF BLOCK blk1 WITH FRAME TITLE TEXT-001.
 
 SELECT-OPTIONS: s_date FOR go_selections->date_selection.
 
-PARAMETERS: p_cstl TYPE ztmonster_am-castle_number OBLIGATORY.
+PARAMETERS: p_cstl TYPE z4c_monster_atrocity_monitor-castlenumber OBLIGATORY.
 
 SELECTION-SCREEN END OF BLOCK blk1.
 
 * Display Options
 SELECTION-SCREEN BEGIN OF BLOCK blk2 WITH FRAME TITLE TEXT-002.
 
-PARAMETERS: p_vari  LIKE disvariant-variant.
+PARAMETERS: p_vari TYPE disvariant-variant.
 
 SELECTION-SCREEN END OF BLOCK blk2.
 
@@ -57,44 +57,14 @@ INITIALIZATION.
 START-OF-SELECTION.
   "This nonsense is the only way I can avoid getting bogus syntax
   "errors when doing a syntax check on the local class implementations
-  CREATE OBJECT go_selections
-    EXPORTING
-      is_date = s_date[]
-      ip_cstl = p_cstl
-      ip_vari = p_vari.
+  go_selections = NEW #( is_date = s_date[]
+                         ip_cstl = p_cstl
+                         ip_vari = p_vari ).
 
   IF zcl_bc_system_environment=>is_production( ) = abap_true.
-    "In production we never want a short dump, but the "design by contract"
-    "things would just confuse the user
-    TRY.
-        lcl_application=>main( ).
-      CATCH cx_sy_no_handler INTO go_no_handler.
-        "An exception was raised that was not caught at any point in the call stack
-        gd_error_class = |Fatal Error concerning Class { go_no_handler->classname } - Please Call the Helpdesk|.
-        MESSAGE gd_error_class TYPE 'I'.
-      CATCH cx_root ##catch_all.
-        "We do not know what was happened, output a message instead of dumping
-        MESSAGE 'Report in Trouble - please call helpdesk' TYPE 'I'.
-    ENDTRY.
+    PERFORM production_run.
   ELSE.
-    "Development / Test / Quality Assurance
-    "Here we DO want short dumps so we can analyse them, and we want the design by
-    "contract messages to make it obvious there is a bug and the code should not
-    "go to production
-    "Put another the way the two DBC exceptions are impossible errors I am actively
-    "looking to cause a dump. If any other sort of dump occurs then it is something
-    "I am not expecting and I want to know all about it
-    TRY.
-        lcl_application=>main( ).
-      CATCH zcx_violated_precondition INTO go_precondition.
-        "A bug was detected at the start of a subroutine - the caller of the
-        "subroutine is at fault
-        go_precondition->mo_error_log->show_error_log( ).
-      CATCH zcx_violated_postcondition INTO go_postcondition.
-        "A bug was detected at the end of a subroutine - the subroutine is
-        "at fault
-        go_postcondition->mo_error_log->show_error_log( ).
-    ENDTRY.
+    PERFORM non_production_run.
   ENDIF.
 
 *----------------------------------------------------------------------*
@@ -130,21 +100,54 @@ INCLUDE z4_monster_am_io1.
 *&---------------------------------------------------------------------*
 *&      Form  INITALISATION
 *&---------------------------------------------------------------------*
-FORM initalisation .
+FORM initalisation ##NEEDED.
 
 ENDFORM.                    " INITALISATION
 
-*--------------------------------------------------------------------*
-* Events
-*--------------------------------------------------------------------*
-*AT LINE-SELECTION.
-*  break developer.
-*  IF gf_message_received = abap_true.
-*    lcl_amc_test=>print_message( ).
-*  ENDIF.
-*
-*AT USER-COMMAND.
-*  break developer.
-*  IF gf_message_received = abap_true.
-*    lcl_amc_test=>print_message( ).
-*  ENDIF.
+*&---------------------------------------------------------------------*
+*& Form PRODUCTION_RUN
+*&---------------------------------------------------------------------*
+*& No point showing the user DBC messages. We should never have got to
+*& the stage where DBC messages are raised in production.
+*& However in production we want to suppress short dumps
+*&---------------------------------------------------------------------*
+FORM production_run.
+
+  TRY.
+      lcl_application=>main( ).
+    CATCH cx_sy_no_handler INTO DATA(lo_no_handler).
+      "An exception was raised that was not caught at any point in the call stack
+      "Fatal Error concerning Class &1 - Please Call the Helpdesk
+      MESSAGE i012(z4monsters) WITH lo_no_handler->classname.
+    CATCH cx_root ##catch_all.
+      "We do not know what was happened, output a message instead of dumping
+      "Report in Trouble - please call the Helpdesk
+      MESSAGE i011(z4monsters).
+  ENDTRY.
+
+ENDFORM.
+*&---------------------------------------------------------------------*
+*& Form NON_PRODUCTION_RUN
+*&---------------------------------------------------------------------*
+" Development / Test / Quality Assurance
+" Here we DO want short dumps so we can analyse them, and we want the design by
+" contract messages to make it obvious there is a bug and the code should not
+" go to production
+" Put another the way the two DBC exceptions represent "impossible" errors which may nonetheless possibly happen
+" If any other sort of dump occurs then it is something I am not expecting and I want to know all about it
+*&---------------------------------------------------------------------*
+FORM non_production_run.
+
+  TRY.
+      lcl_application=>main( ).
+    CATCH zcx_violated_precondition INTO DATA(lo_precondition).
+      "A bug was detected at the start of a subroutine - the caller of the
+      "subroutine is at fault
+      lo_precondition->mo_error_log->popup( ).
+    CATCH zcx_violated_postcondition INTO DATA(lo_postcondition).
+      "A bug was detected at the end of a subroutine - the subroutine is
+      "at fault
+      lo_postcondition->mo_error_log->popup( ).
+  ENDTRY.
+
+ENDFORM.

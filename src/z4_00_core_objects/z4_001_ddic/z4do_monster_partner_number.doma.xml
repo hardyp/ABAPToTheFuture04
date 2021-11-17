@@ -9,7 +9,7 @@
     <LENG>000010</LENG>
     <OUTPUTLEN>000010</OUTPUTLEN>
     <CONVEXIT>ALPHA</CONVEXIT>
-    <DDTEXT>Monster Business Partner Number (KUNAG/KUWE)</DDTEXT>
+    <DDTEXT>Monster Business Partner Number (KUNAG/KUNWE)</DDTEXT>
    </DD01V>
   </asx:values>
  </asx:abap>

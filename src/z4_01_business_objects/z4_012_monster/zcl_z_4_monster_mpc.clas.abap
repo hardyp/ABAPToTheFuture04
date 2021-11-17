@@ -397,7 +397,7 @@ lo_property->/iwbep/if_mgw_odata_annotatabl~create_annotation( 'sap' )->add(
       EXPORTING
         iv_key      = 'unicode'
         iv_value    = 'false' ).
-lo_property = lo_entity_type->create_property( iv_property_name = 'CreationDate' iv_abap_fieldname = 'CREATION_DATE' ). "#EC NOTEXT
+lo_property = lo_entity_type->create_property( iv_property_name = 'Createdat' iv_abap_fieldname = 'CREATEDAT' ). "#EC NOTEXT
 lo_property->set_type_edm_datetimeoffset( ).
 lo_property->set_precison( iv_precision = 7 ). "#EC NOTEXT
 lo_property->set_creatable( abap_false ).
@@ -624,7 +624,7 @@ lo_entity_set->set_filter_required( abap_false ).
 *&---------------------------------------------------------------------*
 
 
-  CONSTANTS: lc_gen_date_time TYPE timestamp VALUE '20210627071613'.                  "#EC NOTEXT
+  CONSTANTS: lc_gen_date_time TYPE timestamp VALUE '20210817083803'.                  "#EC NOTEXT
   rv_last_modified = super->get_last_modified( ).
   IF rv_last_modified LT lc_gen_date_time.
     rv_last_modified = lc_gen_date_time.

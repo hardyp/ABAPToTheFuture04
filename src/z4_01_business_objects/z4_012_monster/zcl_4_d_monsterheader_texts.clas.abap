@@ -22,7 +22,7 @@ CLASS ZCL_4_D_MONSTERHEADER_TEXTS IMPLEMENTATION.
 
   METHOD /bobf/if_frw_determination~check.
 *--------------------------------------------------------------------*
-* Listing 07.11 : Coding CHECK Method for Determination
+* Listing 07.11: - Coding CHECK Method for Determination
 *--------------------------------------------------------------------*
 TRY.
   "Set specific table type for generic return table
@@ -54,7 +54,7 @@ IF is_determination_needed = abap_false.
    DELETE ct_key WHERE key = bopf_monster_header_record-key.
 ENDIF.
 
-CATCH zcx_monster_exceptions.
+CATCH zcx_4_monster_exceptions.
   RETURN.
 ENDTRY.
 
@@ -63,7 +63,7 @@ ENDMETHOD."CHECK of ZCL_4_D_MONSTERHEADER_TEXTS
 
   METHOD /bobf/if_frw_determination~check_delta.
 *--------------------------------------------------------------------*
-* Listing 07.10 - Checking Changed Fields
+* Listing 07.10: - Checking Changed Fields
 *-----------------------------------------------------------*
 * We’re looking to see if any field in the monster header
 * record have changed, which may require a derived field being
@@ -106,7 +106,7 @@ ENDMETHOD."CHECK of ZCL_4_D_MONSTERHEADER_TEXTS
       TRY.
           DATA(monster_model) = zcl_4_monster_model=>get_instance(
            current_monster ).
-        CATCH zcx_monster_exceptions.
+        CATCH zcx_4_monster_exceptions.
           CONTINUE.
       ENDTRY.
 
@@ -136,82 +136,83 @@ ENDMETHOD."CHECK of ZCL_4_D_MONSTERHEADER_TEXTS
   ENDMETHOD."Check Delta of ZCL_4_D_FILL_MONSTERHEADER_TEXTS
 
 
-  METHOD /BOBF/IF_FRW_DETERMINATION~EXECUTE.
+  METHOD /bobf/if_frw_determination~execute.
 *--------------------------------------------------------------------*
-* Listing 07.12 : Executing Determination
+* Listing 07.12: - Executing Determination
 *--------------------------------------------------------------------*
 * Local variables
-DATA: bopf_monster_header_records    TYPE z4tt_monster_header,
-      external_monster_header_record TYPE z4sc_monster_header_ex.
+    DATA: bopf_monster_header_records    TYPE z4tt_monster_header,
+          external_monster_header_record TYPE z4sc_monster_header_ex.
 
-* Clear exporting parameters
-CLEAR: eo_message,
-       et_failed_key.
+    "Clear exporting parameters
+    CLEAR: eo_message,
+           et_failed_key.
 
-TRY.
-    "Get persistent (database) values
-    io_read->retrieve(
-      EXPORTING iv_node = zif_4_monster_c=>sc_node-monster_header
-                it_key  = it_key
-      IMPORTING et_data = bopf_monster_header_records ).
+    TRY.
+        "Get persistent (database) values
+        io_read->retrieve(
+          EXPORTING iv_node = zif_4_monster_c=>sc_node-monster_header
+                    it_key  = it_key
+          IMPORTING et_data = bopf_monster_header_records ).
 
-LOOP AT bopf_monster_header_records INTO DATA(bopf_monster_header_record).
+        LOOP AT bopf_monster_header_records ASSIGNING FIELD-SYMBOL(<bopf_monster_header_record>).
 
-CLEAR external_monster_header_record.
-external_monster_header_record = CORRESPONDING #( bopf_monster_header_record ).
+          CLEAR external_monster_header_record.
+          external_monster_header_record = CORRESPONDING #( <bopf_monster_header_record> ).
 
-* Use the model to derive the transient values
-DATA(monster_model) =
-zcl_4_monster_model=>get_instance( external_monster_header_record-monster_number ).
+          "Use the model to derive the transient values
+          DATA(monster_model) =
+          zcl_4_monster_model=>get_instance( external_monster_header_record-monster_number ).
 
-monster_model->derive_header_fields(
-CHANGING cs_monster_header = external_monster_header_record ).
+          monster_model->derive_header_fields(
+          CHANGING cs_monster_header = external_monster_header_record ).
 
-MOVE-CORRESPONDING external_monster_header_record TO bopf_monster_header_record.
+          <bopf_monster_header_record> = CORRESPONDING #( external_monster_header_record ).
 
-* The combined structure is now full, pass it back to the BOPF
-DATA: header_record_reference TYPE REF TO data.
+          "The combined structure is now full, pass it back to the BOPF
+          DATA: header_record_reference TYPE REF TO data.
 
-header_record_reference = REF #( bopf_monster_header_record ).
+          header_record_reference = REF #( <bopf_monster_header_record> ).
 
-io_modify->update(
-  iv_node = is_ctx-node_key
-  iv_key  = bopf_monster_header_record-key
-  is_data = header_record_reference ).
+          io_modify->update(
+            iv_node = is_ctx-node_key
+            iv_key  = <bopf_monster_header_record>-key
+            is_data = header_record_reference ).
 
-ENDLOOP."Monsters being Queried
+        ENDLOOP."Monsters being Queried
 
-CATCH zcx_4_monster_exceptions_mc INTO DATA(monster_exception).
-"This is a generic monster exception
-"and now we’ll adapt it to a BOPF exception
-READ TABLE it_key INTO DATA(monster_key) INDEX 1."Only one line
+      CATCH zcx_4_monster_exceptions_mc INTO DATA(monster_exception).
+        "This is a generic monster exception
+        "and now we’ll adapt it to a BOPF exception
+        READ TABLE it_key INTO DATA(monster_key) INDEX 1."Only one line
 
-IF sy-subrc NE 0.
-  "Impossible Situation
-  RETURN.
-ENDIF.
+        IF sy-subrc NE 0.
+          "Impossible Situation
+          RETURN.
+        ENDIF.
 
-"This key (node) has failed in its mission. Shame upon it
-INSERT monster_key INTO TABLE et_failed_key.
+        "This key (node) has failed in its mission. Shame upon it
+        "The RAP also has the concept of a FAILED table parameter
+        INSERT monster_key INTO TABLE et_failed_key.
 
-"Now send an error message in the format BOPF desires
-DATA(origin_location_information) =
-VALUE /bobf/s_frw_location(  "Location Location Location
-node_key = is_ctx-node_key
-key      = monster_key-key )."I heard you the first time
+        "Now send an error message in the format BOPF desires
+        DATA(origin_location_information) =
+        VALUE /bobf/s_frw_location(  "Location Location Location
+        node_key = is_ctx-node_key
+        key      = monster_key-key )."I heard you the first time
 
-DATA(message_in_a_bottle) = NEW /bobf/cm_frw_core(
-textid             = monster_exception->if_t100_message~t100key
-severity           = /bobf/cm_frw=>co_severity_error
-symptom            = /bobf/if_frw_message_symptoms=>co_bo_inconsistency
-lifetime           = /bobf/if_frw_c=>sc_lifetime_set_by_bopf
-ms_origin_location = origin_location_information ).
+        DATA(message_in_a_bottle) = NEW /bobf/cm_frw_core(
+        textid             = monster_exception->if_t100_message~t100key
+        severity           = /bobf/cm_frw=>co_severity_error
+        symptom            = /bobf/if_frw_message_symptoms=>co_bo_inconsistency
+        lifetime           = /bobf/if_frw_c=>sc_lifetime_set_by_bopf
+        ms_origin_location = origin_location_information ).
 
-zcl_4_bc_bopf_pl_helper=>put_message_in_bottle(
-   EXPORTING i_hope_that_someone_gets_my = message_in_a_bottle
-   CHANGING  co_bottle                   = eo_message ).
+        zcl_4_bc_bopf_pl_helper=>put_message_in_bottle(
+           EXPORTING i_hope_that_someone_gets_my = message_in_a_bottle
+           CHANGING  co_bottle                   = eo_message ).
 
-ENDTRY.
+    ENDTRY.
 
-ENDMETHOD."EXECUTE of ZCL_4_D_MONSTERHEADER_TEXTS
+  ENDMETHOD."EXECUTE of ZCL_4_D_MONSTERHEADER_TEXTS
 ENDCLASS.

@@ -1,0 +1,1 @@
+sap.ui.define(["monstersvsfs/test/unit/controller/MosterList.controller"],function(){"use strict"});                                                                                                                                                           

@@ -6,13 +6,13 @@
 CLASS lcl_application IMPLEMENTATION.
 
   METHOD main.
-* Local Variables
-    DATA: ld_report_name TYPE string,
-          ld_repid       TYPE sy-repid.
-
-* Set up Push Channels
+*--------------------------------------------------------------------*
+* Listing 14.06: - Subscribing to Messages
+*--------------------------------------------------------------------*
+*--------------------------------------------------------------------*
+    "Set up Push Channels
     TRY.
-* We are going to subsrcibe to messages relating to this castle only
+        "We are going to subscribe to messages relating to this castle only
         gd_chext_id = go_selections->p_cstl.
 
         go_receiver = NEW #( ).
@@ -33,30 +33,24 @@ CLASS lcl_application IMPLEMENTATION.
         gf_message_received = abap_false.
 
       CATCH cx_amc_error INTO DATA(amc_error).
-        MESSAGE amc_error->get_text( ) TYPE 'E'.
+        MESSAGE amc_error TYPE 'E'.
     ENDTRY.
 
-* Activate Report
-    CONCATENATE sy-tcode sy-title INTO ld_report_name
-    SEPARATED BY ' : '.
-
-    CREATE OBJECT mo_model.
-    CREATE OBJECT mo_view TYPE lcl_view.
-    CREATE OBJECT mo_controller
-      EXPORTING
-        io_model = mo_model
-        io_view  = mo_view.
+    mo_model      = NEW #( ).
+    mo_view       = NEW lcl_view( ).
+    mo_controller = NEW #( io_model = mo_model
+                           io_view  = mo_view ).
 
     mo_model->data_retrieval( ).
     mo_model->prepare_data_for_ouput( ).
 
     "It is bad news to pass system variables as parameters
-    ld_repid = sy-repid.
+    DATA(ld_repid) = sy-repid.
 
     IF sy-batch IS INITIAL.
 *--------------------------------------------------------------------*
-* Listing 10.31 - Calling a SALV report whilst creating a container
-*                 automatically
+* Listing 10.35: - Calling a SALV report whilst creating a container
+*                  automatically
 *--------------------------------------------------------------------*
 * Program flow is as follows:-
 * ZCL_BC_VIEW_SALV_TABLE->CREATE_CONTAINER_PREPARE_DATA
@@ -68,7 +62,7 @@ CLASS lcl_application IMPLEMENTATION.
 * --> Display (Generic)
       mo_view->create_container_prep_display(
     EXPORTING
-      id_report_name        = ld_repid                                                                                                                                             " Calling program
+      id_report_name        = ld_repid
       if_start_in_edit_mode = abap_true
       id_edit_control_field = mo_model->md_edit_control_field
       it_editable_fields    = mo_model->mt_editable_fields
@@ -77,7 +71,7 @@ CLASS lcl_application IMPLEMENTATION.
       it_hotspots           = mo_model->mt_hotspots
       it_checkboxes         = mo_model->mt_checkboxes
       it_subtotal_fields    = mo_model->mt_subtotal_fields
-      it_field_texts        = mo_model->mt_field_texts                                                                                                                                    " Display Variant as specified by user
+      it_field_texts        = mo_model->mt_field_texts
       it_user_commands      = mo_model->mt_user_commands
     CHANGING
       ct_data_table         = mo_model->mt_output_data ).
@@ -140,18 +134,14 @@ ENDCLASS."Local Selections
 *----------------------------------------------------------------------*
 CLASS lcl_persistency_layer IMPLEMENTATION.
 
-  METHOD constructor.
-
-  ENDMETHOD.                    "constructor
-
   METHOD get_data.
 *--------------------------------------------------------------------*
 * EXPORTING et_output_data TYPE g_tt_output_data.
 *--------------------------------------------------------------------*
 
     SELECT * ##too_many_itab_fields "in the world
-      FROM ztmonster_am
-      INTO CORRESPONDING FIELDS OF TABLE et_output_data.
+      FROM z4c_monster_atrocity_monitor
+      INTO CORRESPONDING FIELDS OF TABLE @rt_output_data.
 
   ENDMETHOD.                                               "get_data
 
@@ -174,7 +164,7 @@ CLASS lcl_model IMPLEMENTATION.
     IF io_access_class IS SUPPLIED.
       mo_persistency_layer = io_access_class.
     ELSE.
-      CREATE OBJECT mo_persistency_layer.
+      mo_persistency_layer = NEW #( ).
     ENDIF.
 
     fill_user_commands( ).
@@ -199,58 +189,57 @@ CLASS lcl_model IMPLEMENTATION.
 
   METHOD data_retrieval.
 
-    mo_persistency_layer->get_data( IMPORTING et_output_data = mt_output_data ).
+    mt_output_data = mo_persistency_layer->get_data( ).
 
   ENDMETHOD.                                               "data_retrieval
 
-**********************************************************************
+*--------------------------------------------------------------------*
 * METHOD prepare_data_for_output
-**********************************************************************
-* Get text names of objects, mapping, etc etc
+*--------------------------------------------------------------------*
+* Get text names of objects, mapping, etc etc. As time goes by more and
+* more of this sort of thing will be done at the database level
 *----------------------------------------------------------------------*
-  METHOD prepare_data_for_ouput.
+  METHOD prepare_data_for_ouput ##NEEDED.
 
   ENDMETHOD.                                               "prepare_data_for_ouput
 
   METHOD fill_user_commands.
 *--------------------------------------------------------------------*
-* Listing 10.27 - Method in the Model Class to Define User Commands
+* Listing 10.27: - Method in the Model Class to Define User Commands
 *--------------------------------------------------------------------*
-* Local Variables
-    DATA: ls_user_commands LIKE LINE OF mt_user_commands.
+    CLEAR mt_user_commands.
 
-    REFRESH mt_user_commands.
+    INSERT VALUE #(
+    function  = 'ZCOMPLETE'
+    icon      = icon_deceased_patient
+    butn_type = 0                        "Normal Button
+    text      = 'Deed is Done'(001) ) INTO TABLE mt_user_commands.
 
-    CLEAR ls_user_commands.
-    ls_user_commands-function  = 'ZCOMPLETE'.
-    ls_user_commands-icon      = icon_deceased_patient.
-    ls_user_commands-butn_type = 0.                        "Normal Button
-    ls_user_commands-text      = 'Deed is Done'.
-    APPEND ls_user_commands TO mt_user_commands.
-
+* One Haunted Castle has a ghost called the "blue (or radiant) boy" who according to the owners used to haunt the
+* Pink Room in the castle
   ENDMETHOD.                                               "fill_user_commands
 
-  METHOD fill_editable_fields.
+  METHOD fill_editable_fields ##NEEDED.
 * No Editable Fields Here
   ENDMETHOD.                    "fill_editable_fields
 
-  METHOD fill_hidden_fields.
-    "No Hidden Fields
+  METHOD fill_hidden_fields ##NEEDED.
+* No Hidden Fields
   ENDMETHOD.                    "fill_hidden_fields
 
   METHOD fill_technical_fields.
     APPEND 'MANDT' TO mt_technicals.
   ENDMETHOD.                    "fill_technical_fields
 
-  METHOD fill_hotspot_fields.
-    "No Hotspots
+  METHOD fill_hotspot_fields ##NEEDED.
+* No Hotspots
   ENDMETHOD.                    "fill_hotspot_fields
 
-  METHOD fill_subtotal_fields.
-    "No Subtotals
+  METHOD fill_subtotal_fields ##NEEDED.
+* No Subtotals
   ENDMETHOD.                    "fill_subtotal_fields
 
-  METHOD fill_field_texts.
+  METHOD fill_field_texts ##NEEDED.
 * No Need to Rename Anything
   ENDMETHOD.                    "fill_field_texts
 
@@ -265,7 +254,9 @@ CLASS lcl_model IMPLEMENTATION.
     CASE id_user_command.
       WHEN '&IC1'.
         READ TABLE mt_output_data ASSIGNING <ls_output> INDEX id_row.
-        CHECK sy-subrc = 0.
+        IF sy-subrc NE 0.
+          RETURN.
+        ENDIF.
         CASE id_column.
           WHEN 'CHECK'.
             IF <ls_output>-check = abap_false.
@@ -301,25 +292,25 @@ CLASS lcl_model IMPLEMENTATION.
           ld_default_choice TYPE sy-lilli,
           ld_actual_choice  TYPE sy-tabix.
 
-    ls_options-varoption = 'Bolts-Through-Neck'.
+    ls_options-varoption = 'Bolts-Through-Neck'(002).
     APPEND ls_options TO lt_options.
 
-    ls_options-varoption = 'Creeping Terror'.
+    ls_options-varoption = 'Creeping Terror'(003).
     APPEND ls_options TO lt_options.
 
-    ls_options-varoption = 'Creature from the Black Lagoon'.
+    ls_options-varoption = 'Creature from the Black Lagoon'(004).
     APPEND ls_options TO lt_options.
 
-    ls_options-varoption = 'Killer Klown'.
+    ls_options-varoption = 'Killer Klown'(005).
     APPEND ls_options TO lt_options.
 
-    ls_options-varoption = 'Thing with Two Heads'.
+    ls_options-varoption = 'Thing with Two Heads'(006).
     APPEND ls_options TO lt_options.
 
     ld_default_choice = 1.
 
-    ls_titles-titel     = 'Choose Monster'.
-    ls_titles-textline1 = 'Which Monster shall do This Deed, This Deed so Vile?'.
+    ls_titles-titel     = 'Choose Monster'(007).
+    ls_titles-textline1 = 'Which Monster shall do This Deed, This Deed so Vile?'(008).
 
     CALL FUNCTION 'POPUP_TO_DECIDE_LIST'
       EXPORTING
@@ -341,40 +332,39 @@ CLASS lcl_model IMPLEMENTATION.
     ENDIF.
 
     CASE ld_answer.
-      WHEN 'A'.
-        RETURN.
       WHEN '1' OR '2' OR '3' OR '4' OR '5'.
         ld_actual_choice = ld_answer.
       WHEN OTHERS.
         RETURN.
     ENDCASE.
 
-    DATA: ls_monitor TYPE ztmonster_am.
+    DATA: ls_monitor TYPE z4t_deliveries.
 
-    MOVE-CORRESPONDING is_output_data TO ls_monitor.
-
-    READ TABLE lt_options INTO ls_options INDEX ld_actual_choice.
-
-    ls_monitor-monster_name   = ls_options-varoption.
-    ls_monitor-current_status = 'A'."Atrocity Ready to be Committed
-
-    "Create the Delivery
-    MODIFY ztmonster_am FROM ls_monitor.
-
-    IF sy-subrc <> 0.
-      ROLLBACK WORK.
+    SELECT *
+      FROM z4t_deliveries UP TO 1 ROWS
+      INTO CORRESPONDING FIELDS OF ls_monitor
+      WHERE delivery_number = is_output_data-deliverynumber
+      ORDER BY delivery_number.
+    ENDSELECT.
+    IF sy-subrc NE 0.
       RETURN.
     ENDIF.
 
-    "Now update the order
-    UPDATE ztmonster_adl SET   order_status = 'C' "Foul Deed has been Requested
-                         WHERE order_number = is_output_data-order_number.
-
-    IF sy-subrc <> 0.
-      ROLLBACK WORK.
+    READ TABLE lt_options INTO ls_options INDEX ld_actual_choice.
+    IF sy-subrc NE 0.
       RETURN.
-    ELSE.
-      COMMIT WORK.
+    ENDIF.
+
+    ls_monitor-delivery_number = is_output_data-deliverynumber.
+    ls_monitor-monster_name    = ls_options-varoption.
+    ls_monitor-current_status  = 'A'."Atrocity Ready to be Committed
+
+* TO-DO
+* The delivery business object persistency layer should update the delivery
+    UPDATE z4t_deliveries FROM ls_monitor.
+    IF sy-subrc <> 0.
+      ROLLBACK WORK.                                   "#EC CI_ROLLBACK
+      RETURN.
     ENDIF.
 
   ENDMETHOD.                    "allocate_monster
@@ -383,14 +373,15 @@ ENDCLASS.                    "lcl_model IMPLEMENTATION
 
 *----------------------------------------------------------------------*
 *       CLASS lcl_view IMPLEMENTATION
-*----------------------------------------------------------------------*
+*------------------------------------------------------------------------*
 * During the INITIALISATION method this method is called so that
 * every row in the output table will be
 * changed such that nominated columns have been made editable.
 * Now we want to extend this logic to restrict the ability to change
 * the task description. If a monster has always been assigned to the task,
 * the nature of the task can no longer be changed.
-*----------------------------------------------------------------------*
+* This does not actualy work by the way because the SALV does not allow it
+*-------------------------------------------------------------------------*
 CLASS lcl_view IMPLEMENTATION.
 
   METHOD make_column_editable.
@@ -400,15 +391,11 @@ CLASS lcl_view IMPLEMENTATION.
 * CT_DATA_TABLE         Changing  Type  ANY TABLE
 *--------------------------------------------------------------------*
 * Local Variables
-    DATA : ls_celltab     TYPE lvc_s_styl,
-           lt_celltab     TYPE lvc_t_styl,
-           ld_index       TYPE sy-tabix,
-           ldo_table_line TYPE REF TO data.
+    DATA: ldo_table_line TYPE REF TO data.
 
     FIELD-SYMBOLS: <ls_data_table> TYPE any,
-                   <ls_celltab>    TYPE lvc_s_styl,
                    <lt_celltab>    TYPE lvc_t_styl,
-                   <ld_status>     TYPE zde_monster_order_status.
+                   <ld_status>     TYPE z4de_monster_delivery_status.
 
     super->make_column_editable(
       EXPORTING id_edit_control_field = id_edit_control_field
@@ -427,30 +414,29 @@ CLASS lcl_view IMPLEMENTATION.
     ASSIGN ldo_table_line->*  TO <ls_data_table>.
 
     LOOP AT ct_data_table ASSIGNING <ls_data_table>.
-* Determine the Order Status
-      ASSIGN COMPONENT 'ORDER_STATUS' OF STRUCTURE <ls_data_table> TO <ld_status>.
+      "Determine the Order Status
+      ASSIGN COMPONENT 'CURRENT_STATUS' OF STRUCTURE <ls_data_table> TO <ld_status>.
       CHECK sy-subrc = 0.
-* Based upon this, alter the CELLTAB nested table, to make the
-* cell read only if need be
+      "Based upon this, alter the CELLTAB nested table, to make the
+      "cell read only if need be
       CHECK <ld_status> = 'C'."Foul Deed has been Requested
-* Orders in this status cannot have the task description changed
+      "Orders in this status cannot have the task description changed
       ASSIGN COMPONENT 'CELLTAB' OF STRUCTURE <ls_data_table> TO <lt_celltab>.
       CHECK sy-subrc = 0.
 
-      READ TABLE <lt_celltab> ASSIGNING <ls_celltab> WITH KEY fieldname = 'TASK_DESCRIPTION'.
+      READ TABLE <lt_celltab> ASSIGNING FIELD-SYMBOL(<ls_celltab>) WITH KEY fieldname = 'TASK_DESCRIPTION'.
 
       IF sy-subrc <> 0.
-        ld_index             = sy-tabix.
-        ls_celltab-fieldname = 'TASK_DESCRIPTION'.
-        INSERT ls_celltab INTO <lt_celltab> INDEX ld_index.
+        INSERT VALUE #( fieldname = 'TASK_DESCRIPTION' ) INTO TABLE <lt_celltab>.
         READ TABLE <lt_celltab> ASSIGNING <ls_celltab> WITH KEY fieldname = 'TASK_DESCRIPTION'.
+        ASSERT sy-subrc EQ 0.
       ENDIF.
 
       <ls_celltab>-style = cl_gui_alv_grid=>mc_style_disabled."Read Only
 
     ENDLOOP."Data Table
 
-  ENDMETHOD.                    "application_specific_changes
+  ENDMETHOD.
 
 ENDCLASS.                    "lcl_view IMPLEMENTATION
 
@@ -487,28 +473,24 @@ CLASS lcl_controller IMPLEMENTATION.
 *           ed_column.
 *--------------------------------------------------------------------*
 * Local Variables
-    DATA: lo_alv    TYPE REF TO cl_gui_alv_grid,
-          ls_layout TYPE lvc_s_layo,
-          lf_valid  TYPE abap_bool ##needed,
-          lt_fcat   TYPE lvc_t_fcat,
-          ld_answer TYPE char01,
-          ls_stable TYPE lvc_s_stbl.
+    DATA: lo_alv  TYPE REF TO cl_gui_alv_grid ##NEEDED.
 
     CASE ed_user_command.
       WHEN 'ZSAVE'."A command to save your changes
         "Trick to update the internal table
-        CALL METHOD lo_alv->check_changed_data
+        lo_alv->check_changed_data(
           IMPORTING
-            e_valid = lf_valid.
+            e_valid = DATA(lf_valid) ) ##NEEDED.
         "Code to save the data
-        MESSAGE 'Data Saved' TYPE 'I'.
+        MESSAGE i013(z4monsters)."Data saved
+      WHEN OTHERS.
+        "Let it go ... the model might need to respond even if the controller does not care
     ENDCASE.
 
     mo_model->user_command(
-      EXPORTING
-        id_user_command = ed_user_command                                              " Function code that PAI triggered
-        id_column       = ed_column                                                    " Selected Column
-        id_row          = ed_row ).                                                    " Selected Row
+        id_user_command = ed_user_command
+        id_column       = ed_column
+        id_row          = ed_row ).
 
     mo_view->refresh_display( ).
 
@@ -522,44 +504,29 @@ CLASS lcl_controller IMPLEMENTATION.
 
   METHOD make_column_editable.
 *--------------------------------------------------------------------*
-* Listng 10.34 - MAKE_COLUMN_EDITABLE Method
-*--------------------------------------------------------------------*
 * IMPORTING id_column_name TYPE dd03l-fieldname
 * CHANGING  ct_fcat        TYPE lvc_t_fcat.
 *--------------------------------------------------------------------*
-* Local Variables
-    DATA :ls_celltab TYPE lvc_s_styl,
-          ld_index   TYPE sy-tabix.
 
-    FIELD-SYMBOLS: <ls_output>  LIKE LINE OF mo_model->mt_output_data,
-                   <ls_celltab> TYPE lvc_s_styl.
+    LOOP AT mo_model->mt_output_data ASSIGNING FIELD-SYMBOL(<ls_output>).
 
-    LOOP AT mo_model->mt_output_data ASSIGNING <ls_output>.
-
-      READ TABLE <ls_output>-celltab ASSIGNING <ls_celltab> WITH KEY fieldname = id_column_name.
+      READ TABLE <ls_output>-celltab ASSIGNING FIELD-SYMBOL(<ls_celltab>) WITH KEY fieldname = id_column_name.
 
       IF sy-subrc <> 0.
-        ld_index             = sy-tabix.
-        ls_celltab-fieldname = id_column_name.
-        INSERT ls_celltab INTO <ls_output>-celltab INDEX ld_index.
+        INSERT VALUE #( fieldname = id_column_name ) INTO TABLE <ls_output>-celltab.
         READ TABLE <ls_output>-celltab ASSIGNING <ls_celltab> WITH KEY fieldname = id_column_name.
+        ASSERT sy-subrc EQ 0.
       ENDIF.
 
-      IF <ls_celltab>-style EQ cl_gui_alv_grid=>mc_style_enabled.
-        <ls_celltab>-style = cl_gui_alv_grid=>mc_style_disabled.
-      ELSE.
-        <ls_celltab>-style = cl_gui_alv_grid=>mc_style_enabled.
-      ENDIF.
+      <ls_celltab>-style = cl_gui_alv_grid=>mc_style_enabled.
 
     ENDLOOP.
 
-    FIELD-SYMBOLS: <ls_fcat> LIKE LINE OF ct_fcat.
-
-    LOOP AT ct_fcat ASSIGNING <ls_fcat> WHERE fieldname = id_column_name.
+    LOOP AT ct_fcat ASSIGNING FIELD-SYMBOL(<ls_fcat>) WHERE fieldname = id_column_name.
       <ls_fcat>-edit = abap_true.
     ENDLOOP.
 
-  ENDMETHOD."make  column editable
+  ENDMETHOD."make column editable
 
 ENDCLASS.                    "lcl_controller IMPLEMENTATION
 
@@ -573,35 +540,16 @@ CLASS lcl_amc_receiver IMPLEMENTATION.
 ** | [--->] MESSAGE                        TYPE        XSTRING
 ** | [--->] CONTEXT                        TYPE REF TO IF_AMC_MESSAGE_CONTEXT
 ** +--------------------------------------------------------------------------------------</SIGNATURE>
-*  METHOD if_amc_message_receiver_binary~receive.
-** message handling take place in lcl_action=>do_action
-*    DATA: lv_xmessage TYPE xstring,
-*          lv_message  TYPE string.
-*    DATA: lv_cvfrom_utf8 TYPE REF TO cl_abap_conv_in_ce.
-*
-*    gf_message_received = abap_false.
-*    TRY.
-*        lv_xmessage = i_message.
-*        lv_cvfrom_utf8   = cl_abap_conv_in_ce=>create( encoding = 'UTF-8' input = lv_xmessage ).
-*        lv_cvfrom_utf8->read( IMPORTING data = lv_message ).
-*      CATCH cx_root.
-*        IMPORT msg = lv_message FROM DATA BUFFER lv_xmessage.
-*    ENDTRY.
-*    gf_message_received = abap_true.
-*    gv_message = lv_message.
-*    "number = number - 1.
-*
-** for list processing queue the messages
-*    APPEND i_message TO gt_message_list.
-*  ENDMETHOD.
-
   METHOD if_amc_message_receiver_pcp~receive.
-
+*--------------------------------------------------------------------*
+* Listing 14.05: - Coding PCP RECEIVE Method
+*--------------------------------------------------------------------*
     "Fill up static class variables from incoming message
     mf_message_received = abap_true.
+
     TRY.
         md_message = i_message->get_text( ).
-        i_message->get_fields( CHANGING c_fields = mt_pcp_fields  ).
+        i_message->get_fields( CHANGING c_fields = mt_pcp_fields ).
       CATCH cx_ac_message_type_pcp_error INTO DATA(pcp_error).
         md_message = |RECIEVE ERROR:{ pcp_error->get_text( ) }|.
     ENDTRY.

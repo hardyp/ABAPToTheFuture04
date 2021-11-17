@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Name="ZWDA_4_FPM_BOPF_MONSTER_LIST" ConfId="ZWDA_4_FPM_BOPF_MONSTER_LIST" ConfType="02" ConfVar="">
+ <Component Name="FPM_OVP_COMPONENT" Usage="ZWDA_4_FPM_BOPF_MONSTER_LIST" ConfType="00" ConfId="ZWDA_4_FPM_BOPF_MONSTER_LIST" ConfVar="" Interface="False"/>
+</Application>

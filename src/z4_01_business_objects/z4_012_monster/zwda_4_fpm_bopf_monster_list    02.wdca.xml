@@ -380,6 +380,14 @@
      <SCOPE>5</SCOPE>
     </WDY_CFG_PERSIST_DATA_APPL>
    </DATA>
+   <DESCR_LANG>
+    <WDY_CONFIG_APPT>
+     <CONFIG_ID>ZWDA_4_FPM_BOPF_MONSTER_LIST</CONFIG_ID>
+     <CONFIG_TYPE>02</CONFIG_TYPE>
+     <LANGU>E</LANGU>
+     <DESCRIPTION>FPM BOPF Monster Application Configuration</DESCRIPTION>
+    </WDY_CONFIG_APPT>
+   </DESCR_LANG>
   </asx:values>
  </asx:abap>
 </abapGit>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_EXCEL_EXTENDER</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>ABAP2XLS Extensions</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <LINES>
+    <TLINE>
+     <TDFORMAT>U1</TDFORMAT>
+     <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+     <TDLINE>This class will store Hanson specific extension to the ABAP2XLS classes.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+     <TDLINE>The idea is to keep the code here, and then have the calls to the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>assorted static methods embedded in the normal ABAP2XLS as enhancements.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+     <TDLINE>That way when a new version of ABAP2XLS comes out, a large amount of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>cutting and pasting is not required to bring the extensions back, and</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>naturally it will be more difficult to forgot anything.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+    </TLINE>
+   </LINES>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EXTENDER</CLSNAME>
+     <CMPNAME>CALCULATE_CELL_WIDTH</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>From ZCL_EXCEL_WORKSHEET</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_EXCEL_EXTENDER</CLSNAME>
+     <CMPNAME>CALCULATE_COLUMN_WIDTHS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>From ZCL_EXCEL_WORKSHEET</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
