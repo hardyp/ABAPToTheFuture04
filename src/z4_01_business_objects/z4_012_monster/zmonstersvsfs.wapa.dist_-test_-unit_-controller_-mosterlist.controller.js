@@ -1,1 +1,0 @@
-sap.ui.define(["monstersvsfs/controller/MosterList.controller"],function(t){"use strict";QUnit.module("MosterList Controller");QUnit.test("I should test the MosterList controller",function(o){var e=new t;e.onInit();o.ok(e)})});                            
