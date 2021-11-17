@@ -54,7 +54,12 @@
       "url": "https://github.com/hardyp/OCPFactory",
       "folder": "/deps7",
       "files": "/src/**/*.*"
-    }    
+    },
+    {
+      "url": "https://github.com/ABAP-Logger/ABAP-Logger",
+      "folder": "/deps8",
+      "files": "/src/**/*.*"
+    }
   ],
   "syntax": {
     "version": "v755",
