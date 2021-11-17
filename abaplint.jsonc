@@ -1,7 +1,20 @@
 {
   "global": {
     "files": "/src/**/*.*" ,
-    "exclude": ["z4_012_monster/", "z4_014_order/"],
+    "exclude": [
+      "zcl_au_4i_monster_so_header",
+      "zcl_d_4i_monster_so_header_act",
+      "zcl_4_v_monsterheader_con_chk",
+      "zcl_4_village_monster_query",
+      "zcl_4_a_howl_at_the_moon",
+      "zcl_4_d_monsterheader_texts",
+      "zcl_4_a_explode_all_heads",
+      "zcl_4_a_v_check_howling_status",
+      "zcl_4_fpm_monstersearch_feeder",
+      "zcl_au_4cds_monster_deliveries",
+      "zcl_d_4i_monster_so_items_acti",
+      "zcl_d_4cds_monster_deliveries0"      
+    ],
     "skipGeneratedGatewayClasses": true,
     "skipGeneratedPersistentClasses": true,
     "skipGeneratedFunctionGroups": true
