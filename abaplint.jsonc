@@ -64,7 +64,7 @@
   "syntax": {
     "version": "v755",
     "errorNamespace": "^(Z|Y|LCL_|TY_|LIF_)",
-    "globalConstants": [],
+    "globalConstants": ["scua_c_eudb_sprsl"],
     "globalMacros": []
   },
   "rules": {
