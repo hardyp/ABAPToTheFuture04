@@ -339,13 +339,11 @@ CLASS ltc_monster_simulator IMPLEMENTATION.
     "correct tests are done on the data loaded from MIME. I a a MIME. My body is my tool.
     DATA test_cases_table TYPE TABLE OF l_typ_monster_test_data.
 
-    "Name of Entry in SMW0
-    zcl_mockup_loader=>class_set_source(
-      i_type = 'MIME'
-      i_path = 'ZMONSTER_TEST_DATA' ).
-
     TRY.
-        DATA(mockup_loader) = zcl_mockup_loader=>get_instance( ).
+        DATA(mockup_loader) = zcl_mockup_loader=>create(
+           i_type = 'MIME'
+           i_path = 'ZMONSTER_TEST_DATA' )."Name of Entry in SMW0
+
       CATCH zcx_mockup_loader_error INTO DATA(loader_exception).
         cl_abap_unit_assert=>fail( loader_exception->get_text( ) ).
     ENDTRY.

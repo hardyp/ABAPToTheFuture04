@@ -178,7 +178,7 @@ CLASS ZCL_4_CH03_ABAP_EXAMPLES IMPLEMENTATION.
 
     DATA(lt_configuration) = VALUE l_tt_configuration(
     ( variable_name = 'Monster Model'(002) count = 1 possible_value = 'BTNK' ) "Bolts Through Neck
-    ( variable_name = 'Monster Model'(002) count = 2 possible_value = 'KLKL')  "Killer Klown
+    ( variable_name = 'Monster Model'(002) count = 2 possible_value = 'KLKL' ) "Killer Klown
     ( variable_name = 'Monster Model'(002) count = 3 possible_value = 'ISDD' ) "Ice Skating Dead
     ( variable_name = 'Evilness'(003)      count = 1 possible_value = 'EVIL' )
     ( variable_name = 'Evilness'(003)      count = 2 possible_value = 'VERY' )
