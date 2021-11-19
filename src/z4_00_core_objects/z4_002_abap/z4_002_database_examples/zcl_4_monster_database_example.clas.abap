@@ -66,7 +66,7 @@ public section.
   methods DERIVE_BY_AGGREGATION .
   methods DERIVE_DELS_BY_NO_OF_HEADS
     importing
-      !ID_NO_OF_HEADS type ZDE_MONSTER_HEADS
+      !ID_NO_OF_HEADS type Z4DE_MONSTER_HEADS
       !IT_DATE_RANGE type /GC1/TAB_RNG_DATE
     returning
       value(RT_ORDERS) type MTT_DELIVERIES .

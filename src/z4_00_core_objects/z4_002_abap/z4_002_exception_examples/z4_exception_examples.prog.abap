@@ -261,7 +261,7 @@ CLASS lcl_monstrous_exceptions IMPLEMENTATION.
 *--------------------------------------------------------------------*
 * Listing 04.05: Converting Classical Exception to Class-Based
 *--------------------------------------------------------------------*
-    DATA: current_monster_number TYPE zde_monster_number,
+    DATA: current_monster_number TYPE z4de_monster_number,
           monster_handicap       TYPE i ##NEEDED,
           current_www_count      TYPE i VALUE 3.
 
@@ -290,7 +290,7 @@ CLASS lcl_monstrous_exceptions IMPLEMENTATION.
 
   METHOD wrapping_a_function.
 *--------------------------------------------------------------------*
-* IMPORTING id_monster_number       TYPE zde_monster_number
+* IMPORTING id_monster_number       TYPE z4de_monster_number
 * RETURNING VALUE(rd_golf_handicap) TYPE i.
 *--------------------------------------------------------------------*
     DATA(golf_scores) = NEW lcl_golf_scores( ).

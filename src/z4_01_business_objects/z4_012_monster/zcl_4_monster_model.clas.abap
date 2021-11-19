@@ -72,7 +72,7 @@ public section.
       !ED_NUMBER_OF_HATS type SY-TABIX .
   class-methods IS_MAD
     importing
-      !ID_MONSTER_NUMBER type ZDE_MONSTER_NUMBER
+      !ID_MONSTER_NUMBER type Z4DE_MONSTER_NUMBER
     returning
       value(RF_YES_IT_IS) type ABAP_BOOL .
 protected section.

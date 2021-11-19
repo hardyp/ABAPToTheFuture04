@@ -3,7 +3,7 @@
 *"* declarations
 CLASS lcl_monster_functions DEFINITION ##CLASS_FINAL.
   PUBLIC SECTION.
-    METHODS hat_size_of_the_day RETURNING VALUE(rt_hat_size) TYPE zde_monster_hat_size.
+    METHODS hat_size_of_the_day RETURNING VALUE(rt_hat_size) TYPE z4de_monster_hat_size.
 
 ENDCLASS.
 
