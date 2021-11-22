@@ -6,15 +6,18 @@ class ZCL_Z_4_MONSTER_DPC_EXT definition
 public section.
 
   methods CONSTRUCTOR .
+
+  methods /IWBEP/IF_MGW_APPL_SRV_RUNTIME~CREATE_DEEP_ENTITY
+    redefinition .
 protected section.
 
   methods MONSTERITEMS_GET_ENTITYSET
     redefinition .
+  methods MONSTERS_DELETE_ENTITY
+    redefinition .
   methods MONSTERS_GET_ENTITY
     redefinition .
   methods MONSTERS_GET_ENTITYSET
-    redefinition .
-  methods MONSTERS_DELETE_ENTITY
     redefinition .
 private section.
 
@@ -24,6 +27,127 @@ ENDCLASS.
 
 
 CLASS ZCL_Z_4_MONSTER_DPC_EXT IMPLEMENTATION.
+
+
+  METHOD /iwbep/if_mgw_appl_srv_runtime~create_deep_entity.
+*--------------------------------------------------------------------*
+* In traditional DYNPRO programs you update the header table and the
+* item table and any other related tables in a single LUW
+* The obvious example is VBAK / VBAP / VBEP / VBKD etc which all get
+* updated together when a sales document is saved.
+* Naturally we want to do the exact same thing when processing a
+* request to create a new business object via SAP Gateway
+* The terminology here is CREATE_DEEP_ENTITY
+*--------------------------------------------------------------------*
+* The bulk of the comments below are copied verbatim from the standard
+* SAP example code
+*--------------------------------------------------------------------*
+    "Local Variables
+    TYPES: monster_header_row TYPE z4sc_monster_header_ex,
+           monster_item_row   TYPE z4sc_monster_items_ex,
+           monster_item_list  TYPE STANDARD TABLE OF monster_item_row.
+
+    CONSTANTS: monster_set_name TYPE string VALUE `MONSTERS`.
+
+    DATA: new_monster_header_entry TYPE monster_header_row,
+          new_monster_item_stack   TYPE monster_item_list,
+          new_monster_item_entry   LIKE LINE OF new_monster_item_stack,
+          entityset_name           TYPE string,
+          " The following structure is used to receive the header and multiple
+          " rows acquired by the call to method io_data_provider->read_entry_data.
+          " That method will move values, column by column, from the sending
+          " structure to this receiving structure through a process that dynamically
+          " identifies both sender column and receiver column. Accordingly, there
+          " are constraints that must be observed when defining this receiving
+          " structure, otherwise one or more columns of the the receiving structure
+          " will not be populated with counterpart values from the corresponding
+          " sending structure.
+          " This structure needs to be defined as a deep structure, meaning that
+          " it contains at least one field that is itself defined as an internal
+          " table.  The structure is to be arranged as follows:
+          "   o The name of this structure can be any name at all.
+          "   o The next dependent fields of this structure must contain fields with
+          "       the same name and type as those fields defined as the properties
+          "       of the primary entity type.
+          "   o The next dependent field following the final primary entity type field
+          "       must be the same name as the navigation property associating the
+          "       primary entity type to its dependent entity type.  This field itself
+          "       must be defined as an internal table using a structure containing
+          "       fields with the same name and type as those fields defined as the
+          "       properties of the dependent entity type.
+          "   o The sequence of the primary entity type and dependent entity type
+          "       fields within this structure is not important - only the names of
+          "       the fields must match their counterpart entity type properties.
+          "       Indeed, the internal table defined for holding the rows of the
+          "       dependent entity type can be interspersed between two other fields
+          "       describing the properties of the primary entity type.  For the sake
+          "       of easy maintenance and debugging, it is recommended to define these
+          "       fields in the following sequence:
+          "         - all fields correlating to properties of the primary entity type
+          "         - the name of an internal table correlating to the navigation property
+          "             from the primary entity type to the dependent entity type, with
+          "             the name of its corresponding structure being one that contains
+          "             the names of the properties of the dependent entity type
+          BEGIN OF monster_with_items.
+            "   Next entries must indicate the names and respective types of the
+            "     properties defined for the primary entity type:
+            INCLUDE TYPE monster_header_row.
+            "   Next entry must indicate the name of the navigation property from the
+            "     primary entity type to the dependent entity type:
+            DATA: frommonstertomonsteritem
+                  "   Next entry must indicate an internal table describing the names and
+                  "     respective types of the properties defined for the dependent entity type:
+                  TYPE STANDARD TABLE OF monster_item_row,
+          END OF monster_with_items.
+
+    CLEAR er_deep_entity.
+
+    entityset_name = to_upper( io_tech_request_context->get_entity_set_name( ) ).
+
+    CASE entityset_name.
+      WHEN monster_set_name.
+        io_data_provider->read_entry_data( IMPORTING es_data = monster_with_items ).
+      WHEN OTHERS.
+        "Notify the front end of the problem encountered:
+        DATA(message_container) = /iwbep/if_mgw_conv_srv_runtime~get_message_container( ).
+        message_container->add_message_text_only(
+          iv_msg_type = 'E'
+          iv_msg_text = 'Unexpected Entity Set Type'(001) ).
+        RETURN.
+    ENDCASE.
+
+    new_monster_header_entry = CORRESPONDING #( monster_with_items ).
+
+    LOOP AT monster_with_items-frommonstertomonsteritem ASSIGNING FIELD-SYMBOL(<frommonstertomonsteritem>).
+      new_monster_item_entry = CORRESPONDING #( <frommonstertomonsteritem> ).
+      INSERT new_monster_item_entry INTO TABLE new_monster_item_stack.
+    ENDLOOP.
+
+    TRY.
+        "As always, outsource the actual work to a re-usable business object class
+        mo_monster_model->create_monster_record(
+           VALUE #( header = new_monster_header_entry
+                    items  = new_monster_item_stack ) ).
+      CATCH zcx_4_monster_exceptions_mc INTO DATA(exception).
+        "Undo any work that might already have been performed during the execution of this method:
+        ROLLBACK WORK."#EC CI_ROLLBACK
+        "Notify the front end of the problem encountered:
+        message_container = /iwbep/if_mgw_conv_srv_runtime~get_message_container( ).
+        message_container->add_message_text_only(
+          iv_msg_type = 'E'
+          iv_msg_text = CONV #( exception->get_text( ) ) ).
+        RETURN.
+    ENDTRY.
+
+    "Provide this newly created monster with items in the response:
+    copy_data_to_ref(
+      EXPORTING is_data = monster_with_items
+      CHANGING  cr_data = er_deep_entity ).
+
+*--------------------------------------------------------------------*
+* The 20 foor tall monster cannot turn invisible at will
+*--------------------------------------------------------------------*
+  ENDMETHOD.
 
 
   METHOD constructor.
