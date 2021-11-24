@@ -757,12 +757,16 @@ CLASS ZCL_4_CH03_ABAP_EXAMPLES IMPLEMENTATION.
 
 
   METHOD l03_34_copying_itabs_old.
-*--------------------------------------------------------------------*
+*---------------------------------------------------------------------*
 * Listing 03.34:  Moving One Table to Another before 7.4
-*--------------------------------------------------------------------*
+*---------------------------------------------------------------------*
+* We are moving the GREEN monsters to a new BLUE monsters table
+*---------------------------------------------------------------------*
+* STRENGTH is the source field, EARLY AGE STRENGTH is the target field
+*---------------------------------------------------------------------*
 * Local Variables
-    DATA: green_monsters TYPE STANDARD TABLE OF z4t_monster_head,
-          blue_monsters  TYPE STANDARD TABLE OF z4t_monster_head.
+    DATA: green_monsters TYPE STANDARD TABLE OF z4t_monster_head, "Source
+          blue_monsters  TYPE STANDARD TABLE OF z4t_monster_head. "Target
 
     FIELD-SYMBOLS:
       <green_monsters> LIKE LINE OF green_monsters,
@@ -772,24 +776,29 @@ CLASS ZCL_4_CH03_ABAP_EXAMPLES IMPLEMENTATION.
       APPEND INITIAL LINE TO blue_monsters
       ASSIGNING <blue_monsters>.
       MOVE-CORRESPONDING <green_monsters> TO <blue_monsters>.
+      "We do not want to copy the evilness
       CLEAR <blue_monsters>-evilness.
-      <blue_monsters>-early_age_strength =
-      <green_monsters>-strength.
+      "Move value to differently named field
+      <blue_monsters>-early_age_strength =  <green_monsters>-strength.
     ENDLOOP.
 
   ENDMETHOD.
 
 
   METHOD l03_35_copying_itabs_new.
-*--------------------------------------------------------------------*
+*---------------------------------------------------------------------*
 * Listing 03.35:  Moving One Table to Another in 7.4
-*--------------------------------------------------------------------*
+*---------------------------------------------------------------------*
+* We are moving the GREEN monsters to a new BLUE monsters table
+*---------------------------------------------------------------------*
+* STRENGTH is the source field, EARLY AGE STRENGTH is the target field
+*---------------------------------------------------------------------*
 * Local Variables
-    DATA: green_monsters TYPE STANDARD TABLE OF z4t_monster_head,
-          blue_monsters  TYPE STANDARD TABLE OF z4t_monster_head.
+    DATA: green_monsters TYPE STANDARD TABLE OF z4t_monster_head, "Source
+          blue_monsters  TYPE STANDARD TABLE OF z4t_monster_head. "Target
 
-    green_monsters = CORRESPONDING #(
-    blue_monsters
+    blue_monsters = CORRESPONDING #(
+    green_monsters
     MAPPING early_age_strength = strength
     EXCEPT evilness ).
 
