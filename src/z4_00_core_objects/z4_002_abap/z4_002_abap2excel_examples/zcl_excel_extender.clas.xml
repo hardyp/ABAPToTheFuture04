@@ -11,36 +11,6 @@
     <FIXPT>X</FIXPT>
     <UNICODE>X</UNICODE>
    </VSEOCLASS>
-   <LINES>
-    <TLINE>
-     <TDFORMAT>U1</TDFORMAT>
-     <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
-    </TLINE>
-    <TLINE>
-     <TDFORMAT>AS</TDFORMAT>
-     <TDLINE>This class will store Hanson specific extension to the ABAP2XLS classes.</TDLINE>
-    </TLINE>
-    <TLINE>
-     <TDFORMAT>AS</TDFORMAT>
-     <TDLINE>The idea is to keep the code here, and then have the calls to the</TDLINE>
-    </TLINE>
-    <TLINE>
-     <TDLINE>assorted static methods embedded in the normal ABAP2XLS as enhancements.</TDLINE>
-    </TLINE>
-    <TLINE>
-     <TDFORMAT>AS</TDFORMAT>
-     <TDLINE>That way when a new version of ABAP2XLS comes out, a large amount of</TDLINE>
-    </TLINE>
-    <TLINE>
-     <TDLINE>cutting and pasting is not required to bring the extensions back, and</TDLINE>
-    </TLINE>
-    <TLINE>
-     <TDLINE>naturally it will be more difficult to forgot anything.</TDLINE>
-    </TLINE>
-    <TLINE>
-     <TDFORMAT>AS</TDFORMAT>
-    </TLINE>
-   </LINES>
    <DESCRIPTIONS>
     <SEOCOMPOTX>
      <CLSNAME>ZCL_EXCEL_EXTENDER</CLSNAME>

@@ -32,6 +32,66 @@
      <LENGTH>62</LENGTH>
     </item>
    </TPOOL>
+   <LINES>
+    <TLINE>
+     <TDFORMAT>U1</TDFORMAT>
+     <TDLINE>&amp;Business Process&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+     <TDLINE>Baron F then makes the new monster. He needs to know what ingredients</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>need to go into the new monster. He would also like to be able to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>anticipate future customer requirements and so be pro-active. For this a</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>“Monster Simulator” application is needed in SAP.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>U1</TDFORMAT>
+     <TDLINE>&amp;Resulting User Story&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+     <TDLINE>AS A =&gt; Mad Scientist</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+     <TDLINE>I NEED TO =&gt; Dynamically calculate the Monster BOM</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+     <TDLINE>SO I CAN =&gt; Know the best ingredients to use to build a new Monster</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>U1</TDFORMAT>
+     <TDLINE>&amp;Resulting Application&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+     <TDLINE>An application to calculate a Monster BOM based on the customer</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>requirements in an order =&gt; The Monster Simulator</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>U1</TDFORMAT>
+     <TDLINE>&amp;HINTS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>U1</TDFORMAT>
+     <TDLINE>&amp;FURTHER_SOURCES_OF_INF&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+    </TLINE>
+   </LINES>
    <DESCRIPTIONS>
     <SEOCOMPOTX>
      <CLSNAME>ZCL_4_MONSTER_SIMULATOR</CLSNAME>

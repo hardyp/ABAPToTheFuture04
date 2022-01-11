@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_BC_VIEW_GUI_ALV_GRID</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Base View for CL_GUI_ALV_GRID</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_GUI_ALV_GRID</CLSNAME>
+     <CMPNAME>MC_CTX_UI_TECHNOLOGY</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>UI Technology used by this Class</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_GUI_ALV_GRID</CLSNAME>
+     <CMPNAME>MD_REPORT_NAME</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Report Program</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_GUI_ALV_GRID</CLSNAME>
+     <CMPNAME>MF_START_IN_EDIT_MODE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Start in Edit Mode</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_GUI_ALV_GRID</CLSNAME>
+     <CMPNAME>MO_ALV_GRID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>ALV List Viewer</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_GUI_ALV_GRID</CLSNAME>
+     <CMPNAME>MS_VARIANT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Layout (External Use)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_GUI_ALV_GRID</CLSNAME>
+     <CMPNAME>MT_DATA_TABLE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Data Table</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC_VIEW_GUI_ALV_GRID</CLSNAME>
+     <CMPNAME>MT_USER_COMMANDS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Toolbar Buttons</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
