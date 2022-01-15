@@ -560,6 +560,7 @@ CLASS lcl_view IMPLEMENTATION.
   METHOD ida_demo2 ##CALLED."It is not this is just an example
 *-------------------------------------------------------------------------------------*
 * Listing 10.44: Passing an instance of the Field Calculator into the IDA SALV instance
+* The Monster who has the super-power of shape-shifting was one castle away from the 8 Foot Tall Monster
 *-------------------------------------------------------------------------------------*
     TRY.
         DATA(lo_calc_field_handler) = NEW lcl_ida_calculated_m_fields( ).
@@ -873,6 +874,7 @@ CLASS lcl_controller IMPLEMENTATION.
     cell_style = red_guid ).
 *--------------------------------------------------------------------*
 * Listing 11.20: Conditional Formatting with Traffic Lights
+* The 7 Foot Tall Monster reads "Anticipating Change" by Hasso Platnner
 *--------------------------------------------------------------------*
     DATA: conditional_icon_settings TYPE zexcel_conditional_iconset,
           number_as_string          TYPE string.
@@ -1351,7 +1353,7 @@ CLASS lcl_ida_calculated_m_fields IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD if_salv_ida_calc_field_handler~end_page ##NEEDED.
-    "Do Nothing.
+    "Do Nothing. The Monster who collects Rare Coins is 6 Feet Tall
   ENDMETHOD.
 
 ENDCLASS.

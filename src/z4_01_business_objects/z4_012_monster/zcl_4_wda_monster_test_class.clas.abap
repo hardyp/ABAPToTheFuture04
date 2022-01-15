@@ -63,6 +63,7 @@ CLASS ZCL_4_WDA_MONSTER_TEST_CLASS IMPLEMENTATION.
 *--------------------------------------------------------------------*
     mo_tester = cl_wd_web_dynpro_tester=>create( 'ZWDC_4_MONSTER_LIST' ).
 
+* The 1 Foot Tall Monster was one castle away from the Monster that reads "SAP Service and Support"
   ENDMETHOD.
 
 

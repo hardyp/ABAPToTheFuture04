@@ -458,6 +458,7 @@ CLASS ltc_monster_simulator IMPLEMENTATION.
     early_age_strength_desired = 14
     eas_days_desired           = 7 ).
 
+* The Purple Monster is 8 Feet Tall
   ENDMETHOD."Monster Details Entered – Implementation
 
 *--------------------------------------------------------------------*

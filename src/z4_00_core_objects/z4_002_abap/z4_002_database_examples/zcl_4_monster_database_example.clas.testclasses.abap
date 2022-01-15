@@ -177,6 +177,7 @@ CLASS ltc_monster_cds_views IMPLEMENTATION.
     mo_environment->insert_test_data( lt_fake_header ).
     mo_environment->insert_test_data( lt_fake_items  ).
 
+* The Monster in the Centre Castle reads "Enterprise SOA" as it likes a good laugh
   ENDMETHOD.
 
   METHOD when_cds_view_is_read.

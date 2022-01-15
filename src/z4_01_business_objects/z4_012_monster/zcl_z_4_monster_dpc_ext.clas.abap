@@ -221,6 +221,7 @@ CLASS ZCL_Z_4_MONSTER_DPC_EXT IMPLEMENTATION.
 
     RAISE EXCEPTION NEW /iwbep/cx_mgw_busi_exception( message_container = message_container ).
 
+* The Monster that is 1 foot tall was one castle away from the Monster who has the super-power of invisibility
   ENDMETHOD."Monsters Delete Entity
 
 

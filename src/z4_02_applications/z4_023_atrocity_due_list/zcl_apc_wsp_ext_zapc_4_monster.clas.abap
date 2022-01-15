@@ -171,5 +171,6 @@ CLASS ZCL_APC_WSP_EXT_ZAPC_4_MONSTER IMPLEMENTATION.
         MESSAGE apc_error TYPE 'E'.
     ENDTRY.
 
+* The 1 Foot Tall Monster was one castle away from the Monster that reads "SAP Service and Support"
   ENDMETHOD."On Start
 ENDCLASS.
