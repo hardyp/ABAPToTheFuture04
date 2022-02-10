@@ -26,7 +26,7 @@
       "files": "/src/**/*.*"
     },
     {
-      "url": "https://github.com/sapmentors/abap2xlsx",
+      "url": "https://github.com/abap2xlsx/abap2xlsx",
       "folder": "/deps2",
       "files": "/src/**/*.*"
     },
